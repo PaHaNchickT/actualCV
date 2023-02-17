@@ -151,11 +151,17 @@ h1
     flex-wrap: wrap
     justify-content: center
 
+.proj-container > a 
+    &:link, &:active, &:visited
+        color: white
+        text-decoration: none
+
 .proj
     background-color: red
     width: 400px
     height: 400px
     margin: 10px
+    position: relative
 
 .channel
     background-color: red
@@ -177,6 +183,10 @@ h1
 .proj > p
     background-color: black
     padding: 5px 10px 5px 20px
+
+.proj > p, .channel > p
+    position: relative
+    z-index: 8
 
 .channel
     justify-content: center
@@ -208,6 +218,14 @@ h1
 
 // .channel > p > span
 //     color: red
+
+.proj-black
+    transition: 0.3s
+    width: 100%
+    height: 100%
+    position: absolute
+    background-color: black
+    opacity: 0
 
 ////////////////////////////////////////////about///////////////////////////////////////////////
 

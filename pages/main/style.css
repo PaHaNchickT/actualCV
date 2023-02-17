@@ -142,11 +142,17 @@ h1 {
   justify-content: center;
 }
 
+.proj-container > a:link, .proj-container > a:active, .proj-container > a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .proj {
   background-color: red;
   width: 400px;
   height: 400px;
   margin: 10px;
+  position: relative;
 }
 
 .channel {
@@ -172,6 +178,11 @@ h1 {
 .proj > p {
   background-color: black;
   padding: 5px 10px 5px 20px;
+}
+
+.proj > p, .channel > p {
+  position: relative;
+  z-index: 8;
 }
 
 .channel {
@@ -209,6 +220,15 @@ h1 {
 
 .channel {
   background-image: url("../../assets/images/proj7.jpg");
+}
+
+.proj-black {
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0;
 }
 
 .about {

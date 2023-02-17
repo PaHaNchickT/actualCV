@@ -69,6 +69,14 @@ header
 .menu
     margin-right: 120px
 
+.home > a, .menu > li > a, .github > a
+    &:link, &:active, &:visited
+        color: #f6ad34
+        text-decoration: none
+    &:hover
+        color: white
+
+
 //////////////////////////////////////////intro///////////////////////////////////////////
 
 .intro
@@ -163,6 +171,8 @@ h1
     cursor: pointer
     box-shadow: 0px 0px 30px -5px black
     filter: grayscale(100%)
+    &:hover
+        filter: grayscale(0%)
 
 .proj > p
     background-color: black
@@ -256,6 +266,13 @@ h2
     &:first-child
         color: #f6ad34
         cursor: auto
+
+.social > li > a
+    &:link, &:active, &:visited
+        color: white
+        text-decoration: none
+    &:hover
+        color: #f6ad34
 
 ///////////////////////////////footer///////////////////////////////
 

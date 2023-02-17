@@ -33,7 +33,7 @@ header {
   color: #f6ad34;
   height: 70px;
   font-size: 20px;
-  padding: 0 20px 0;
+  padding: 0 80px;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -49,6 +49,10 @@ header {
 
 .lang > p {
   margin: 0 5px;
+}
+
+.menu {
+  margin-right: 120px;
 }
 
 .intro {
@@ -216,11 +220,12 @@ h2 {
 }
 
 .about-wrapper {
-  width: 1240px;
+  width: 1180px;
   background-color: black;
-  margin-bottom: 130px;
+  margin-bottom: 70px;
   padding: 30px;
   display: flex;
+  box-shadow: 0px 0px 20px -5px #f6ad34;
 }
 
 .about-wrapper > p {
@@ -240,21 +245,40 @@ h2 {
   height: 318px;
 }
 
-.contact-title {
+.about > ul {
+  color: white;
+  font-size: 40px;
+  width: 1240px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 100px;
+}
+
+.about > ul > li {
+  cursor: pointer;
+}
+.about > ul > li:first-child {
+  color: #f6ad34;
+  cursor: auto;
+}
+
+footer {
+  height: 70px;
   background-color: black;
-  height: 100px;
+  box-shadow: 0px 0px 20px 20px black;
+  position: relative;
+  z-index: 6;
+  color: #f6ad34;
+  font-size: 20px;
   display: flex;
   align-items: center;
-  box-shadow: 0px 0px 20px -5px black;
-  position: relative;
-  z-index: 5;
+  justify-content: center;
 }
 
-.contact-title > h2 {
-  margin: 0;
-}
-
-.contact-container {
-  height: 300px;
-  background: linear-gradient(black, #523004);
+footer > ul {
+  width: 1240px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

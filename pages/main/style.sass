@@ -49,7 +49,14 @@ header
     align-items: center 
     position: fixed
     width: 96vw
+    z-index: 10
+    // box-shadow: 0px 0px 10px 10px black
 
+.lang
+    display: flex
+
+.lang > p
+    margin: 0 5px
 ////////////////////intro////////////////////
 
 .intro
@@ -75,6 +82,8 @@ h1
     background-color: black
     color: #f6ad34
     position: relative
+    box-shadow: 0px 0px 20px -5px #f6ad34
+    z-index: 5
 
 .avatar
     width: 250px
@@ -93,3 +102,74 @@ h1
     flex-wrap: wrap
     align-content: center
     justify-content: space-around
+
+
+//////////////////work//////////////////
+
+.work
+    // height: 1000px
+    background: linear-gradient(#523004, black)
+    // background-color: #100d04
+    padding: 100px 0 50px
+    // border-bottom: 5px solid #f6ad34
+    box-shadow: 0px 0px 10px 20px black
+
+.proj-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+.proj
+    background-color: red
+    width: 400px
+    height: 400px
+    margin: 10px
+
+.channel
+    background-color: red
+    width: 1240px
+    height: 400px
+    margin: 10px
+
+.proj, .channel
+    color: white
+    font-size: 20px
+    display: flex
+    align-items: center
+    cursor: pointer
+
+.proj > p
+    // max-width: 150px
+    background-color: black
+    padding: 5px 10px 5px 20px
+
+.channel
+    justify-content: center
+
+.channel > p
+    padding: 5px 20px
+    background-color: black
+
+.proj1
+    background-image: url('../../assets/images/proj1.jpg')
+
+.proj2
+    background-image: url('../../assets/images/proj2.jpg')
+
+.proj3
+    background-image: url('../../assets/images/proj3.jpg')
+
+.proj4
+    background-image: url('../../assets/images/proj4.jpg')
+
+.proj5
+    background-image: url('../../assets/images/proj5.jpg')
+
+.proj6
+    background-image: url('../../assets/images/proj6.jpg')
+
+.channel
+    background-image: url('../../assets/images/proj7.jpg')
+
+// .channel > p > span
+//     color: red

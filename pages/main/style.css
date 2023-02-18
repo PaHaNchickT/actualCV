@@ -288,14 +288,20 @@ h2 {
   text-align: justify;
 }
 
+.diplomas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .diploma-1 {
-  width: 450px;
-  height: 348px;
+  width: 31.253075vw;
+  height: 24.1686195286vw;
 }
 
 .diploma-2 {
-  width: 450px;
-  height: 318px;
+  width: 31.250537vw;
+  height: 22.0815488215vw;
 }
 
 .social {
@@ -394,6 +400,7 @@ footer > ul {
   }
   .diplomas {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
   .diploma-1 {

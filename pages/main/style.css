@@ -444,4 +444,14 @@ footer > ul {
   .skl-left, .skl-right {
     display: none;
   }
+  .channel {
+    width: 240px;
+    margin: 10px;
+    justify-content: flex-start;
+  }
+  .channel > p, .proj > p {
+    background-color: black;
+    padding: 5px 10px 5px 20px;
+    max-width: 40%;
+  }
 }/*# sourceMappingURL=style.css.map */

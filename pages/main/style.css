@@ -339,4 +339,14 @@ footer > ul {
   padding: 0;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1300px) {
+  header {
+    padding: 0 75px;
+    width: 87vw;
+  }
+  .menu {
+    margin-right: 45px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -330,10 +330,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 100px;
 }
 
 footer > ul {
-  width: 1240px;
+  flex-basis: 100%;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -368,7 +369,7 @@ footer > ul {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .about-wrapper > p {
     margin-bottom: 30px;
@@ -391,5 +392,8 @@ footer > ul {
     width: 70vw;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  footer {
+    padding: 0 20px;
   }
 }/*# sourceMappingURL=style.css.map */

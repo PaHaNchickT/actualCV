@@ -163,7 +163,6 @@ h1 {
 }
 
 .proj {
-  background-color: red;
   width: 400px;
   height: 400px;
   margin: 10px;
@@ -171,7 +170,6 @@ h1 {
 }
 
 .channel {
-  background-color: red;
   width: 1240px;
   height: 400px;
   margin: 10px;
@@ -341,12 +339,26 @@ footer > ul {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1260px) {
   header {
-    padding: 0 75px;
-    width: 87vw;
+    padding: 0;
+    width: 100vw;
   }
   .menu {
-    margin-right: 45px;
+    margin-right: 0;
+  }
+  .proj {
+    width: 240px;
+    height: 240px;
+    margin: 5px;
+  }
+  .channel {
+    width: 740px;
+    height: 240px;
+    background-position-x: -480px;
+    margin: 5px;
+  }
+  .proj > p {
+    max-width: 30%;
   }
 }/*# sourceMappingURL=style.css.map */

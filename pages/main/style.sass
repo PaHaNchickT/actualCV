@@ -400,3 +400,37 @@ footer > ul
 
     footer
         padding: 0 20px
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////    
+///////////////////////////////////////////////MOBILE////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media screen and (max-width: $tablet)
+    .intro
+        min-height: 500px
+        background-image: url('../../assets/images/bg.jpg')
+        background-attachment: fixed
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        color: white
+
+    h1
+        font-size: 50px
+        font-weight: 700
+
+    h3
+        font-size: 15px
+
+    .skills
+        height: 70px
+
+    .avatar
+        width: 200px
+        height: 200px
+        left: calc(50% - 200px/2)
+        top: calc(50% - 200px/2)
+
+    .skl-left, .skl-right
+        display: none

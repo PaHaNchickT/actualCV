@@ -153,6 +153,10 @@ h1 {
   justify-content: center;
 }
 
+.proj-container > a > div {
+  transition: 0.3s;
+}
+
 .proj-container > a:link, .proj-container > a:active, .proj-container > a:visited {
   color: white;
   text-decoration: none;

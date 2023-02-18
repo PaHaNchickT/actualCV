@@ -67,6 +67,15 @@ header {
   color: white;
 }
 
+.burger {
+  display: none;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/images/burger.png");
+  background-size: 100%;
+  margin-right: 20px;
+}
+
 .intro {
   min-height: 800px;
   background-image: url("../../assets/images/bg.jpg");
@@ -340,7 +349,7 @@ footer > ul {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1023.5px) {
   header {
     padding: 0;
     width: 100vw;
@@ -350,6 +359,14 @@ footer > ul {
   }
   .menu {
     margin-right: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    display: none;
+  }
+  .burger {
+    display: block;
   }
   .proj {
     width: 240px;

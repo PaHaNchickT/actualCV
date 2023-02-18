@@ -255,12 +255,13 @@ h2
     margin-bottom: 30px
 
 .about-wrapper
-    width: 1180px
+    width: 81.5%
     background-color: black
     margin-bottom: 70px
     padding: 30px
     display: flex
     box-shadow: 0px 0px 20px -5px #f6ad34
+    // flex-wrap: wrap
 
 .about-wrapper > p
     color: white
@@ -276,7 +277,7 @@ h2
     width: 450px
     height: 318px
 
-.about > ul
+.social
     color: white
     font-size: 40px
     width: 1240px
@@ -285,7 +286,7 @@ h2
     padding: 0
     margin-bottom: 100px
 
-.about > ul > li
+.social > li
     // background-color: black
     cursor: pointer
     &:first-child
@@ -332,6 +333,9 @@ footer > ul
         padding: 0
         width: 100vw
         
+    .intro
+        min-height: 600px
+
     .menu
         margin-right: 0
 
@@ -349,3 +353,31 @@ footer > ul
 
     .proj > p
         max-width: 30%
+
+    .about-wrapper
+        flex-wrap: wrap
+        flex-direction: column
+        justify-content: space-between
+        margin-bottom: 50px
+
+    .about-wrapper > p
+        margin-bottom: 30px
+        margin-right: 0
+
+    .diplomas
+        display: flex
+        justify-content: space-between
+
+    .diploma-1
+        width: calc(81.51vw*0.4613)
+        height: calc((81.51vw*318px)/891px)
+        margin-right: 30px
+
+    .diploma-2
+        width: calc(81.51vw*0.5051)
+        height: calc((81.51vw*318px)/891px)
+
+    .social
+        width: 70vw
+        flex-wrap: wrap
+        justify-content: space-around

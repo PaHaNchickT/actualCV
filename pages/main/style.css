@@ -414,7 +414,7 @@ footer > ul {
     padding: 0 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.5px) {
   .intro {
     min-height: 500px;
     background-image: url("../../assets/images/bg.jpg");
@@ -483,9 +483,26 @@ footer > ul {
     font-size: 30px;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
   }
   .social > li:first-child {
     color: #f6ad34;
     margin-bottom: 20px;
+  }
+  footer {
+    padding: 0;
+  }
+  footer > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .github {
+    margin-bottom: 10px;
+  }
+  .by {
+    display: none;
+  }
+  .github > a:link, .github > a:active, .github > a:visited {
+    color: white;
   }
 }/*# sourceMappingURL=style.css.map */

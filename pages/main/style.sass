@@ -18,7 +18,7 @@
 //     background-position: $p
 
 $desktop: 1023.5px
-$tablet: 768px
+$tablet: 767.5px
 $mobile: 320px
 
 html
@@ -474,8 +474,26 @@ footer > ul
         font-size: 30px
         flex-direction: column
         align-items: center
+        margin-bottom: 40px
 
     .social > li
         &:first-child
             color: #f6ad34
             margin-bottom: 20px
+
+    footer
+        padding: 0
+
+    footer > ul
+        flex-direction: column
+        align-items: center
+
+    .github
+        margin-bottom: 10px
+
+    .by
+        display: none
+
+    .github > a
+        &:link, &:active, &:visited
+            color: white

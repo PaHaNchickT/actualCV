@@ -92,6 +92,10 @@ h1 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 20px;
+}
+
 .skills {
   font-size: 30px;
   display: flex;

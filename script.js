@@ -1,38 +1,64 @@
 // // import animals from './animals.js';
 // // import feedback from './feedback.js';
 
-let proj = []
+let proj = [],
+    isMenuOpen = 0
 
 const   body = document.querySelector('body'),
         projOrig = document.querySelectorAll('.proj'),
-        channel = document.querySelector('.channel')
+        channel = document.querySelector('.channel'),
+        burger = document.querySelector('.burger'),
+        menu = document.querySelector('.menu'),
+        burgerBg = document.querySelector('.burger-bg'),
+        home = document.querySelector('.home')
 
 projOrig.forEach(e => {
     proj.push(e)
 })
 proj.push(channel)
 
-// return
-// const input = document.querySelector('input')
-// const inputfocus = document.querySelector('input:focus')
-// const inputvalid = document.querySelector('input:valid')
-// const inputinvalid = document.querySelector('input:invalid')
-// const formbutton = document.querySelector('form > button')
-// const pagdiv = document.querySelectorAll('.pag > div')
+console.log(proj, burger, menu)
 
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////burger menu////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
 
+burger.addEventListener('click', function() {
+    let result = isMenuOpen === 0 ? menuOn() : menuOff()
+})
+menu.addEventListener('click', function() {
+    if (isMenuOpen === 1) {
+        menuOff()
+    }
+})
 
+home.addEventListener('click', function() {
+    if (isMenuOpen === 1) {
+        menuOff()
+    }
+})
 
+burgerBg.addEventListener('click', function() {
+    if (isMenuOpen === 1) {
+        menuOff()
+    }
+})
 
+function menuOff() {
+    menu.style.right = '-130px'
+    burgerBg.style.opacity = '0'
+    burgerBg.style.zIndex = '0'
+    burger.style.backgroundImage = "url('../../assets/images/burger.png')"
+    isMenuOpen = 0
+}
 
-
-
-
-
-
-
-
-
+function menuOn() {
+    menu.style.right = '0'
+    burgerBg.style.opacity = '0.6'
+    burgerBg.style.zIndex = '9'
+    burger.style.backgroundImage = "url('../../assets/images/cross.png')"
+    isMenuOpen = 1
+}
 
 // ////////////////////////////////////////////////base/////////////////////////////////////////////////////
 

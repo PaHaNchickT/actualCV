@@ -67,6 +67,15 @@ header {
   margin: 0 5px;
 }
 
+.lang > span {
+  cursor: pointer;
+}
+
+.act {
+  color: white;
+  cursor: auto !important;
+}
+
 .menu {
   margin-right: 120px;
   transition: 0.5s;

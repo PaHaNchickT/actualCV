@@ -13,11 +13,11 @@ const i18Obj = {
         'proj4-text': 'Virtual Keyboard',
         'proj5-text': 'Online Zoo Site',
         'proj6-text': 'Meme Slider',
-        'proj7-text': '<span class="YBspan">YouTube</span> Channel',
+        'proj7-text': '<span>YouTube</span> Channel',
 
         'about-text': 'About',
         'preview-text': 'Abakkus is a collection of projects featuring work specializing in UI/UX/Graphic Design, Illustration & Motion Graphics. I am passionate about the concept and creation of interactive experiences, and I am convinced that clear usability in combination with stimulating graphics can deliver a compelling message. Thus far, I feel fortunate to have had the opportunity to have worked with amazingly talented people on truely inspiring projects. Through these collaborations I have been able to gain a breadth of insights and knowledge that I would like to share with you here and on your next project.',
-        'contact-text': 'Contact',
+        'contact-text': 'Contact:',
 
         'designed-text': 'Designed by Pavel Terno'
     },
@@ -35,11 +35,11 @@ const i18Obj = {
         'proj4-text': 'Виртуальная клавиатура',
         'proj5-text': 'Сайт "Онлайн зоопарк"',
         'proj6-text': 'Мем-слайдер',
-        'proj7-text': '<span class="YBspan">YouTube</span> канал',
+        'proj7-text': '<span>YouTube</span> Канал',
 
         'about-text': 'Обо мне',
         'preview-text': 'Abakkus — это коллекция проектов, в которых представлены работы, специализирующиеся на UI/UX/графическом дизайне, иллюстрации и анимационной графике. Я увлечен концепцией и созданием интерактивных приложений и убежден, что четкое удобство использования в сочетании со стимулирующей графикой может доставить убедительное сообщение. До сих пор мне повезло, что у меня была возможность работать с удивительно талантливыми людьми над действительно вдохновляющими проектами. Благодаря этому сотрудничеству я смог получить широкий спектр идей и знаний, которыми я хотел бы поделиться с вами здесь и в вашем следующем проекте.',
-        'contact-text': 'Контакты',
+        'contact-text': 'Контакты:',
 
         'designed-text': 'Разработано Павлом Терно'
     }

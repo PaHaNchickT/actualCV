@@ -29,9 +29,9 @@ const i18Obj = {
         'name-text': 'Павел Терно',
         'subname-text': 'Junior Frontend разработчик',
 
-        'proj1-text': 'Игра "Шрек-пятнашки"',
+        'proj1-text': 'Игра "Шрек пазл"',
         'proj2-text': 'Сайт "Приют"',
-        'proj3-text': 'Аудиоплеер',
+        'proj3-text': 'Аудио плеер',
         'proj4-text': 'Виртуальная клавиатура',
         'proj5-text': 'Сайт "Онлайн зоопарк"',
         'proj6-text': 'Мем-слайдер',

@@ -48,7 +48,7 @@ burgerBg.addEventListener('click', function () {
 })
 
 function menuOff() {
-    menu.style.right = '-130px'
+    menu.style.right = '-156px'
     burgerBg.style.opacity = '0'
     burgerBg.style.zIndex = '0'
     burger.style.backgroundImage = "url('../../assets/images/burger.png')"

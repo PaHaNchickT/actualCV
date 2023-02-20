@@ -2,7 +2,8 @@
 // // import feedback from './feedback.js';
 
 let proj = [],
-    isMenuOpen = 0
+    isMenuOpen = 0,
+    widthP
 
 const   body = document.querySelector('body'),
         projOrig = document.querySelectorAll('.proj'),
@@ -10,7 +11,8 @@ const   body = document.querySelector('body'),
         burger = document.querySelector('.burger'),
         menu = document.querySelector('.menu'),
         burgerBg = document.querySelector('.burger-bg'),
-        home = document.querySelector('.home')
+        home = document.querySelector('.home'),
+        span = document.querySelector('.YBspan')
 
 projOrig.forEach(e => {
     proj.push(e)
@@ -59,6 +61,35 @@ function menuOn() {
     burger.style.backgroundImage = "url('../../assets/images/cross.png')"
     isMenuOpen = 1
 }
+
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////proj anim////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+proj.forEach((e, i) => {
+    e.addEventListener('mouseover', function() {
+        widthP = window.getComputedStyle(e.children[0]).width
+        e.children[0].style.fontSize = '50px'
+        e.children[0].style.textAlign = 'center'
+        e.children[0].style.width = '100%'
+        e.children[1].style.opacity = '0.3'
+        if (i === 6) {
+            span.style.color = '#E8314E'
+        }
+    })
+
+    e.addEventListener('mouseout', function() {
+        e.children[0].style.fontSize = '20px'
+        e.children[0].style.textAlign = 'left'
+        e.children[0].style.width = `${widthP}`
+        e.children[1].style.opacity = '0'
+        if (i === 6) {
+            span.style.color = 'white'
+        }
+    })
+})
+
+
 
 // ////////////////////////////////////////////////base/////////////////////////////////////////////////////
 

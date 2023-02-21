@@ -27,7 +27,7 @@ const i18Obj = {
         'menu-about-text': 'обо мне',
         'menu-contact-text': 'контакты',
         'name-text': 'Павел Терно',
-        'subname-text': 'Junior Frontend разработчик',
+        'subname-text': 'Джуниор Фронтенд-разработчик',
 
         'proj1-text': 'Игра "Шрек пазл"',
         'proj2-text': 'Сайт "Приют"',

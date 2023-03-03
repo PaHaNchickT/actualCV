@@ -7,16 +7,16 @@ const i18Obj = {
         'name-text': 'Pavel Terno',
         'subname-text': 'Junior Frontend developer',
 
-        'proj1-text': 'Shrek Game Puzzle',
-        'proj2-text': 'Shelter Site',
+        'proj1-text': 'Minesweeper Game',
+        'proj2-text': 'Shrek Game Puzzle',
         'proj3-text': 'Audio Player',
-        'proj4-text': 'Virtual Keyboard',
+        'proj4-text': 'Shelter Site',
         'proj5-text': 'Online Zoo Site',
         'proj6-text': 'Meme Slider',
         'proj7-text': '<span>YouTube</span> Channel',
 
         'about-text': 'About',
-        'preview-text': 'Abakkus is a collection of projects featuring work specializing in UI/UX/Graphic Design, Illustration & Motion Graphics. I am passionate about the concept and creation of interactive experiences, and I am convinced that clear usability in combination with stimulating graphics can deliver a compelling message. Thus far, I feel fortunate to have had the opportunity to have worked with amazingly talented people on truely inspiring projects. Through these collaborations I have been able to gain a breadth of insights and knowledge that I would like to share with you here and on your next project.',
+        'preview-text': 'Front-end development for me is, first of all, creativity, the perfect balance between intellectual work and the expression of emotions. Due to my empathy, I successfully find a common language with people, easily join the team and enjoy working in a team. I strive to solve problems with a creative approach, so I plan to achieve high performance and work efficiency. I also possess the following qualities: goal-oriented, easily trained and prone to self-development.',
         'contact-text': 'Contact:',
 
         'designed-text': 'Designed by Pavel Terno'
@@ -24,21 +24,21 @@ const i18Obj = {
     'ru': {
         'home-text': 'домой',
         'work-text': 'работы',
-        'menu-about-text': 'обо мне',
+        'menu-about-text': 'о себе',
         'menu-contact-text': 'контакты',
         'name-text': 'Павел Терно',
-        'subname-text': 'Junior Frontend разработчик',
+        'subname-text': 'Джуниор Фронтенд-разработчик',
 
-        'proj1-text': 'Игра "Шрек пазл"',
-        'proj2-text': 'Сайт "Приют"',
+        'proj1-text': 'Игра "Сапёр"',
+        'proj2-text': 'Игра "Шрек пазл"',
         'proj3-text': 'Аудио плеер',
-        'proj4-text': 'Виртуальная клавиатура',
+        'proj4-text': 'Сайт "Приют"',
         'proj5-text': 'Сайт "Онлайн зоопарк"',
         'proj6-text': 'Мем-слайдер',
         'proj7-text': '<span>YouTube</span> Канал',
 
-        'about-text': 'Обо мне',
-        'preview-text': 'Abakkus — это коллекция проектов, в которых представлены работы, специализирующиеся на UI/UX/графическом дизайне, иллюстрации и анимационной графике. Я увлечен концепцией и созданием интерактивных приложений и убежден, что четкое удобство использования в сочетании со стимулирующей графикой может доставить убедительное сообщение. До сих пор мне повезло, что у меня была возможность работать с удивительно талантливыми людьми над действительно вдохновляющими проектами. Благодаря этому сотрудничеству я смог получить широкий спектр идей и знаний, которыми я хотел бы поделиться с вами здесь и в вашем следующем проекте.',
+        'about-text': 'О себе',
+        'preview-text': 'Фронтенд разработка для меня – это в первую очередь творчество, идеальный баланс между интеллектуальной работой и выражением эмоций. Ввиду своей эмпатичности я успешно нахожу общий язык с людьми, легко вливаюсь в коллектив и с удовольствием работаю в команде. Стремлюсь решать задачи с творческим подходом, поэтому планирую достигнуть высоких показателей результативности и эффективности работы. Также обладаю следующими качествами: целеустремленный, легко обучаемый и склонен к саморазвитию.',
         'contact-text': 'Контакты:',
 
         'designed-text': 'Разработано Павлом Терно'

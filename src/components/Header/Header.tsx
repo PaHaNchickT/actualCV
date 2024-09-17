@@ -12,7 +12,6 @@ import {
 import Image from 'next/image';
 import { useEffect, useState, type ReactElement } from 'react';
 
-import AuthenticationButtons from '@/components/AuthenticationButtons/AuthenticationButtons';
 import { usePathnameIntl } from '@/navigation';
 import LangDropdown from '@/ui/LangDropdown/LangDropdown';
 import ThemTogler from '@/ui/ThemTogler/ThemTogler';
@@ -64,14 +63,8 @@ const Header = (): ReactElement => {
         <NavbarItem>
           <ThemTogler />
         </NavbarItem>
-        <NavbarItem>
-          <AuthenticationButtons />
-        </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        <NavbarMenuItem>
-          <AuthenticationButtons />
-        </NavbarMenuItem>
         <NavbarMenuItem className="flex align-middle">
           <LangDropdown />
           <ThemTogler />

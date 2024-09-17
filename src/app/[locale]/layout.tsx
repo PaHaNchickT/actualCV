@@ -6,7 +6,6 @@ import type { ReactElement } from 'react';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import { locales, type Locale } from '@/i18n';
-import { getUserFromCookie } from '@/utils/getUserFromCookie';
 
 import Providers from '../providers';
 
@@ -29,12 +28,11 @@ const RootLayout = async ({
   params: { locale: Locale };
 }>): Promise<ReactElement> => {
   const messages = await getMessages({ locale });
-  const user = await getUserFromCookie();
 
   return (
     <html lang={locale} suppressHydrationWarning={true}>
       <body>
-        <Providers locale={locale} messages={messages} user={user}>
+        <Providers locale={locale} messages={messages}>
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="max-w-[1000px] w-full mx-auto p-[10px] flex-1">{children}</main>

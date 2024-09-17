@@ -4,32 +4,19 @@ import { Avatar, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 
-import { useAuth } from '@/context/AuthContext';
 import Tooltip from '@/ui/Tooltip/Tooltip';
 
 const Home = (): ReactElement => {
-  const { user } = useAuth();
   const t = useTranslations('Home');
 
   return (
     <div className="flex justify-center">
       <div className="flex flex-col gap-4">
-        <h1 className="text-4xl text-center">
-          {user ? t('welcomeUsername', { username: user.displayName }) : t('welcome')}
-        </h1>
+        <h1 className="text-4xl text-center">{t('welcome')}</h1>
         <div className="flex gap-5 justify-center">
-          {user ? (
-            <>
-              <Link href="/GET">{t('buttons.restFullClient')}</Link>
-              <Link href="/GRAPHQL">{t('buttons.graphiQlClient')}</Link>
-              <Link href="/history">{t('buttons.history')}</Link>
-            </>
-          ) : (
-            <>
-              <Link href="/sign-in">{t('buttons.signIn')}</Link>
-              <Link href="/sign-up">{t('buttons.signUp')}</Link>
-            </>
-          )}
+          <Link href="/GET">{t('buttons.restFullClient')}</Link>
+          <Link href="/GRAPHQL">{t('buttons.graphiQlClient')}</Link>
+          <Link href="/history">{t('buttons.history')}</Link>
         </div>
         <div className="flex flex-col gap-4">
           <p className="px-2 min-[440px]:px-4 text-base text-justify">{t('appInfo')}</p>

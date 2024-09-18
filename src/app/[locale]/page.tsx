@@ -12,6 +12,7 @@ const Home = (): ReactElement => {
     <div className="flex flex-col justify-center w-full relative">
       <video
         src="/video/bg.mp4"
+        poster="/images/bg.jpg"
         width="100%"
         autoPlay
         muted

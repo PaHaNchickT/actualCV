@@ -6,13 +6,14 @@ import type { ReactElement } from 'react';
 
 import Stack from '@/components/Stack/Stack';
 import WelcomeBanner from '@/components/WelcomeBanner/WelcomeBanner';
+import { TEXT_CONTENT } from '@/constants/constants';
 
 const Home = (): ReactElement => {
   return (
     <div className="flex flex-col justify-center w-full relative">
       <video
-        src="/video/bg.mp4"
-        poster="/images/bg.jpg"
+        src={TEXT_CONTENT.path.video}
+        poster={TEXT_CONTENT.path.videoPoster}
         width="100%"
         autoPlay
         muted

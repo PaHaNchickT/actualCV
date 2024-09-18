@@ -1,11 +1,11 @@
 'use client';
 
 import { Avatar } from '@nextui-org/react';
-// import { useTranslations } from 'next-intl';
 import { useEffect, useRef, useState, type ReactElement } from 'react';
 
+import { TEXT_CONTENT } from '@/constants/constants';
+
 const Stack = (): ReactElement => {
-  // const t = useTranslations('Welcome');
   const avatarRef = useRef(null);
   const [avatarWidth, setAvatarWidth] = useState(250);
 
@@ -29,7 +29,7 @@ const Stack = (): ReactElement => {
         </div>
       </div>
       <Avatar
-        src="/images/avatar.png"
+        src={TEXT_CONTENT.path.avatar}
         className="w-[250px] h-[250px] shadow-[0_0_20px_7px_background]"
         ref={avatarRef}
       />

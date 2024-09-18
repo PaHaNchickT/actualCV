@@ -4,11 +4,12 @@
 // import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 
+import Stack from '@/components/Stack/Stack';
 import WelcomeBanner from '@/components/WelcomeBanner/WelcomeBanner';
 
 const Home = (): ReactElement => {
   return (
-    <div className="flex justify-center w-full relative">
+    <div className="flex flex-col justify-center w-full relative">
       <video
         src="/video/bg.mp4"
         width="100%"
@@ -18,6 +19,7 @@ const Home = (): ReactElement => {
         className="fixed top-0 z-[0] blur-[2px] opacity-90"
       ></video>
       <WelcomeBanner />
+      <Stack />
       {/* <div className="flex flex-col gap-4">
         <h1 className="text-4xl text-center">{t('welcome')}</h1>
         <div className="flex gap-5 justify-center">

@@ -24,9 +24,9 @@ module.exports = {
         dark: {
           layout: {},
           colors: {
-            background: '#555555',
+            background: '#111111',
             primary: {
-              DEFAULT: '#BEF264',
+              DEFAULT: '#f6ad34',
             },
           },
         },

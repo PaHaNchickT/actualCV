@@ -2,5 +2,9 @@
   "Welcome": {
     "h1": "Pavel Terno",
     "h2": "Junior Frontend developer"
+  },
+  "Error": {
+    "message": "Something went wrong!",
+    "button": "To main page"
   }
 }

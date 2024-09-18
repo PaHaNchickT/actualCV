@@ -1,5 +1,10 @@
 {
-  "Home": {
-    "welcome": "Welcome!"
+  "Welcome": {
+    "h1": "Pavel Terno",
+    "h2": "Junior Frontend developer"
+  },
+  "Error": {
+    "message": "Что-то пошло не так!",
+    "button": "На главную страницу"
   }
 }

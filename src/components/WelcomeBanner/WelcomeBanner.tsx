@@ -43,7 +43,7 @@ const WelcomeBanner = (): ReactElement => {
   // }, [pathname]);
 
   return (
-    <div className="relative w-full h-[700px] flex flex-col justify-center items-center relative z-[1]">
+    <div className="relative w-full h-[710px] flex flex-col justify-center items-center relative z-[1]">
       <h1 className="font-black text-8xl">{t('h1')}</h1>
       <h2 className="text-xl text-center">{t('h2')}</h2>
     </div>

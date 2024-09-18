@@ -35,7 +35,7 @@ const RootLayout = async ({
         <Providers locale={locale} messages={messages}>
           <div className="min-h-screen flex flex-col">
             <Header />
-            <main className="max-w-[1000px] w-full mx-auto p-[10px] flex-1">{children}</main>
+            <main className="w-full flex-1">{children}</main>
             <Footer />
           </div>
         </Providers>

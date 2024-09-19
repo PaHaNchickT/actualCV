@@ -3,7 +3,7 @@
 import { Avatar } from '@nextui-org/react';
 import { useEffect, useRef, useState, type ReactElement } from 'react';
 
-import { TEXT_CONTENT } from '@/constants/constants';
+import { ASSETS_PATH } from '@/constants/constants';
 
 import StackItems from '../StackItems/StackItems';
 
@@ -18,10 +18,10 @@ const Stack = (): ReactElement => {
   }, []);
 
   return (
-    <div className="relative w-full h-[100px] flex justify-between items-center bg-background text-2xl font-black shadow-[0_0_20px_-5px_#F6AD34]">
+    <div className="relative w-full h-[100px] flex justify-between items-center bg-background text-2xl font-black shadow-[0_0_20px_-5px_#F6AD34] z-[2]">
       <StackItems index={0} avatarWidth={avatarWidth} />
       <Avatar
-        src={TEXT_CONTENT.path.avatar}
+        src={ASSETS_PATH.avatar}
         className="w-[250px] h-[250px] shadow-[0_0_20px_7px_background]"
         ref={avatarRef}
       />

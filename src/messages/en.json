@@ -6,5 +6,33 @@
   "Error": {
     "message": "Something went wrong!",
     "button": "To main page"
+  },
+  "Works": {
+    "items": {
+      "0": {
+        "title": "GetMan",
+        "descr": "Something here"
+      },
+      "1": {
+        "title": "Kinomania",
+        "descr": "Something here"
+      },
+      "2": {
+        "title": "English Puzzle",
+        "descr": "Something here"
+      },
+      "3": {
+        "title": "Nonograms",
+        "descr": "Something here"
+      },
+      "4": {
+        "title": "Minesweeper",
+        "descr": "Something here"
+      },
+      "5": {
+        "title": "Coffee House",
+        "descr": "Something here"
+      }
+    }
   }
 }

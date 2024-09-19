@@ -6,14 +6,15 @@ import type { ReactElement } from 'react';
 
 import Stack from '@/components/Stack/Stack';
 import WelcomeBanner from '@/components/WelcomeBanner/WelcomeBanner';
-import { TEXT_CONTENT } from '@/constants/constants';
+import Work from '@/components/Work/Work';
+import { ASSETS_PATH } from '@/constants/constants';
 
 const Home = (): ReactElement => {
   return (
     <div className="flex flex-col justify-center w-full relative">
       <video
-        src={TEXT_CONTENT.path.video}
-        poster={TEXT_CONTENT.path.videoPoster}
+        src={ASSETS_PATH.video}
+        poster={ASSETS_PATH.videoPoster}
         width="100%"
         autoPlay
         muted
@@ -22,6 +23,7 @@ const Home = (): ReactElement => {
       ></video>
       <WelcomeBanner />
       <Stack />
+      <Work />
       {/* <div className="flex flex-col gap-4">
         <h1 className="text-4xl text-center">{t('welcome')}</h1>
         <div className="flex gap-5 justify-center">

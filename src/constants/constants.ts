@@ -1,9 +1,11 @@
-export const TEXT_CONTENT = {
-  path: {
-    video: '/video/bg.mp4',
-    videoPoster: '/images/bg.jpg',
-    avatar: '/images/avatar.png',
-  },
+import type { TWorkItem } from '@/types/types';
+
+export const ASSETS_PATH = {
+  video: '/video/bg.mp4',
+  videoPoster: '/images/bg.jpg',
+  avatar: '/images/avatar.png',
+  placeholder: '/images/placeholder.png',
+  proj: '/images/proj',
 };
 
 export const STACK_COLORS: { [key: string]: string } = {
@@ -44,21 +46,95 @@ export const STACK = [
   ],
 ];
 
-export const WORKS = [
+export const WORKS: TWorkItem[] = [
   {
     id: 0,
-    title: 'Placeholder Title',
-    descr:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras orci risus, vehicula sit amet pulvinar at, eleifend et risus. Donec consequat sapien posuere laoreet feugiat. Nunc eget lacus ut turpis semper bibendum vel eu diam. Proin eget sapien sed massa tristique convallis. In rhoncus, arcu vel cursus aliquet, elit urna vehicula urna, eu sollicitudin arcu mi sed lorem. Proin et lorem metus. Proin sit amet eleifend orci. Nunc quis tristique justo. Nullam consequat pretium efficitur. Suspendisse potenti. Curabitur tristique nibh at ex mollis placerat. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla nec pharetra arcu. Mauris maximus dui ac iaculis imperdiet.',
     stack: [
-      {
-        name: 'React',
-        key: 'react',
-      },
-      {
-        name: 'NextJS',
-        key: 'next',
-      },
+      // {
+      //   name: 'React',
+      //   key: 'react',
+      // },
+      // {
+      //   name: 'NextJS',
+      //   key: 'next',
+      // },
     ],
+    year: 2024,
+    link: 'https://graphiql-app-kappa.vercel.app/en',
+  },
+  {
+    id: 1,
+    stack: [
+      // {
+      //   name: 'React',
+      //   key: 'react',
+      // },
+      // {
+      //   name: 'NextJS',
+      //   key: 'next',
+      // },
+    ],
+    year: 2024,
+    link: 'https://react-2024-q3-zrxs.vercel.app/films?page=1',
+  },
+  {
+    id: 2,
+    stack: [
+      // {
+      //   name: 'React',
+      //   key: 'react',
+      // },
+      // {
+      //   name: 'NextJS',
+      //   key: 'next',
+      // },
+    ],
+    year: 2024,
+    link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-rss-puzzle/',
+  },
+  {
+    id: 3,
+    stack: [
+      // {
+      //   name: 'React',
+      //   key: 'react',
+      // },
+      // {
+      //   name: 'NextJS',
+      //   key: 'next',
+      // },
+    ],
+    year: 2024,
+    link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-nonograms/',
+  },
+  {
+    id: 4,
+    stack: [
+      // {
+      //   name: 'React',
+      //   key: 'react',
+      // },
+      // {
+      //   name: 'NextJS',
+      //   key: 'next',
+      // },
+    ],
+    year: 2023,
+    link: 'https://pahanchickt.github.io/minesweeper/index.html',
+  },
+  {
+    id: 5,
+    stack: [
+      // {
+      //   name: 'React',
+      //   key: 'react',
+      // },
+      // {
+      //   name: 'NextJS',
+      //   key: 'next',
+      // },
+    ],
+    year: 2023,
+    link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-coffee-house/pages/home/',
   },
 ];

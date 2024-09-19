@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@nextui-org/react';
 import type { ReactElement } from 'react';
 
 import { WORKS } from '@/constants/constants';
@@ -12,6 +13,7 @@ const Work = (): ReactElement => {
       {WORKS.map((item, index) => (
         <WorkItems item={item} key={index} />
       ))}
+      <Button size="lg">About this site</Button>
     </div>
   );
 };

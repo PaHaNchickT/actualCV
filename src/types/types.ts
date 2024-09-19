@@ -4,6 +4,5 @@ export type TWorkItem = {
     name: string;
     key: string;
   }[];
-  year: number;
   link: string;
 };

@@ -11,27 +11,39 @@
     "items": {
       "0": {
         "title": "GetMan",
-        "descr": "Something here"
+        "subtitle": "\"GetMan\" App",
+        "descrMain": "This application is our joint final project on the RS School course. It is a simplified copy of the Postman application, allowing you to send both classic requests to the Resfull API and GraphQl requests, as well as study the response in a convenient and flexible editor. The application supports changing the language and theme, an authentication system, and a request history is implemented.",
+        "descrSub": "The development took 4 weeks. The development was carried out in a team of three people using the Scrum methodology, sprints lasted one week, at the end of the sprints a retrospective was held. We used GitHub Projects as a task board."
       },
       "1": {
         "title": "Kinomania",
-        "descr": "Something here"
+        "subtitle": "\"Kinomania\" App",
+        "descrMain": "Something here",
+        "descrSub": "Still something here"
       },
       "2": {
         "title": "English Puzzle",
-        "descr": "Something here"
+        "subtitle": "\"English Puzzle\" Game",
+        "descrMain": "Something here",
+        "descrSub": "Still something here"
       },
       "3": {
         "title": "Nonograms",
-        "descr": "Something here"
+        "subtitle": "\"Nonograms\" Game",
+        "descrMain": "Something here",
+        "descrSub": "Still something here"
       },
       "4": {
         "title": "Minesweeper",
-        "descr": "Something here"
+        "subtitle": "\"Minesweeper\" Game",
+        "descrMain": "Something here",
+        "descrSub": "Still something here"
       },
       "5": {
         "title": "Coffee House",
-        "descr": "Something here"
+        "subtitle": "\"Coffee House\" Site",
+        "descrMain": "Something here",
+        "descrSub": "Still something here"
       }
     },
     "btnLink": "Go to the site!"

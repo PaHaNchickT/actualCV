@@ -16,7 +16,7 @@ import {
 import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 
-import { ASSETS_PATH } from '@/constants/constants';
+import { ASSETS_PATH, STACK_COLORS } from '@/constants/constants';
 import type { TWorkItem } from '@/types/types';
 
 const WorkItems = (props: { item: TWorkItem }): ReactElement => {
@@ -50,24 +50,42 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
         </Card>
       </div>
 
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="3xl">
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl">
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">{t(`items.${props.item.id}.title`)}</ModalHeader>
-              <ModalBody className="flex-row justify-between gap-5">
-                <section className="w-[65%]">
-                  <p>{t(`items.${props.item.id}.descr`)}</p>
-                </section>
-                <Image
-                  shadow="sm"
-                  radius="lg"
-                  width="200px"
-                  height="200px"
-                  alt={`${t(`items.${props.item.id}.descr`)}-cover`}
-                  className="self-center object-cover"
-                  src={`${ASSETS_PATH.proj}${props.item.id}.jpg`}
-                />
+              <ModalHeader className="flex flex-col gap-1 text-primary">
+                {t(`items.${props.item.id}.subtitle`)}
+              </ModalHeader>
+              <ModalBody>
+                <div className="flex flex-row justify-between gap-5">
+                  <section className="w-[65%] flex flex-col gap-3">
+                    <p className="text-justify">{t(`items.${props.item.id}.descrMain`)}</p>
+                    <p className="text-justify">{t(`items.${props.item.id}.descrSub`)}</p>
+                    <div className="flex flex-col">
+                      <p className="text-primary">Stack:</p>
+                      <div className="flex flex-wrap gap-2">
+                        {props.item.stack.map((lang) => (
+                          <p
+                            key={lang.name}
+                            className={`text-xs [text-shadow:_0_0_1px_white] text-[${STACK_COLORS[lang.key]}]`}
+                          >
+                            {lang.name}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </section>
+                  <Image
+                    shadow="sm"
+                    radius="lg"
+                    width="300px"
+                    height="300px"
+                    alt={`${t(`items.${props.item.id}.title`)}-cover`}
+                    className="self-center object-cover"
+                    src={`${ASSETS_PATH.proj}${props.item.id}.jpg`}
+                  />
+                </div>
               </ModalBody>
               <ModalFooter className="justify-center">
                 <Button color="primary" onPress={onClose}>

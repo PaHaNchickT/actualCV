@@ -9,16 +9,20 @@ export const ASSETS_PATH = {
 };
 
 export const STACK_COLORS: { [key: string]: string } = {
+  firebase: '#FFCB2D',
   html: '#F67E34',
+  husky: '#113256',
+  jest: '#FF6434',
+  js: '#F6AD34',
+  lint: '#4B32C3',
+  next: 'white',
+  pretty: 'white',
+  react: '#00D8FF',
+  redux: '#764ABC',
   sass: '#EC407A',
   tail: '#06B6D4',
-  js: '#F6AD34',
-  webpack: '#1C78C0',
   ts: '#3178C6',
-  react: '#00D8FF',
-  next: 'white',
-  redux: '#764ABC',
-  jest: '#FF6434',
+  webpack: '#1C78C0',
 };
 
 export const STACK = [
@@ -50,16 +54,43 @@ export const WORKS: TWorkItem[] = [
   {
     id: 0,
     stack: [
-      // {
-      //   name: 'React',
-      //   key: 'react',
-      // },
-      // {
-      //   name: 'NextJS',
-      //   key: 'next',
-      // },
+      {
+        name: 'TypeScript',
+        key: 'ts',
+      },
+      {
+        name: 'React',
+        key: 'react',
+      },
+      {
+        name: 'NextJS',
+        key: 'next',
+      },
+      {
+        name: 'TailWind',
+        key: 'tail',
+      },
+      {
+        name: 'ESLint',
+        key: 'lint',
+      },
+      {
+        name: 'Prettier',
+        key: 'pretty',
+      },
+      {
+        name: 'Husky',
+        key: 'husky',
+      },
+      {
+        name: 'FireBase',
+        key: 'firebase',
+      },
+      {
+        name: 'Jest',
+        key: 'jest',
+      },
     ],
-    year: 2024,
     link: 'https://graphiql-app-kappa.vercel.app/en',
   },
   {
@@ -74,7 +105,6 @@ export const WORKS: TWorkItem[] = [
       //   key: 'next',
       // },
     ],
-    year: 2024,
     link: 'https://react-2024-q3-zrxs.vercel.app/films?page=1',
   },
   {
@@ -89,7 +119,6 @@ export const WORKS: TWorkItem[] = [
       //   key: 'next',
       // },
     ],
-    year: 2024,
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-rss-puzzle/',
   },
   {
@@ -104,7 +133,6 @@ export const WORKS: TWorkItem[] = [
       //   key: 'next',
       // },
     ],
-    year: 2024,
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-nonograms/',
   },
   {
@@ -119,7 +147,6 @@ export const WORKS: TWorkItem[] = [
       //   key: 'next',
       // },
     ],
-    year: 2023,
     link: 'https://pahanchickt.github.io/minesweeper/index.html',
   },
   {
@@ -134,7 +161,6 @@ export const WORKS: TWorkItem[] = [
       //   key: 'next',
       // },
     ],
-    year: 2023,
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-coffee-house/pages/home/',
   },
 ];

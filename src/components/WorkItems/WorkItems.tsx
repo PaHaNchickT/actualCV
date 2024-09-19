@@ -5,6 +5,7 @@ import {
   Card,
   CardBody,
   Image,
+  Link,
   Modal,
   ModalBody,
   ModalContent,
@@ -29,20 +30,20 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
           shadow="sm"
           isPressable
           onPress={onOpen}
-          className="w-[400px] h-[400px] flex flex-col justify-center relative"
+          className="w-[400px] h-[400px] flex flex-col justify-center relative bg-black hover:bg-[#F6AD34]"
         >
-          <CardBody className="overflow-visible p-0 absolute z-[2]">
+          <CardBody className="overflow-visible p-0 absolute z-[2] opacity-70">
             <Image
               shadow="sm"
               radius="lg"
               width="400px"
               height="400px"
               alt={`${t(`items.${props.item.id}.title`)}-cover`}
-              className="w-full object-cover"
+              className="w-full object-cover blur-[1px] grayscale"
               src={`${ASSETS_PATH.proj}${props.item.id}.jpg`}
             />
           </CardBody>
-          <div className="bg-black px-5 py-2 text-2xl box-border relative z-[3]">
+          <div className="bg-background px-6 py-3 text-3xl box-border relative z-[3]">
             {/* {transition-all duration-300 group-hover/card:w-full group-hover/card:text-4xl} */}
             <b>{t(`items.${props.item.id}.title`)}</b>
           </div>
@@ -68,12 +69,11 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
                   src={`${ASSETS_PATH.proj}${props.item.id}.jpg`}
                 />
               </ModalBody>
-              <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
+              <ModalFooter className="justify-center">
                 <Button color="primary" onPress={onClose}>
-                  Action
+                  <Link href={props.item.link} className="text-black" target="_blank">
+                    {t('btnLink')}
+                  </Link>
                 </Button>
               </ModalFooter>
             </>

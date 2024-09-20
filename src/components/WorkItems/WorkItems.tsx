@@ -3,7 +3,7 @@
 'use client';
 
 import { Card, CardBody, useDisclosure } from '@nextui-org/react';
-import { useTranslations } from 'next-intl';
+import type { useTranslations } from 'next-intl';
 import { type ReactElement } from 'react';
 
 import { ASSETS_PATH } from '@/constants/constants';
@@ -11,8 +11,7 @@ import type { TWorkItem } from '@/types/types';
 
 import WorkModal from '../WorkModal/WorkModal';
 
-const WorkItems = (props: { item: TWorkItem }): ReactElement => {
-  const t = useTranslations('Works');
+const WorkItems = (props: { item: TWorkItem; t: ReturnType<typeof useTranslations<'Works'>> }): ReactElement => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   // useEffect(() => {
@@ -37,12 +36,12 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
             ></div>
           </CardBody>
           <div className="bg-background pl-8 pr-2 py-1 text-xl box-border relative z-[3] transition-all min-w-[10px] group-hover/card:min-w-full group-hover/card:text-5xl group-hover/card:py-4 group-hover/card:px-0">
-            <p>{t(`items.${props.item.id}.title`)}</p>
+            <p>{props.t(`items.${props.item.id}.title`)}</p>
           </div>
         </Card>
       </div>
 
-      <WorkModal item={props.item} isOpen={isOpen} onOpenChange={onOpenChange} t={t} />
+      <WorkModal item={props.item} isOpen={isOpen} onOpenChange={onOpenChange} t={props.t} />
     </>
   );
 };

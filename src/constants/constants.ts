@@ -250,3 +250,34 @@ export const WORKS: TWorkItem[] = [
     cover: "bg-[url('/images/proj5.jpg')]",
   },
 ];
+
+export const PORTFOLIO_STACK = [
+  {
+    name: 'TypeScript',
+    key: 'ts',
+  },
+  {
+    name: 'React',
+    key: 'react',
+  },
+  {
+    name: 'NextJS',
+    key: 'next',
+  },
+  {
+    name: 'TailWind',
+    key: 'tail',
+  },
+  {
+    name: 'ESLint',
+    key: 'lint',
+  },
+  {
+    name: 'Prettier',
+    key: 'pretty',
+  },
+  {
+    name: 'Husky',
+    key: 'husky',
+  },
+];

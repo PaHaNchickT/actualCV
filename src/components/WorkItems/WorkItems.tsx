@@ -46,7 +46,7 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
             ></div>
           </CardBody>
           <div className="bg-background pl-8 pr-2 py-1 text-xl box-border relative z-[3] transition-all min-w-[10px] group-hover/card:min-w-full group-hover/card:text-5xl group-hover/card:py-4 group-hover/card:px-0">
-            <b>{t(`items.${props.item.id}.title`)}</b>
+            <p>{t(`items.${props.item.id}.title`)}</p>
           </div>
         </Card>
       </div>

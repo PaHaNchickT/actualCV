@@ -72,7 +72,7 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
                         {props.item.stack.map((lang) => (
                           <p
                             key={lang.name}
-                            className={`text-xs [text-shadow:_0_0_1px_white] text-[${STACK_COLORS[lang.key]}]`}
+                            className={`text-xs [text-shadow:_0_0_1px_white] ${STACK_COLORS[lang.key]}`}
                           >
                             {lang.name}
                           </p>

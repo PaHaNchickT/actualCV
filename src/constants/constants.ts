@@ -9,22 +9,26 @@ export const ASSETS_PATH = {
 };
 
 export const STACK_COLORS: { [key: string]: string } = {
-  figma: '#0ACF83',
-  firebase: '#FFCB2D',
-  html: '#F67E34',
-  husky: '#113256',
-  jest: '#FF6434',
-  js: '#F6AD34',
-  lint: '#4B32C3',
-  next: 'white',
-  nodejs: '#83CD29',
-  pretty: 'white',
-  react: '#00D8FF',
-  redux: '#764ABC',
-  sass: '#EC407A',
-  tail: '#06B6D4',
-  ts: '#3178C6',
-  webpack: '#1C78C0',
+  figma: 'text-[#0ACF83]',
+  firebase: 'text-[#FFCB2D]',
+  html: 'text-[#F67E34]',
+  husky: 'text-[#113256]',
+  jest: 'text-[#FF6434]',
+  js: 'text-[#F6AD34]',
+  lint: 'text-[#4B32C3]',
+  next: 'text-[white]',
+  nodejs: 'text-[#83CD29]',
+  pretty: 'text-[white]',
+  react: 'text-[#00D8FF]',
+  redux: 'text-[#764ABC]',
+  sass: 'text-[#EC407A]',
+  tail: 'text-[#06B6D4]',
+  ts: 'text-[#3178C6]',
+  webpack: 'text-[#1C78C0]',
+};
+
+export const STACK_WIDTH: { [key: number]: string } = {
+  250: 'w-[calc((100%-250px)/2)]',
 };
 
 export const STACK = [

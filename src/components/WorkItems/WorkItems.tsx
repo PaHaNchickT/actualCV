@@ -28,6 +28,9 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
   //   if (props.item.id === 1) onOpen();
   // }, []);
 
+  const ImgPath = `${ASSETS_PATH.proj}${props.item.id}.jpg`;
+  console.log(ImgPath);
+
   return (
     <>
       <div className="">
@@ -38,15 +41,9 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
           className="w-[400px] h-[400px] flex flex-col justify-center relative bg-black group/card"
         >
           <CardBody className="overflow-visible p-0 absolute z-[2] opacity-70">
-            <Image
-              shadow="sm"
-              radius="lg"
-              width="400px"
-              height="400px"
-              alt={`${t(`items.${props.item.id}.title`)}-cover`}
-              className="w-full object-cover blur-[1px] transition-all duration-300 grayscale group-hover/card:grayscale-0"
-              src={`${ASSETS_PATH.proj}${props.item.id}.jpg`}
-            />
+            <div
+              className={`${props.item.cover} bg-cover w-[400px] h-[400px] blur-[2px] transition-all duration-300 grayscale group-hover/card:grayscale-0 group-hover/card:blur-[1px]`}
+            ></div>
           </CardBody>
           <div className="bg-background pl-8 pr-2 py-1 text-xl box-border relative z-[3] transition-all min-w-[10px] group-hover/card:min-w-full group-hover/card:text-5xl group-hover/card:py-4 group-hover/card:px-0">
             <b>{t(`items.${props.item.id}.title`)}</b>
@@ -99,9 +96,6 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
                   </div>
                 </div>
               </ModalBody>
-              {/* <ModalFooter className="justify-center">
-                
-              </ModalFooter> */}
             </>
           )}
         </ModalContent>

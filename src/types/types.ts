@@ -5,4 +5,5 @@ export type TWorkItem = {
     key: string;
   }[];
   link: string;
+  cover: string;
 };

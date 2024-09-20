@@ -104,6 +104,7 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://graphiql-app-kappa.vercel.app/en',
+    cover: "bg-[url('/images/proj0.jpg')]",
   },
   {
     id: 1,
@@ -146,6 +147,7 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://react-2024-q3-zrxs.vercel.app/films?page=1',
+    cover: "bg-[url('/images/proj1.jpg')]",
   },
   {
     id: 2,
@@ -176,6 +178,7 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-rss-puzzle/',
+    cover: "bg-[url('/images/proj2.jpg')]",
   },
   {
     id: 3,
@@ -202,6 +205,7 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-nonograms/',
+    cover: "bg-[url('/images/proj3.jpg')]",
   },
   {
     id: 4,
@@ -220,6 +224,7 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://pahanchickt.github.io/minesweeper/index.html',
+    cover: "bg-[url('/images/proj4.jpg')]",
   },
   {
     id: 5,
@@ -242,5 +247,6 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-coffee-house/pages/home/',
+    cover: "bg-[url('/images/proj5.jpg')]",
   },
 ];

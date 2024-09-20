@@ -63,7 +63,7 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
                     <p className="text-justify">{t(`items.${props.item.id}.descrMain`)}</p>
                     <p className="text-justify">{t(`items.${props.item.id}.descrSub`)}</p>
                     <div className="flex flex-col">
-                      <p className="text-primary">Stack:</p>
+                      <p className="text-primary">{t('stackLabel')}</p>
                       <div className="flex flex-wrap gap-2">
                         {props.item.stack.map((lang) => (
                           <p

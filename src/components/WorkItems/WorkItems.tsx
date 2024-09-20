@@ -28,7 +28,7 @@ const WorkItems = (props: { item: TWorkItem; t: ReturnType<typeof useTranslation
           shadow="sm"
           isPressable
           onPress={onOpen}
-          className="w-[400px] h-[400px] flex flex-col justify-center relative bg-black group/card"
+          className="w-[400px] h-[400px] transition-all duration-300 flex flex-col justify-center relative bg-black group/card shadow-[0_0_20px_7px_background] hover:shadow-[0_0_10px_1px_#F6AD34]"
         >
           <CardBody className="overflow-visible p-0 absolute z-[2] opacity-70">
             <div

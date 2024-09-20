@@ -91,11 +91,11 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
                       className="object-cover"
                       src={`${ASSETS_PATH.proj}${props.item.id}.jpg`}
                     />
-                    <Button color="primary" onPress={onClose}>
-                      <Link href={props.item.link} className="text-black" target="_blank">
+                    <Link href={props.item.link} className="text-black rounded-xl" target="_blank">
+                      <Button color="primary" onPress={onClose} className="w-full">
                         {t('btnLink')}
-                      </Link>
-                    </Button>
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </ModalBody>

@@ -53,6 +53,7 @@
       }
     },
     "btnLink": "Перейти на сайт",
-    "stackLabel": "Стек:"
+    "stackLabel": "Стек:",
+    "footerAuthor": "Сайт сделан Павлом Терно"
   }
 }

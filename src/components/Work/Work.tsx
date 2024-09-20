@@ -14,7 +14,7 @@ const Work = (): ReactElement => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <div className="flex justify-center flex-wrap gap-5 w-full pt-[120px] px-20 relative z-1 bg-gradient-to-t from-transparent to-background shadow-[0_0_40px_20px_background]">
+    <div className="flex justify-center flex-wrap gap-5 w-full pt-[120px] px-20 relative z-1 bg-gradient-to-t from-transparent to-background">
       {WORKS.map((item, index) => (
         <WorkItems item={item} t={t} key={index} />
       ))}

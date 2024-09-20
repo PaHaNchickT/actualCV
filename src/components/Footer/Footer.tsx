@@ -1,12 +1,11 @@
 'use client';
 
-import { Link } from '@nextui-org/react';
+import { useTranslations } from 'next-intl';
 // import { useTranslations } from 'next-intl';
 // import { useTheme } from 'next-themes';
 import type { ReactElement } from 'react';
 
 // import GithubOutlineIcon from './GithubOutlineIcon';
-import RssLogo from './RssLogo';
 
 // const githubLinks = (t: ReturnType<typeof useTranslations<'Home.team'>>): { href: string; label: string }[] => [
 //   {
@@ -24,28 +23,14 @@ import RssLogo from './RssLogo';
 // ];
 
 export const Footer = (): ReactElement => {
-  // const { theme } = useTheme();
-  // const t = useTranslations('Home.team');
+  const t = useTranslations('Works');
 
   return (
-    <footer className="flex-grow-0 mt-4 p-4 flex border-t-1 border-t-default-400">
-      <div className="flex-1 flex flex-wrap gap-1">
-        {/* {githubLinks(t).map((link) => (
-          <Link key={link.href} href={link.href} target="_blank" className="flex gap-1 text-small">
-            <span className="flex-shrink-0">
-              <GithubOutlineIcon fill={theme === 'light' ? '#000' : '#fff'} />
-            </span>
-            {link.label}
-          </Link>
-        ))} */}
-      </div>
-      <div className="flex-1 max-w-8 flex justify-center items-center">
-        <span className="text-small text-default-500">2024</span>
-      </div>
-      <div className="flex-1 flex justify-end">
-        <Link href="https://rs.school/courses/reactjs" target="_blank">
-          <RssLogo />
-        </Link>
+    <footer className="z-50 bg-transparent border-t-1 border-t-default-300 w-full flex justify-center backdrop-blur-lg backdrop-saturate-150">
+      <div className="max-w-5xl w-full p-6 flex justify-between relative text-primary font-black">
+        <p>{t('footerAuthor')}</p>
+        <p className="w-[39px] absolute left-[calc((100%-39px)/2)] text-center">2024</p>
+        <p>GitHub</p>
       </div>
     </footer>
   );

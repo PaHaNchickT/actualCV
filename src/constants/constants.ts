@@ -9,6 +9,7 @@ export const ASSETS_PATH = {
 };
 
 export const STACK_COLORS: { [key: string]: string } = {
+  figma: '#0ACF83',
   firebase: '#FFCB2D',
   html: '#F67E34',
   husky: '#113256',
@@ -16,6 +17,7 @@ export const STACK_COLORS: { [key: string]: string } = {
   js: '#F6AD34',
   lint: '#4B32C3',
   next: 'white',
+  nodejs: '#83CD29',
   pretty: 'white',
   react: '#00D8FF',
   redux: '#764ABC',
@@ -27,26 +29,32 @@ export const STACK_COLORS: { [key: string]: string } = {
 
 export const STACK = [
   [
-    { name: 'HTML', key: 'html', id: 0 },
     [
-      { name: 'SASS', key: 'sass', id: 1 },
-      { name: 'Tailwind', key: 'tail', id: 2 },
+      { name: 'HTML', key: 'html', id: 0 },
+      { name: 'Figma', key: 'figma', id: 1 },
     ],
     [
-      { name: 'JavaScript', key: 'js', id: 3 },
-      { name: 'WebPack', key: 'webpack', id: 4 },
+      { name: 'SASS', key: 'sass', id: 2 },
+      { name: 'Tailwind', key: 'tail', id: 3 },
+    ],
+    [
+      { name: 'JavaScript', key: 'js', id: 4 },
+      { name: 'WebPack', key: 'webpack', id: 5 },
     ],
   ],
   [
     [
-      { name: 'TypeScript', key: 'ts', id: 5 },
-      { name: 'React', key: 'react', id: 6 },
+      { name: 'TypeScript', key: 'ts', id: 6 },
+      { name: 'React', key: 'react', id: 7 },
     ],
     [
-      { name: 'Next.js', key: 'next', id: 7 },
-      { name: 'Redux', key: 'redux', id: 8 },
+      { name: 'Next.js', key: 'next', id: 8 },
+      { name: 'Redux', key: 'redux', id: 9 },
     ],
-    { name: 'Jest', key: 'jest', id: 9 },
+    [
+      { name: 'Jest', key: 'jest', id: 10 },
+      { name: 'Node.js', key: 'nodejs', id: 11 },
+    ],
   ],
 ];
 
@@ -96,70 +104,138 @@ export const WORKS: TWorkItem[] = [
   {
     id: 1,
     stack: [
-      // {
-      //   name: 'React',
-      //   key: 'react',
-      // },
-      // {
-      //   name: 'NextJS',
-      //   key: 'next',
-      // },
+      {
+        name: 'TypeScript',
+        key: 'ts',
+      },
+      {
+        name: 'React',
+        key: 'react',
+      },
+      {
+        name: 'NextJS',
+        key: 'next',
+      },
+      {
+        name: 'Redux',
+        key: 'redux',
+      },
+      {
+        name: 'SASS',
+        key: 'sass',
+      },
+      {
+        name: 'ESLint',
+        key: 'lint',
+      },
+      {
+        name: 'Prettier',
+        key: 'pretty',
+      },
+      {
+        name: 'Husky',
+        key: 'husky',
+      },
+      {
+        name: 'Jest',
+        key: 'jest',
+      },
     ],
     link: 'https://react-2024-q3-zrxs.vercel.app/films?page=1',
   },
   {
     id: 2,
     stack: [
-      // {
-      //   name: 'React',
-      //   key: 'react',
-      // },
-      // {
-      //   name: 'NextJS',
-      //   key: 'next',
-      // },
+      {
+        name: 'TypeScript',
+        key: 'ts',
+      },
+      {
+        name: 'SASS',
+        key: 'sass',
+      },
+      {
+        name: 'WebPack',
+        key: 'webpack',
+      },
+      {
+        name: 'ESLint',
+        key: 'lint',
+      },
+      {
+        name: 'Prettier',
+        key: 'pretty',
+      },
+      {
+        name: 'Husky',
+        key: 'husky',
+      },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-rss-puzzle/',
   },
   {
     id: 3,
     stack: [
-      // {
-      //   name: 'React',
-      //   key: 'react',
-      // },
-      // {
-      //   name: 'NextJS',
-      //   key: 'next',
-      // },
+      {
+        name: 'JavaScript',
+        key: 'js',
+      },
+      {
+        name: 'SASS',
+        key: 'sass',
+      },
+      {
+        name: 'WebPack',
+        key: 'webpack',
+      },
+      {
+        name: 'ESLint',
+        key: 'lint',
+      },
+      {
+        name: 'Prettier',
+        key: 'pretty',
+      },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-nonograms/',
   },
   {
     id: 4,
     stack: [
-      // {
-      //   name: 'React',
-      //   key: 'react',
-      // },
-      // {
-      //   name: 'NextJS',
-      //   key: 'next',
-      // },
+      {
+        name: 'HTML',
+        key: 'html',
+      },
+      {
+        name: 'SASS',
+        key: 'sass',
+      },
+      {
+        name: 'JavaScript',
+        key: 'js',
+      },
     ],
     link: 'https://pahanchickt.github.io/minesweeper/index.html',
   },
   {
     id: 5,
     stack: [
-      // {
-      //   name: 'React',
-      //   key: 'react',
-      // },
-      // {
-      //   name: 'NextJS',
-      //   key: 'next',
-      // },
+      {
+        name: 'HTML',
+        key: 'html',
+      },
+      {
+        name: 'SASS',
+        key: 'sass',
+      },
+      {
+        name: 'Figma',
+        key: 'figma',
+      },
+      {
+        name: 'JavaScript',
+        key: 'js',
+      },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-coffee-house/pages/home/',
   },

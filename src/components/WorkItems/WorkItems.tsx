@@ -50,7 +50,7 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
         </Card>
       </div>
 
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl">
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="4xl">
         <ModalContent>
           {(onClose) => (
             <>
@@ -59,7 +59,7 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
               </ModalHeader>
               <ModalBody>
                 <div className="flex flex-row justify-between gap-5">
-                  <section className="w-[65%] flex flex-col gap-3">
+                  <section className="w-[60%] flex flex-col gap-3">
                     <p className="text-justify">{t(`items.${props.item.id}.descrMain`)}</p>
                     <p className="text-justify">{t(`items.${props.item.id}.descrSub`)}</p>
                     <div className="flex flex-col">

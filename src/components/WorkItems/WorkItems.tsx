@@ -52,7 +52,7 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
       </div>
 
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="4xl" backdrop="blur">
-        <ModalContent>
+        <ModalContent className="bg-background">
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1 text-primary">

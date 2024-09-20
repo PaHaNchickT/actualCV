@@ -1,3 +1,5 @@
+/* eslint-disable react-compiler/react-compiler */
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import {
@@ -13,7 +15,7 @@ import {
   useDisclosure,
 } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
-import type { ReactElement } from 'react';
+import { type ReactElement } from 'react';
 
 import { ASSETS_PATH, STACK_COLORS } from '@/constants/constants';
 import type { TWorkItem } from '@/types/types';
@@ -21,6 +23,10 @@ import type { TWorkItem } from '@/types/types';
 const WorkItems = (props: { item: TWorkItem }): ReactElement => {
   const t = useTranslations('Works');
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  // useEffect(() => {
+  //   if (props.item.id === 1) onOpen();
+  // }, []);
 
   return (
     <>
@@ -48,7 +54,7 @@ const WorkItems = (props: { item: TWorkItem }): ReactElement => {
         </Card>
       </div>
 
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="4xl">
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="4xl" backdrop="blur">
         <ModalContent>
           {(onClose) => (
             <>

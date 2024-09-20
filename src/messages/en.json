@@ -46,7 +46,7 @@
         "descrSub": "Full compliance with the layout with an error of no more than 3%. An adaptive mode for three devices (phone, tablet, desktop) is implemented, as well as an animated slider, pagination and a price counter in vanilla JavaScript."
       }
     },
-    "btnLink": "Go to the site",
+    "btnLink": "Go to site",
     "stackLabel": "Stack:"
   }
 }

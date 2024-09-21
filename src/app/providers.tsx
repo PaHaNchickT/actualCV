@@ -6,7 +6,7 @@ import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useEffect, useState, type ReactNode } from 'react';
 import { ToastContainer } from 'react-toastify';
 
-import Loading from '@/components/Loading/Loading';
+import Loader from '@/components/Loader/Loader';
 import type { Locale } from '@/i18n';
 import { useRouterIntl } from '@/navigation';
 
@@ -31,7 +31,7 @@ const Providers = ({ children, locale, messages }: ProviderProps): ReactNode => 
             {children}
           </NextThemesProvider>
         ) : (
-          <Loading />
+          <Loader />
         )}
         <ToastContainer
           position="bottom-right"

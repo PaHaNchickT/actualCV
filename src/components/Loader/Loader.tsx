@@ -3,7 +3,7 @@
 import { Spinner } from '@nextui-org/react';
 import { type ReactElement } from 'react';
 
-const Loading = (): ReactElement => {
+const Loader = (): ReactElement => {
   return (
     <div className="bg-[#111111] w-screen h-screen flex justify-center items-center">
       <Spinner color="warning" size="lg" />
@@ -11,4 +11,4 @@ const Loading = (): ReactElement => {
   );
 };
 
-export default Loading;
+export default Loader;

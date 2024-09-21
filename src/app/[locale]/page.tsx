@@ -5,22 +5,14 @@
 import type { ReactElement } from 'react';
 
 import Stack from '@/components/Stack/Stack';
+import Video from '@/components/Video/Video';
 import WelcomeBanner from '@/components/WelcomeBanner/WelcomeBanner';
 import Work from '@/components/Work/Work';
-import { ASSETS_PATH } from '@/constants/constants';
 
 const Home = (): ReactElement => {
   return (
     <div className="flex flex-col justify-center w-full relative">
-      <video
-        src={ASSETS_PATH.video}
-        poster={ASSETS_PATH.videoPoster}
-        width="100%"
-        autoPlay
-        muted
-        loop
-        className="fixed top-0 z-[0] blur-[2px] opacity-90"
-      ></video>
+      <Video />
       <WelcomeBanner />
       <Stack />
       <Work />

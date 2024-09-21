@@ -6,7 +6,6 @@ import { Card, CardBody, useDisclosure } from '@nextui-org/react';
 import type { useTranslations } from 'next-intl';
 import { type ReactElement } from 'react';
 
-import { ASSETS_PATH } from '@/constants/constants';
 import type { TWorkItem } from '@/types/types';
 
 import WorkModal from '../WorkModal/WorkModal';
@@ -17,9 +16,6 @@ const WorkItems = (props: { item: TWorkItem; t: ReturnType<typeof useTranslation
   // useEffect(() => {
   //   if (props.item.id === 1) onOpen();
   // }, []);
-
-  const ImgPath = `${ASSETS_PATH.proj}${props.item.id}.jpg`;
-  console.log(ImgPath);
 
   return (
     <>

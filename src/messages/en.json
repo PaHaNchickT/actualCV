@@ -48,7 +48,7 @@
         "title": "Coffee House",
         "subtitle": "\"Coffee House\" Site",
         "descrMain": "I marked up this simple website based on the Figma layout as part of my training at RS School.",
-        "descrSub": "Full compliance with the layout with an error of no more than 3%. An adaptive mode for three devices (phone, tablet, desktop) is implemented, as well as an animated slider, pagination and a price counter in vanilla JavaScript."
+        "descrSub": "Full compliance with the layout with an error of no more than 3%. An adaptive mode for three devices (phone, tablet, desktop) is implemented, as well as an animated carousel, pagination and a price counter in vanilla JavaScript."
       },
       "7": {
         "title": "About this site",

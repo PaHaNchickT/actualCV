@@ -10,16 +10,17 @@ import {
   Link,
 } from '@nextui-org/react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { useEffect, useState, type ReactElement } from 'react';
 
 import { usePathnameIntl } from '@/navigation';
 import LangDropdown from '@/ui/LangDropdown/LangDropdown';
-import ThemTogler from '@/ui/ThemTogler/ThemTogler';
 
 const Header = (): ReactElement => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathnameIntl();
+  const t = useTranslations('Header');
 
   const handleScroll = (): void => {
     if (window.scrollY > 0) {
@@ -45,7 +46,7 @@ const Header = (): ReactElement => {
       onMenuOpenChange={setIsMenuOpen}
       isBordered
       position="sticky"
-      className={`z-50 transition-all duration-300 ${isScrolled ? 'bg-white/30 shadow-lg' : 'bg-transparent'}`}
+      className={`z-50 transition-all duration-300 ${isScrolled ? 'bg-black/30 shadow-lg' : 'bg-transparent'}`}
     >
       <NavbarContent>
         <Link href="/">
@@ -58,16 +59,26 @@ const Header = (): ReactElement => {
       <NavbarContent className="hidden sm:flex gap-4" justify="center"></NavbarContent>
       <NavbarContent className="hidden sm:flex" justify="end">
         <NavbarItem>
-          <LangDropdown />
+          <Link href="/#works">{t('work')}</Link>
         </NavbarItem>
         <NavbarItem>
-          <ThemTogler />
+          <Link href="/about">{t('about')}</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/contact">{t('contact')}</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <LangDropdown />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem className="flex align-middle">
+          <div>
+            <p>Work</p>
+            <p>About</p>
+            <p>Contact</p>
+          </div>
           <LangDropdown />
-          <ThemTogler />
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>

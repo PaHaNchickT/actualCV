@@ -1,5 +1,3 @@
-'use client';
-
 import { Spinner } from '@nextui-org/react';
 import { type ReactElement } from 'react';
 

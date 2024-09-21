@@ -19,7 +19,7 @@ const WorkItems = (props: { item: TWorkItem; t: ReturnType<typeof useTranslation
 
   return (
     <>
-      <div className="">
+      <div>
         <Card
           shadow="sm"
           isPressable

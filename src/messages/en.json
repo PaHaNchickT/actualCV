@@ -1,4 +1,9 @@
 {
+  "Header": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  },
   "Welcome": {
     "h1": "Pavel Terno",
     "h2": "Junior Frontend developer"

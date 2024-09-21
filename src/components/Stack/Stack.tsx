@@ -18,7 +18,10 @@ const Stack = (): ReactElement => {
   }, []);
 
   return (
-    <div className="relative w-full h-[100px] flex justify-between items-center bg-background text-2xl font-black shadow-[0_0_20px_-5px_#F6AD34] z-[2]">
+    <div
+      id="works"
+      className="relative w-full h-[100px] flex justify-between items-center bg-background text-2xl font-black shadow-[0_0_20px_-5px_#F6AD34] z-[2]"
+    >
       <StackItems index={0} avatarWidth={avatarWidth} />
       <Avatar
         src={ASSETS_PATH.avatar}

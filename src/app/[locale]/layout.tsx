@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { getMessages } from 'next-intl/server';
-import type { ReactElement } from 'react';
+import { Suspense, type ReactElement } from 'react';
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
@@ -35,7 +35,9 @@ const RootLayout = async ({
         <Providers locale={locale} messages={messages}>
           <div className="min-h-screen flex flex-col">
             <Header />
-            <main className="w-full flex-1">{children}</main>
+            <Suspense fallback={<p>Loading...</p>}>
+              <main className="w-full flex-1">{children}</main>
+            </Suspense>
             <Footer />
           </div>
         </Providers>

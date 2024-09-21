@@ -4,7 +4,7 @@ import { Button, Image, Link, Modal, ModalBody, ModalContent, ModalHeader } from
 import type { useTranslations } from 'next-intl';
 import { type ReactElement } from 'react';
 
-import { ASSETS_PATH, STACK_COLORS } from '@/constants/constants';
+import { ASSETS_PATH, STACK_COLORS } from '@/constants/work-constants';
 import type { TWorkItem } from '@/types/types';
 
 const WorkModal = (props: {

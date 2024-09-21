@@ -2,7 +2,7 @@
 
 import type { ReactElement } from 'react';
 
-import { STACK, STACK_COLORS, STACK_WIDTH } from '@/constants/constants';
+import { STACK, STACK_COLORS, STACK_WIDTH } from '@/constants/work-constants';
 
 const StackItems = (props: { index: number; avatarWidth: number }): ReactElement => {
   return (

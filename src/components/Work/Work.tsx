@@ -4,7 +4,7 @@ import { Button, useDisclosure } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 
-import { WORKS } from '@/constants/constants';
+import { WORKS } from '@/constants/work-constants';
 
 import WorkAboutModal from '../WorkAboutModal/WorkAboutModal';
 import WorkItems from '../WorkItems/WorkItems';

@@ -4,7 +4,7 @@ import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from
 import type { useTranslations } from 'next-intl';
 import { type ReactElement } from 'react';
 
-import { PORTFOLIO_STACK, STACK_COLORS } from '@/constants/constants';
+import { PORTFOLIO_STACK, STACK_COLORS } from '@/constants/work-constants';
 
 const WorkAboutModal = (props: {
   isOpen: boolean;

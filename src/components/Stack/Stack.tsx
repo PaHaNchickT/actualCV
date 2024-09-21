@@ -3,7 +3,7 @@
 import { Avatar } from '@nextui-org/react';
 import { useEffect, useRef, useState, type ReactElement } from 'react';
 
-import { ASSETS_PATH } from '@/constants/constants';
+import { ASSETS_PATH } from '@/constants/work-constants';
 
 import StackItems from '../StackItems/StackItems';
 

@@ -1,5 +1,3 @@
-export const DIPLOMAS = ['', '', ''];
-
 export const EDUCATION: {
   name: 'education.university';
   degree: 'education.bachelor' | 'education.master';

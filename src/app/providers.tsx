@@ -6,6 +6,7 @@ import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useEffect, useState, type ReactNode } from 'react';
 import { ToastContainer } from 'react-toastify';
 
+import Loading from '@/components/Loading/Loading';
 import type { Locale } from '@/i18n';
 import { useRouterIntl } from '@/navigation';
 
@@ -26,11 +27,11 @@ const Providers = ({ children, locale, messages }: ProviderProps): ReactNode => 
     <NextIntlClientProvider locale={locale} messages={messages} timeZone={timeZone}>
       <NextUIProvider navigate={router.push}>
         {mounted ? (
-          <NextThemesProvider attribute="class" defaultTheme="light">
+          <NextThemesProvider attribute="class" defaultTheme="dark">
             {children}
           </NextThemesProvider>
         ) : (
-          children
+          <Loading />
         )}
         <ToastContainer
           position="bottom-right"

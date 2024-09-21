@@ -125,9 +125,11 @@ const About = (): ReactElement => {
           </div>
         </div>
       </div>
-      <Button color="primary" size="lg" className="text-background">
-        Скачать CV
-      </Button>
+      <Link href={ASSETS_PATH.cv} download="Terno Pavel CV">
+        <Button color="primary" size="lg" className="text-background">
+          {t('downloadCV')}
+        </Button>
+      </Link>
     </div>
   );
 };

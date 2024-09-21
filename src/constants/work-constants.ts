@@ -6,6 +6,7 @@ export const ASSETS_PATH = {
   avatar: '/images/avatar.png',
   placeholder: '/images/placeholder.png',
   proj: '/images/proj',
+  cv: '/pdf/CV.pdf',
 };
 
 export const STACK_COLORS: { [key: string]: string } = {

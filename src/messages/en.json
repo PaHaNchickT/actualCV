@@ -63,5 +63,41 @@
   },
   "NotFound": {
     "message": "The page you were looking for doesn't exist."
+  },
+  "About": {
+    "title": "About me",
+    "info": {
+      "age": "Age:",
+      "status": "Status:",
+      "current": " Looking for a job",
+      "text": "Frontend development for me is, first and foremost, creativity, the perfect balance between intellectual work and the expression of emotions. Due to my empathy, I successfully find a common language with people and easily fit into a team. I strive to solve problems effectively and creatively, so I plan to achieve high performance indicators. I have the following qualities: determination, easy learning, organizational skills. I am constantly engaged in self-development."
+    },
+    "work": {
+      "0": "While studying at",
+      "1": "and",
+      "2": "online schools, I acquired skills in developing applications in JavaScript, TypeScript, and React. Among them were both single-page applications and games, as well as full-fledged multi-page sites, laid out according to Figma layouts. When writing code, I strictly follow the concepts of DRY, KISS, and YAGNI, and thanks to regular cross-checks of work, I have confident Code Review skills. During the final projects, I also studied the Agile methodology and gained experience in collective development according to Scrum, using Jira and gh project boards."
+    },
+    "education": {
+      "header": "Education",
+      "university": "Saint Petersburg State University",
+      "bachelor": "Bachelor's degree",
+      "master": "Master's degree"
+    },
+    "languages": {
+      "header": "Languages",
+      "name": "English"
+    },
+    "hobby": {
+      "header": "Hobby",
+      "text": "In my free time I play guitar and drums, and also run my YouTube channel."
+    },
+    "stack": {
+      "header": "Stack",
+      "0": "Confident possession in HTML, SASS, Tailwind, JavaScript, TypeScript, React, Redux + RTK Query, Webpack, Vite, NextUI (component library), NextIntl (internationalization), React Hook Form, Zod and Yup (form validation)",
+      "1": "Understanding of SSR concepts, confident possession in Next.js and experience with Remix",
+      "2": "Understanding of Rest API concept, experience with Websocket and GraphQL queries, as well as authentication tokens (FireBase)",
+      "3": "Experience writing unit tests in Jest",
+      "4": "Basic knowledge and experience with Node.js"
+    }
   }
 }

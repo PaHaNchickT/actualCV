@@ -64,7 +64,7 @@ export const STACK = [
 
 export const WORKS: TWorkItem[] = [
   {
-    id: 0,
+    id: 1,
     stack: [
       {
         name: 'TypeScript',
@@ -104,10 +104,10 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://graphiql-app-kappa.vercel.app/en',
-    cover: "bg-[url('/images/proj0.jpg')]",
+    cover: "bg-[url('/images/proj1.jpg')]",
   },
   {
-    id: 1,
+    id: 2,
     stack: [
       {
         name: 'TypeScript',
@@ -147,10 +147,10 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://react-2024-q3-zrxs.vercel.app/films?page=1',
-    cover: "bg-[url('/images/proj1.jpg')]",
+    cover: "bg-[url('/images/proj2.jpg')]",
   },
   {
-    id: 2,
+    id: 3,
     stack: [
       {
         name: 'TypeScript',
@@ -178,10 +178,10 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-rss-puzzle/',
-    cover: "bg-[url('/images/proj2.jpg')]",
+    cover: "bg-[url('/images/proj3.jpg')]",
   },
   {
-    id: 3,
+    id: 4,
     stack: [
       {
         name: 'JavaScript',
@@ -205,10 +205,10 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-nonograms/',
-    cover: "bg-[url('/images/proj3.jpg')]",
+    cover: "bg-[url('/images/proj4.jpg')]",
   },
   {
-    id: 4,
+    id: 5,
     stack: [
       {
         name: 'HTML',
@@ -224,10 +224,10 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://pahanchickt.github.io/minesweeper/index.html',
-    cover: "bg-[url('/images/proj4.jpg')]",
+    cover: "bg-[url('/images/proj5.jpg')]",
   },
   {
-    id: 5,
+    id: 6,
     stack: [
       {
         name: 'HTML',
@@ -247,7 +247,7 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-coffee-house/pages/home/',
-    cover: "bg-[url('/images/proj5.jpg')]",
+    cover: "bg-[url('/images/proj6.jpg')]",
   },
 ];
 
@@ -281,3 +281,4 @@ export const PORTFOLIO_STACK = [
     key: 'husky',
   },
 ];
+

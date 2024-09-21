@@ -17,11 +17,11 @@ const WorkAboutModal = (props: {
         <ModalContent className="bg-background">
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 text-primary">{props.t('items.6.subtitle')}</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 text-primary">{props.t('items.7.subtitle')}</ModalHeader>
               <ModalBody>
                 <section className="flex flex-col justify-between gap-5">
-                  <p className="text-justify">{props.t('items.6.descrMain')}</p>
-                  <p className="text-justify">{props.t('items.6.descrSub')}</p>
+                  <p className="text-justify">{props.t('items.7.descrMain')}</p>
+                  <p className="text-justify">{props.t('items.7.descrSub')}</p>
                   <div className="flex flex-col">
                     <p className="text-primary">{props.t('stackLabel')}</p>
                     <div className="flex flex-wrap gap-2">

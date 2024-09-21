@@ -14,43 +14,43 @@
   },
   "Works": {
     "items": {
-      "0": {
+      "1": {
         "title": "GetMan",
         "subtitle": "\"GetMan\" App",
         "descrMain": "This application is our joint final project on the RS School course. It is a simplified copy of the Postman application, allowing you to send both classic requests to the Resfull API and GraphQl requests, as well as study the response in a convenient and flexible editor. The application supports changing the language and theme, an authentication system, and a request history is implemented.",
         "descrSub": "The development took 4 weeks. The development was carried out in a team of three people using the Scrum methodology, sprints lasted one week, at the end of the sprints a retrospective was held. We used GitHub Projects as a task board."
       },
-      "1": {
+      "2": {
         "title": "Kinomania",
         "subtitle": "\"Kinomania\" App",
         "descrMain": "This application is a film library that works with an unofficial Kinopoisk API.",
         "descrSub": "You can search for films and series by keywords, view brief information about each element, select and download a short excerpt for selected films, and it is also possible to change the theme."
       },
-      "2": {
+      "3": {
         "title": "English Puzzle",
         "subtitle": "\"English Puzzle\" Game",
         "descrMain": "This game is a simplified version of Duolingo. The main goal of the application is to improve English in an interactive game form.",
         "descrSub": "The game has six difficulty levels, each of which contains from 20 to 40 rounds. In each round, you have to collect logical sentences from randomly scattered words (Drag'n'Drop supported), and each word is a puzzle. Having collected ten sentences, you gain access to one of the iconic works of art. Depending on your level of English, you can use one of three hints, as well as skip a sentence. At the end of the round, you will see detailed statistics."
       },
-      "3": {
+      "4": {
         "title": "Nonograms",
         "subtitle": "\"Nonograms\" Game",
         "descrMain": "This game is my intermediate final project at one of the stages of training at RS School. It is an improved version of the popular Japanese puzzle.",
         "descrSub": "The application includes three difficulty levels, which differ in the size of the field and the complexity of the picture, but you can also choose a level randomly. You will not only have to solve Japanese crosswords, but also compete with yourself or with friends for a while, and the main feature of this application is a small trophy system straight from PlayStation. Can you unlock them all?"
       },
-      "4": {
+      "5": {
         "title": "Minesweeper",
         "subtitle": "\"Minesweeper\" Game",
         "descrMain": "This application is a reproduction of the iconic \"Minesweeper\", which I developed in 3 days in vanilla JavaScript.",
         "descrSub": "The game includes a 16x16 field and classic rules of the game: left mouse button - open a cell, right mouse button - put a flag or mark a cell as questionable. Victory occurs if the player correctly marks all the bombs with flags. And if you hit a mine, you can always start over."
       },
-      "5": {
+      "6": {
         "title": "Coffee House",
         "subtitle": "\"Coffee House\" Site",
         "descrMain": "I marked up this simple website based on the Figma layout as part of my training at RS School.",
         "descrSub": "Full compliance with the layout with an error of no more than 3%. An adaptive mode for three devices (phone, tablet, desktop) is implemented, as well as an animated slider, pagination and a price counter in vanilla JavaScript."
       },
-      "6": {
+      "7": {
         "title": "About this site",
         "subtitle": "More about this site",
         "descrMain": "Speaking of my portfolio, I can't help but mention the portfolio website you are currently on. It was also developed by me using Typescript and React.",

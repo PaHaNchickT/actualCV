@@ -1,5 +1,5 @@
 export type TWorkItem = {
-  id: 0 | 1 | 2 | 3 | 4 | 5;
+  id: 1 | 2 | 3 | 4 | 5 | 6;
   stack: {
     name: string;
     key: string;

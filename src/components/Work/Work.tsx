@@ -20,7 +20,7 @@ const Work = (): ReactElement => {
       ))}
       <div className="p-10">
         <Button size="lg" color="primary" className="text-black" onPress={onOpen}>
-          {t('items.6.title')}
+          {t('items.7.title')}
         </Button>
         <WorkAboutModal isOpen={isOpen} onOpenChange={onOpenChange} t={t} />
       </div>

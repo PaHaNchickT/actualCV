@@ -9,8 +9,9 @@ export type TWorkItem = {
 };
 
 export type TContactForm = {
-  name: string; //Как я могу к вам обращаться?
-  company: string;
-  email: string;
+  from_name: string;
+  from_company: string;
+  from_email: string;
   message: string;
+  to__name: string;
 };

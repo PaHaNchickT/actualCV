@@ -56,7 +56,7 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
         </CardBody>
       </Card>
 
-      <Modal size="xl" isOpen={isOpen} onClose={onClose}>
+      <Modal size="xl" isOpen={isOpen} onClose={onClose} backdrop="blur">
         <ModalContent>
           <ModalHeader></ModalHeader>
           <ModalBody>

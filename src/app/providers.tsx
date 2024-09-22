@@ -4,6 +4,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import { type AbstractIntlMessages, NextIntlClientProvider } from 'next-intl';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useEffect, useState, type ReactNode } from 'react';
+import { Toaster } from 'react-hot-toast';
 
 import type { Locale } from '@/i18n';
 import { useRouterIntl } from '@/navigation';
@@ -33,6 +34,7 @@ const Providers = ({ children, locale, messages }: ProviderProps): ReactNode => 
         ) : (
           <Loader />
         )}
+        <Toaster position="bottom-right" />
       </NextUIProvider>
     </NextIntlClientProvider>
   );

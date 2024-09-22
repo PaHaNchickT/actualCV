@@ -7,7 +7,7 @@ import type { useTranslations } from 'next-intl';
 import { useState, type FormEvent, type ReactNode } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 import type { TContactForm } from '@/types/types';
 import ContactSchema from '@/validation/ContactSchema';
@@ -64,9 +64,6 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
 
   return (
     <div className="flex flex-col items-center py-5 px-2 gap-2 bg-[#18181B] rounded-3xl transition-all duration-300">
-      <div>
-        <Toaster position="bottom-right" />
-      </div>
       <form
         onSubmit={handleSubmit(submit as SubmitHandler<TContactForm>)}
         className="flex flex-col items-center gap-5 w-full min-w-[400px] sm:w-[70%]"

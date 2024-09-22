@@ -13,5 +13,5 @@ export type TContactForm = {
   from_company: string;
   from_email: string;
   message: string;
-  to__name: string;
+  to_name: string;
 };

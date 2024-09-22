@@ -1,7 +1,7 @@
 'use client';
 
-// import { zodResolver } from '@hookform/resolvers/zod';
 import emailjs from '@emailjs/browser';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { Button, Input, Spinner, Textarea } from '@nextui-org/react';
 import type { useTranslations } from 'next-intl';
 import { useState, type FormEvent, type ReactNode } from 'react';
@@ -10,6 +10,7 @@ import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
 
 import type { TContactForm } from '@/types/types';
+import ContactSchema from '@/validation/ContactSchema';
 
 function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }): ReactNode {
   const {
@@ -19,10 +20,9 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
     formState: { errors },
   } = useForm<TContactForm>({
     mode: 'onChange',
-    // resolver: zodResolver(RestSchema(t)),
+    resolver: zodResolver(ContactSchema(props.t)),
   });
   const [sending, setSending] = useState(false);
-  console.log(props);
 
   const toastStyler = (color: string): object => {
     return {
@@ -114,7 +114,7 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
           isDisabled={sending}
         />
         <div className="p-5">
-          <Input type="hidden" value="PaHaNchick" {...register('to__name')} />
+          <Input type="hidden" value="PaHaNchick" {...register('to_name')} />
           {sending ? (
             <Spinner color="warning" size="lg" className="h-[56px]" />
           ) : (

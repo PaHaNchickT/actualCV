@@ -4,7 +4,6 @@ import { NextUIProvider } from '@nextui-org/react';
 import { type AbstractIntlMessages, NextIntlClientProvider } from 'next-intl';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useEffect, useState, type ReactNode } from 'react';
-import { ToastContainer } from 'react-toastify';
 
 import type { Locale } from '@/i18n';
 import { useRouterIntl } from '@/navigation';
@@ -34,18 +33,6 @@ const Providers = ({ children, locale, messages }: ProviderProps): ReactNode => 
         ) : (
           <Loader />
         )}
-        <ToastContainer
-          position="bottom-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="colored"
-        />
       </NextUIProvider>
     </NextIntlClientProvider>
   );

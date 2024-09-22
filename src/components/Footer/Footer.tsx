@@ -2,26 +2,7 @@
 
 import { Button, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
-// import { useTranslations } from 'next-intl';
-// import { useTheme } from 'next-themes';
 import type { ReactElement } from 'react';
-
-// import GithubOutlineIcon from './GithubOutlineIcon';
-
-// const githubLinks = (t: ReturnType<typeof useTranslations<'Home.team'>>): { href: string; label: string }[] => [
-//   {
-//     href: 'https://github.com/mistert1a',
-//     label: t('developer1.name'),
-//   },
-//   {
-//     href: 'https://github.com/pahanchickt',
-//     label: t('developer2.name'),
-//   },
-//   {
-//     href: 'https://github.com/ru-ab',
-//     label: t('developer3.name'),
-//   },
-// ];
 
 export const Footer = (): ReactElement => {
   const t = useTranslations('Footer');

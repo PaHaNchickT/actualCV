@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, CardBody, CardHeader } from '@nextui-org/react';
+import { Card, CardBody, CardHeader, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 
@@ -18,12 +18,18 @@ const Contact = (): ReactElement => {
         <div className="flex flex-col gap-10">
           <ContactForm t={t} />
           <Card className="p-4" shadow="lg">
-            <CardHeader>{t('alt.title')}</CardHeader>
+            <CardHeader className="justify-center">{t('alt.title')}</CardHeader>
             <CardBody className="overflow-visible py-2">
               <div className="flex justify-between gap-5">
-                <p>{t('alt.tg')}</p>
-                <p>{t('alt.vk')}</p>
-                <p>pt1999@mail.ru</p>
+                <Link href="https://t.me/pahanchickt" target="_blank">
+                  {t('alt.tg')}
+                </Link>
+                <Link href="https://vk.com/ternopavel" target="_blank">
+                  {t('alt.vk')}
+                </Link>
+                <Link href="mailto: pt1999@mail.ru" target="_blank">
+                  pt1999@mail.ru
+                </Link>
               </div>
             </CardBody>
           </Card>

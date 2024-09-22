@@ -51,11 +51,11 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
       })
       .then(() => {
         reset();
-        toast.success('Letter sent successfully!\nI will contact you shortly', toastStyler('#59D22C'));
+        toast.success(props.t('notify.success'), toastStyler('#59D22C'));
       })
       .catch((error) => {
         console.log(error.text);
-        toast.error('Something went wrong!\nTry again later', toastStyler('#E8314E'));
+        toast.error(props.t('notify.failure'), toastStyler('#E8314E'));
       })
       .finally(() => {
         setSending(false);
@@ -73,7 +73,7 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
       >
         <Input
           type="text"
-          label="How can I address you?"
+          label={props.t('labels.name')}
           {...register('from_name')}
           className="w-full text-center"
           isInvalid={Boolean(errors.from_name)}
@@ -84,7 +84,7 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
           <div className="w-full">
             <Input
               type="text"
-              label="E-mail"
+              label={props.t('labels.email')}
               {...register('from_email')}
               className="w-full text-center"
               isInvalid={Boolean(errors.from_email)}
@@ -95,7 +95,7 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
           <div className="w-full">
             <Input
               type="text"
-              label="Company"
+              label={props.t('labels.company')}
               {...register('from_company')}
               className="w-full text-center"
               isInvalid={Boolean(errors.from_company)}
@@ -106,8 +106,8 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
         </div>
         <Textarea
           {...register('message')}
-          label="Message"
-          placeholder="Type here..."
+          label={props.t('labels.messageLabel')}
+          placeholder={props.t('labels.messagePH')}
           className="w-full text-center h-[100px]"
           isInvalid={Boolean(errors.message)}
           errorMessage={errors.message?.message}
@@ -125,7 +125,7 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
               isDisabled={Boolean(Object.keys(errors).length)}
               className="h-14 text-background"
             >
-              Send
+              {props.t('sendBtn')}
             </Button>
           )}
         </div>

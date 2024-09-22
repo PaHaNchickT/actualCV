@@ -111,6 +111,22 @@
       "email": "Please, enter a valid e-mail",
       "message": "Message cannot be empty"
     },
-    "notify": {}
+    "notify": {
+      "success": "Letter sent successfully!\nI will contact you shortly",
+      "failure": "Something went wrong!\nTry again later"
+    },
+    "labels": {
+      "name": "How can I address you?",
+      "email": "Your e-mail",
+      "company": "Your company",
+      "messageLabel": "Message",
+      "messagePH": "Type here your message..."
+    },
+    "sendBtn": "Send",
+    "alt": {
+      "title": "You can also contact me directly",
+      "tg": "Telegram",
+      "vk": "VK"
+    }
   }
 }

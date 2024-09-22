@@ -15,22 +15,19 @@ const Contact = (): ReactElement => {
       <Video />
       <div className="w-full p-10 relative z-[2] flex flex-col items-center gap-10">
         <h3 className="font-black text-5xl text-center">{t('title')}</h3>
-        <ContactForm t={t} />
-        {/* <Card className="p-4" shadow="lg">
-          <CardBody className="overflow-visible py-2">
-            <ContactForm t={t} />
-          </CardBody>
-        </Card> */}
-        <Card className="p-4" shadow="lg">
-          <CardHeader>You can also contact me directly</CardHeader>
-          <CardBody className="overflow-visible py-2">
-            <div className="flex justify-between gap-5">
-              <p>Telegram</p>
-              <p>VK</p>
-              <p>pt1999@mail.ru</p>
-            </div>
-          </CardBody>
-        </Card>
+        <div className="flex flex-col gap-10">
+          <ContactForm t={t} />
+          <Card className="p-4" shadow="lg">
+            <CardHeader>{t('alt.title')}</CardHeader>
+            <CardBody className="overflow-visible py-2">
+              <div className="flex justify-between gap-5">
+                <p>{t('alt.tg')}</p>
+                <p>{t('alt.vk')}</p>
+                <p>pt1999@mail.ru</p>
+              </div>
+            </CardBody>
+          </Card>
+        </div>
       </div>
     </div>
   );

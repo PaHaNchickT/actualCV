@@ -16,8 +16,8 @@ export function generateStaticParams(): {
 }
 
 export const metadata: Metadata = {
-  title: 'App',
-  description: 'next app',
+  title: "Pavel's Terno Portfolio",
+  description: 'Portfolio of Junior Frontend Developer Pavel Terno made using TypeScript, React and Next.js',
 };
 
 const RootLayout = async ({

@@ -63,7 +63,7 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
   };
 
   return (
-    <div className="flex flex-col items-center pt-5 px-2 gap-2">
+    <div className="flex flex-col items-center py-5 px-2 gap-2 bg-[#18181B] rounded-3xl transition-all duration-300">
       <div>
         <Toaster position="bottom-right" />
       </div>
@@ -108,12 +108,12 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
           {...register('message')}
           label="Message"
           placeholder="Type here..."
-          className="w-full h-[100px]"
+          className="w-full text-center h-[100px]"
           isInvalid={Boolean(errors.message)}
           errorMessage={errors.message?.message}
           isDisabled={sending}
         />
-        <div className="p-5">
+        <div className="pb-2">
           <Input type="hidden" value="PaHaNchick" {...register('to_name')} />
           {sending ? (
             <Spinner color="warning" size="lg" className="h-[56px]" />

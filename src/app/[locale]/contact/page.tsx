@@ -15,11 +15,12 @@ const Contact = (): ReactElement => {
       <Video />
       <div className="w-full p-10 relative z-[2] flex flex-col items-center gap-10">
         <h3 className="font-black text-5xl text-center">{t('title')}</h3>
-        <Card className="p-4" shadow="lg">
+        <ContactForm t={t} />
+        {/* <Card className="p-4" shadow="lg">
           <CardBody className="overflow-visible py-2">
             <ContactForm t={t} />
           </CardBody>
-        </Card>
+        </Card> */}
         <Card className="p-4" shadow="lg">
           <CardHeader>You can also contact me directly</CardHeader>
           <CardBody className="overflow-visible py-2">

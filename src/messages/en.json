@@ -104,6 +104,13 @@
     "downloadCV": "Download CV"
   },
   "Contact": {
-    "title": "Contact me"
+    "title": "Contact me",
+    "errors": {
+      "required": "This field is required",
+      "name": "This field must not contain numbers or special characters",
+      "email": "Please, enter a valid e-mail",
+      "message": "Message cannot be empty"
+    },
+    "notify": {}
   }
 }

@@ -18,7 +18,7 @@ const Contact = (): ReactElement => {
         <div className="flex flex-col gap-10">
           <ContactForm t={t} />
           <Card className="p-4" shadow="lg">
-            <CardHeader className="justify-center">{t('alt.title')}</CardHeader>
+            <CardHeader>{t('alt.title')}</CardHeader>
             <CardBody className="overflow-visible py-2">
               <div className="flex justify-between gap-5">
                 <Link href="https://t.me/pahanchickt" target="_blank">

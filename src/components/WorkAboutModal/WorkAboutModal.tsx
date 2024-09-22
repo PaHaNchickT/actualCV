@@ -14,7 +14,7 @@ const WorkAboutModal = (props: {
   return (
     <>
       <Modal isOpen={props.isOpen} onOpenChange={props.onOpenChange} size="2xl" backdrop="blur">
-        <ModalContent className="bg-background">
+        <ModalContent>
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1 text-primary">{props.t('items.7.subtitle')}</ModalHeader>

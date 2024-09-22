@@ -7,3 +7,10 @@ export type TWorkItem = {
   link: string;
   cover: string;
 };
+
+export type TContactForm = {
+  name: string; //Как я могу к вам обращаться?
+  company: string;
+  email: string;
+  message: string;
+};

@@ -74,9 +74,9 @@ const Header = (): ReactElement => {
       <NavbarMenu>
         <NavbarMenuItem className="flex align-middle">
           <div>
-            <p>Work</p>
-            <p>About</p>
-            <p>Contact</p>
+            <Link href="/#work">{t('work')}</Link>
+            <Link href="/about">{t('about')}</Link>
+            <Link href="/contact">{t('contact')}</Link>
           </div>
           <LangDropdown />
         </NavbarMenuItem>

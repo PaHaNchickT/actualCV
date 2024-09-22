@@ -59,7 +59,7 @@ const Header = (): ReactElement => {
       <NavbarContent className="hidden sm:flex gap-4" justify="center"></NavbarContent>
       <NavbarContent className="hidden sm:flex" justify="end">
         <NavbarItem>
-          <Link href="/#works">{t('work')}</Link>
+          <Link href="/#work">{t('work')}</Link>
         </NavbarItem>
         <NavbarItem>
           <Link href="/about">{t('about')}</Link>

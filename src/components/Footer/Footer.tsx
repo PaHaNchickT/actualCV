@@ -26,7 +26,7 @@ export const Footer = (): ReactElement => {
             </div>
             <div className="flex flex-col gap-5">
               <p>{t('headers.navigation')}</p>
-              <Link href="/#works">{t('links.work')}</Link>
+              <Link href="/#work">{t('links.work')}</Link>
               <Link href="/about">{t('links.about')}</Link>
               <Link href="/contact">{t('links.contact')}</Link>
             </div>

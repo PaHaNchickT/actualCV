@@ -1,14 +1,15 @@
 'use client';
 
 import { Avatar } from '@nextui-org/react';
+import type { MutableRefObject } from 'react';
 import { useEffect, useRef, useState, type ReactElement } from 'react';
 
 import { ASSETS_PATH } from '@/constants/work-constants';
 
 import StackItems from '../StackItems/StackItems';
 
-const Stack = (): ReactElement => {
-  const avatarRef = useRef(null);
+const Stack = (props: { elementRef: MutableRefObject<HTMLDivElement> }): ReactElement => {
+  const avatarRef = useRef<HTMLDivElement>(null);
   const [avatarWidth, setAvatarWidth] = useState(250);
 
   useEffect(() => {
@@ -19,8 +20,9 @@ const Stack = (): ReactElement => {
 
   return (
     <div
-      id="works"
+      id="work"
       className="relative w-full h-[100px] flex justify-between items-center bg-background text-2xl font-black shadow-[0_0_20px_-5px_#F6AD34] z-[2]"
+      ref={props.elementRef}
     >
       <StackItems index={0} avatarWidth={avatarWidth} />
       <Avatar

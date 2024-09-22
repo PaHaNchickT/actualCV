@@ -128,5 +128,19 @@
       "tg": "Telegram",
       "vk": "VK"
     }
+  },
+  "Footer": {
+    "links": {
+      "tg": "Telegram",
+      "vk": "VK",
+      "work": "Work",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "headers": {
+      "navigation": "Navigation:",
+      "contact": "Contact:"
+    },
+    "copyright": "©2024 Pavel Terno. Junior Frontend Developer"
   }
 }

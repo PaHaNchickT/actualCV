@@ -5,5 +5,9 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps): ReactElement {
-  return children;
+  return (
+    <html suppressHydrationWarning={true}>
+      <body>{children}</body>
+    </html>
+  );
 }

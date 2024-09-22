@@ -68,6 +68,8 @@
     "title": "About me",
     "info": {
       "age": "Age:",
+      "cityLabel": "City:",
+      "cityText": "Saint Petersburg",
       "status": "Status:",
       "current": " Looking for a job",
       "text": "Frontend development for me is, first and foremost, creativity, the perfect balance between intellectual work and the expression of emotions. Due to my empathy, I successfully find a common language with people and easily fit into a team. I strive to solve problems effectively and creatively, so I plan to achieve high performance indicators. I have the following qualities: determination, easy learning, organizational skills. I am constantly engaged in self-development."
@@ -100,5 +102,8 @@
       "4": "Basic knowledge and experience with Node.js"
     },
     "downloadCV": "Download CV"
+  },
+  "Contact": {
+    "title": "Contact"
   }
 }

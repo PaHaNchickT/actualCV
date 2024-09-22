@@ -13,7 +13,7 @@ import AboutWork from '@/components/AboutWork/AboutWork';
 import Video from '@/components/Video/Video';
 import { ASSETS_PATH } from '@/constants/work-constants';
 
-const Home = (): ReactElement => {
+const About = (): ReactElement => {
   const t = useTranslations('About');
 
   return (
@@ -45,4 +45,4 @@ const Home = (): ReactElement => {
   );
 };
 
-export default Home;
+export default About;

@@ -18,6 +18,10 @@ const AboutInfo = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
                 <span className="text-primary mr-1">{props.t('info.age')}</span> 25
               </p>
               <p>
+                <span className="text-primary mr-1">{props.t('info.cityLabel')}</span>
+                {props.t('info.cityText')}
+              </p>
+              <p>
                 <span className="text-primary mr-1">{props.t('info.status')}</span>
                 {props.t('info.current')}
               </p>

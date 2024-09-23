@@ -14,11 +14,11 @@ export const Footer = (): ReactElement => {
           <div className="flex gap-28">
             <div className="flex flex-col gap-5">
               <p>{t('headers.contact')}</p>
-              <Link href="https://t.me/pahanchickt" target="_blank">
-                {t('links.tg')}
-              </Link>
               <Link href="https://vk.com/ternopavel" target="_blank">
                 {t('links.vk')}
+              </Link>
+              <Link href="https://t.me/pahanchickt" target="_blank">
+                {t('links.tg')}
               </Link>
               <Link href="mailto: pt1999@mail.ru" target="_blank">
                 pt1999@mail.ru

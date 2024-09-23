@@ -1,11 +1,14 @@
 'use client';
 
-import { Card, CardBody, CardHeader, Link } from '@nextui-org/react';
+import { Button, Card, CardBody, CardHeader, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 
 import ContactForm from '@/components/ContactForm/ContactForm';
 import Video from '@/components/Video/Video';
+import { EmailIcon } from '@/ui/Icons/EmailIcon';
+import { LetterIcon } from '@/ui/Icons/LetterIcon';
+import { PhoneIcon } from '@/ui/Icons/PhoneIcon';
 
 const Contact = (): ReactElement => {
   const t = useTranslations('Contact');
@@ -20,16 +23,45 @@ const Contact = (): ReactElement => {
           <Card className="p-4" shadow="lg">
             <CardHeader>{t('alt.title')}</CardHeader>
             <CardBody className="overflow-visible py-2">
-              <div className="flex justify-between gap-5">
-                <Link href="https://t.me/pahanchickt" target="_blank">
-                  {t('alt.tg')}
-                </Link>
-                <Link href="https://vk.com/ternopavel" target="_blank">
-                  {t('alt.vk')}
-                </Link>
-                <Link href="mailto: pt1999@mail.ru" target="_blank">
-                  pt1999@mail.ru
-                </Link>
+              <div className="flex flex-col justify-between gap-5">
+                <div className="flex justify-between">
+                  <li>
+                    <Link href="https://vk.com/ternopavel" target="_blank">
+                      {t('alt.vk')}
+                    </Link>
+                  </li>
+                  <Link href="https://vk.com/ternopavel" target="_blank">
+                    <Button isIconOnly color="primary" aria-label="Like" className="w-[24px] min-w-[24px] h-[24px]">
+                      <LetterIcon />
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="flex justify-between">
+                  <li>
+                    <Link href="https://t.me/pahanchickt" target="_blank">
+                      {t('alt.tg')}
+                    </Link>
+                  </li>
+                  <Link href="https://t.me/pahanchickt" target="_blank">
+                    <Button isIconOnly color="primary" aria-label="Like" className="w-[24px] min-w-[24px] h-[24px]">
+                      <PhoneIcon />
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="flex justify-between">
+                  <li>
+                    <Link href="mailto: pt1999@mail.ru" target="_blank">
+                      pt1999@mail.ru
+                    </Link>
+                  </li>
+                  <Link href="mailto: pt1999@mail.ru" target="_blank">
+                    <Button isIconOnly color="primary" aria-label="Like" className="w-[24px] min-w-[24px] h-[24px]">
+                      <EmailIcon />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </CardBody>
           </Card>

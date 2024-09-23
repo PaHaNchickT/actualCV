@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { getMessages } from 'next-intl/server';
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { type ReactElement } from 'react';
 
 import Footer from '@/components/Footer/Footer';
@@ -27,6 +27,8 @@ const RootLayout = async ({
   children: React.ReactNode;
   params: { locale: Locale };
 }>): Promise<ReactElement> => {
+  unstable_setRequestLocale(locale);
+
   const messages = await getMessages({ locale });
 
   return (

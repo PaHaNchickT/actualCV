@@ -6,9 +6,6 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/actualCV',
-  assetPrefix: '/actualCV/',
   reactStrictMode: true,
   sassOptions: {
     includePaths: [path.join(process.cwd(), 'src', 'styles')],

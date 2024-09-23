@@ -13,7 +13,7 @@ export const Footer = (): ReactElement => {
     <footer className="z-5 bg-black/30 border-t-1 border-t-default-300 w-full flex justify-center backdrop-blur-lg backdrop-saturate-150">
       <div className="px-6 py-10 gap-10 w-full flex flex-col max-w-[1024px]">
         <div className="flex justify-between">
-          <div className="flex gap-28">
+          <div className="flex gap-10 flex-wrap sm:gap-28">
             <div className="flex flex-col gap-5">
               <p>{t('headers.contact')}</p>
               <Link href="https://vk.com/ternopavel" target="_blank">
@@ -43,7 +43,7 @@ export const Footer = (): ReactElement => {
             ↑
           </Button>
         </div>
-        <div className="flex justify-between items-end">
+        <div className="flex justify-between items-end flex-wrap">
           <Link href="https://github.com/PaHaNchickT" target="_blank" className="flex gap-2">
             <p>GitHub</p>
             <GithubOutlineIcon />

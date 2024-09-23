@@ -36,7 +36,7 @@ const WorkAboutModal = (props: {
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
-                  Close
+                  {props.t('btnClose')}
                 </Button>
               </ModalFooter>
             </>

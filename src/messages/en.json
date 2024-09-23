@@ -59,7 +59,8 @@
     },
     "btnLink": "Go to site",
     "stackLabel": "Stack:",
-    "footerAuthor": "Made by Pavel Terno"
+    "footerAuthor": "Made by Pavel Terno",
+    "btnClose": "Close"
   },
   "NotFound": {
     "message": "The page you were looking for doesn't exist."

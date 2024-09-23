@@ -1,7 +1,7 @@
 import type { TWorkItem } from '@/types/types';
 
 export const ASSETS_PATH = {
-  video: '/video/bg.mp4',
+  video: '/video/bg.gif',
   videoPoster: '/images/bg.jpg',
   avatar: '/images/avatar.png',
   placeholder: '/images/placeholder.png',

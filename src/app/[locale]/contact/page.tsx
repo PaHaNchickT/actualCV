@@ -15,7 +15,7 @@ const Contact = (): ReactElement => {
     <div className="flex flex-col justify-center w-full relative">
       <Video />
       <div className="w-full p-10 relative z-[2] flex flex-col items-center gap-10">
-        <h3 className="font-black text-5xl text-center">{t('title')}</h3>
+        <h3 className="font-black text-4xl text-center sm:text-5xl">{t('title')}</h3>
         <div className="flex flex-col gap-10">
           <ContactForm t={t} />
           <Card className="p-4" shadow="lg">

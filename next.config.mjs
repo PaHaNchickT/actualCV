@@ -14,3 +14,5 @@ const nextConfig = {
 };
 
 export default withNextIntl(nextConfig);
+
+export const output = 'export';

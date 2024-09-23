@@ -1,5 +1,3 @@
-/* eslint-disable react-compiler/react-compiler */
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import { Card, CardBody, useDisclosure } from '@nextui-org/react';
@@ -12,10 +10,6 @@ import WorkModal from '../WorkModal/WorkModal';
 
 const WorkItems = (props: { item: TWorkItem; t: ReturnType<typeof useTranslations<'Works'>> }): ReactElement => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
-  // useEffect(() => {
-  //   if (props.item.id === 1) onOpen();
-  // }, []);
 
   return (
     <>

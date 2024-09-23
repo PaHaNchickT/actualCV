@@ -10,8 +10,8 @@ const Video = (): ReactElement => {
     <Image
       src={ASSETS_PATH.video}
       alt="background"
-      width="100%"
-      className="fixed top-0 left-0 z-[0] blur-[2px] opacity-90"
+      width="1440px"
+      className="fixed top-0 left-0 z-[0] blur-[2px] opacity-90 w-[1440px] max-w-[1440px]"
     />
   );
 };

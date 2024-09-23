@@ -43,7 +43,7 @@ export const Footer = (): ReactElement => {
             ↑
           </Button>
         </div>
-        <div className="flex justify-between items-end flex-wrap">
+        <div className="flex justify-between items-end flex-wrap gap-5">
           <Link href="https://github.com/PaHaNchickT" target="_blank" className="flex gap-2">
             <p>GitHub</p>
             <GithubOutlineIcon />

@@ -27,7 +27,7 @@ const Stack = (props: { elementRef: MutableRefObject<HTMLDivElement> }): ReactEl
       <StackItems index={0} avatarWidth={avatarWidth} />
       <Avatar
         src={ASSETS_PATH.avatar}
-        className="w-[150px] h-[150px] shadow-[0_0_20px_7px_background] lg:w-[250px] lg:h-[250px]"
+        className="w-[200px] h-[200px] shadow-[0_0_20px_7px_background] lg:w-[250px] lg:h-[250px]"
         ref={avatarRef}
       />
       <StackItems index={1} avatarWidth={avatarWidth} />

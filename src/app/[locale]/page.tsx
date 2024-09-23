@@ -1,7 +1,5 @@
 'use client';
 
-// import { Link } from '@nextui-org/react';
-// import { useTranslations } from 'next-intl';
 import type { MutableRefObject } from 'react';
 import { useEffect, useRef, type ReactElement } from 'react';
 

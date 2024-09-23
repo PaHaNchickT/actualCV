@@ -15,4 +15,8 @@ const nextConfig = {
 
 export default withNextIntl(nextConfig);
 
-export const output = 'export';
+module.exports = {
+  output: 'export',
+  basePath: '/actualCV',
+  assetPrefix: '/actualCV/',
+};

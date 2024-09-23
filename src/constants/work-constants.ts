@@ -34,10 +34,6 @@ export const STACK_COLORS: { [key: string]: string } = {
   webpack: 'text-[#1C78C0]',
 };
 
-export const STACK_WIDTH: { [key: number]: string } = {
-  250: 'w-[calc((100%-250px)/2)]',
-};
-
 export const STACK = [
   [
     [

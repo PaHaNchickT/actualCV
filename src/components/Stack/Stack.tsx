@@ -21,13 +21,13 @@ const Stack = (props: { elementRef: MutableRefObject<HTMLDivElement> }): ReactEl
   return (
     <div
       id="work"
-      className="relative w-full h-[100px] flex justify-between items-center bg-background text-2xl font-black shadow-[0_0_20px_-5px_#F6AD34] z-[2]"
+      className="relative w-full h-[80px] flex justify-center items-center bg-background text-2xl font-black shadow-[0_0_20px_-5px_#F6AD34] z-[2] lg:h-[100px] lg:justify-between"
       ref={props.elementRef}
     >
       <StackItems index={0} avatarWidth={avatarWidth} />
       <Avatar
         src={ASSETS_PATH.avatar}
-        className="w-[250px] h-[250px] shadow-[0_0_20px_7px_background]"
+        className="w-[150px] h-[150px] shadow-[0_0_20px_7px_background] lg:w-[250px] lg:h-[250px]"
         ref={avatarRef}
       />
       <StackItems index={1} avatarWidth={avatarWidth} />

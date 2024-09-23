@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "format:fix": "prettier .  --write",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "prepare": "husky"
+    "prepare": "husky",
+    "export": "next export"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [

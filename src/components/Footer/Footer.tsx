@@ -4,6 +4,8 @@ import { Button, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 
+import { GithubOutlineIcon } from '@/ui/Icons/GithubOutlineIcon';
+
 export const Footer = (): ReactElement => {
   const t = useTranslations('Footer');
 
@@ -42,11 +44,10 @@ export const Footer = (): ReactElement => {
           </Button>
         </div>
         <div className="flex justify-between items-end">
-          <p>
-            <Link href="https://github.com/PaHaNchickT" target="_blank">
-              GitHub
-            </Link>
-          </p>
+          <Link href="https://github.com/PaHaNchickT" target="_blank" className="flex gap-2">
+            <p>GitHub</p>
+            <GithubOutlineIcon />
+          </Link>
           <p className="text-sm">{t('copyright')}</p>
         </div>
       </div>

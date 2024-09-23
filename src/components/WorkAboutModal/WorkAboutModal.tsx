@@ -13,7 +13,7 @@ const WorkAboutModal = (props: {
 }): ReactElement => {
   return (
     <>
-      <Modal isOpen={props.isOpen} onOpenChange={props.onOpenChange} size="2xl" backdrop="blur">
+      <Modal isOpen={props.isOpen} onOpenChange={props.onOpenChange} size="2xl" backdrop="blur" placement="center">
         <ModalContent>
           {(onClose) => (
             <>

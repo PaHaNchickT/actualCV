@@ -42,7 +42,7 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
             <div className="flex flex-col gap-5">
               <div
                 onClick={onOpen}
-                className={`${ASSETS_PATH.diplomas[counter]} bg-cover w-[200px] h-[155px] transition-all duration-500 rounded-xl cursor-pointer grayscale hover:shadow-[0_0_8px_3px_#F6AD34] hover:grayscale-0`}
+                className={`${ASSETS_PATH.diplomas[counter]} bg-cover w-[200px] h-[155px] transition-all duration-500 rounded-xl cursor-pointer shadow-[0_0_8px_3px_#F6AD34] hover:shadow-[0_0_8px_3px_#F6AD34] hover:grayscale-0 sm:shadow-none sm:grayscale`}
               ></div>
               <div className="flex gap-5 self-center">
                 <CarouselButton counter={counter} setCounter={setCounter} isPlus={false} />
@@ -56,7 +56,7 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
         </CardBody>
       </Card>
 
-      <Modal size="xl" isOpen={isOpen} onClose={onClose} backdrop="blur">
+      <Modal size="xl" isOpen={isOpen} onClose={onClose} backdrop="blur" placement="center">
         <ModalContent>
           <ModalHeader></ModalHeader>
           <ModalBody>

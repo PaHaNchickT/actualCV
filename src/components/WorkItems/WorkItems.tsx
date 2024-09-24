@@ -18,11 +18,11 @@ const WorkItems = (props: { item: TWorkItem; t: ReturnType<typeof useTranslation
           shadow="sm"
           isPressable
           onPress={onOpen}
-          className="w-[400px] h-[400px] transition-all duration-300 flex flex-col justify-center relative bg-black group/card shadow-[0_0_20px_7px_background] hover:shadow-[0_0_10px_1px_#F6AD34]"
+          className="w-[200px] h-[200px] transition-all duration-300 flex flex-col justify-center relative bg-black group/card shadow-[0_0_20px_7px_background] hover:shadow-[0_0_10px_1px_#F6AD34] lg:w-[400px] lg:h-[400px]"
         >
           <CardBody className="overflow-visible p-0 absolute z-[2] opacity-70">
             <div
-              className={`${props.item.cover} bg-cover w-[400px] h-[400px] blur-[2px] transition-all duration-300 grayscale group-hover/card:grayscale-0 group-hover/card:blur-[1px]`}
+              className={`${props.item.cover} bg-cover w-[200px] h-[200px] blur-[2px] transition-all duration-300 grayscale group-hover/card:grayscale-0 group-hover/card:blur-[1px] lg:w-[400px] lg:h-[400px]`}
             ></div>
           </CardBody>
           <div className="bg-background pl-8 pr-2 py-1 text-xl box-border relative z-[3] transition-all min-w-[10px] group-hover/card:min-w-full group-hover/card:text-5xl group-hover/card:py-4 group-hover/card:px-0">

@@ -15,7 +15,14 @@ const WorkModal = (props: {
 }): ReactElement => {
   return (
     <>
-      <Modal isOpen={props.isOpen} onOpenChange={props.onOpenChange} size="4xl" backdrop="blur">
+      <Modal
+        isOpen={props.isOpen}
+        onOpenChange={props.onOpenChange}
+        size="4xl"
+        backdrop="blur"
+        scrollBehavior="inside"
+        placement="center"
+      >
         <ModalContent>
           {(onClose) => (
             <>
@@ -23,8 +30,8 @@ const WorkModal = (props: {
                 {props.t(`items.${props.item.id}.subtitle`)}
               </ModalHeader>
               <ModalBody>
-                <div className="flex flex-row justify-between gap-5 pb-14">
-                  <section className="w-[60%] flex flex-col gap-3">
+                <div className="flex flex-col justify-between gap-5 pb-14 lg:flex-row">
+                  <section className="w-full flex flex-col gap-3 lg:w-[60%]">
                     <p className="text-justify">{props.t(`items.${props.item.id}.descrMain`)}</p>
                     <p className="text-justify">{props.t(`items.${props.item.id}.descrSub`)}</p>
                     <div className="flex flex-col">
@@ -41,7 +48,7 @@ const WorkModal = (props: {
                       </div>
                     </div>
                   </section>
-                  <div className="flex flex-col gap-5">
+                  <div className="flex flex-col gap-5 self-center">
                     <Image
                       isBlurred
                       shadow="sm"

@@ -8,10 +8,10 @@ import { STACK } from '@/constants/about-constants';
 
 const AboutStack = (props: { t: ReturnType<typeof useTranslations<'About'>> }): ReactElement => {
   return (
-    <Card className="p-4 max-w-[800px] h-full" shadow="lg">
+    <Card className="p-4 max-w-[800px] h-full text-sm sm:text-base" shadow="lg">
       <CardHeader className="text-primary">{props.t('stack.header')}</CardHeader>
       <CardBody className="overflow-visible py-2 pl-7 h-full">
-        <ul className="list-disc marker:text-primary h-full flex flex-col justify-between">
+        <ul className="list-disc marker:text-primary h-full flex flex-col justify-between gap-1 text-justify lg:gap-0">
           {STACK.map((item, index) => (
             <li key={index}>{props.t(item)}</li>
           ))}

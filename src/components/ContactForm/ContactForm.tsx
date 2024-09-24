@@ -63,10 +63,10 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
   };
 
   return (
-    <div className="flex flex-col items-center py-5 px-2 gap-2 bg-[#18181B] rounded-3xl transition-all duration-300">
+    <div className="flex flex-col items-center p-3 gap-2 bg-[#18181B] rounded-medium transition-all duration-300 sm:p-5 sm:rounded-3xl">
       <form
         onSubmit={handleSubmit(submit as SubmitHandler<TContactForm>)}
-        className="flex flex-col items-center gap-5 w-full min-w-[400px] sm:w-[70%]"
+        className="flex flex-col items-center gap-3 w-full w-[300px] sm:w-[400px] sm:gap-5"
       >
         <Input
           type="text"
@@ -77,7 +77,7 @@ function ContactForm(props: { t: ReturnType<typeof useTranslations<'Contact'>> }
           errorMessage={errors.from_name?.message}
           isDisabled={sending}
         />
-        <div className="flex justify-between w-full gap-5">
+        <div className="flex justify-between w-full gap-3 flex-col sm:gap-5 sm:flex-row">
           <div className="w-full">
             <Input
               type="text"

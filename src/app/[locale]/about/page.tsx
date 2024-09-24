@@ -20,11 +20,11 @@ const About = (): ReactElement => {
     <div className="flex flex-col justify-center w-full relative">
       <Video />
       <div className="w-full p-10 relative z-[2] flex flex-col items-center gap-10">
-        <h3 className="font-black text-5xl text-center">{t('title')}</h3>
-        <div className="flex flex-col gap-5 w-[800px]">
+        <h3 className="font-black text-4xl text-center sm:text-5xl">{t('title')}</h3>
+        <div className="flex flex-col gap-5 lg:w-[800px]">
           <AboutInfo t={t} />
           <AboutWork t={t} />
-          <div className="flex gap-5">
+          <div className="flex gap-5 flex-col-reverse lg:flex-row">
             <div className="flex flex-col gap-5">
               <AboutEducation t={t} />
               <AboutLanguages t={t} />

@@ -2,11 +2,11 @@
 
 import type { ReactElement } from 'react';
 
-import { STACK, STACK_COLORS, STACK_WIDTH } from '@/constants/work-constants';
+import { STACK, STACK_COLORS } from '@/constants/work-constants';
 
 const StackItems = (props: { index: number; avatarWidth: number }): ReactElement => {
   return (
-    <div className={`flex justify-around ${STACK_WIDTH[props.avatarWidth]}`}>
+    <div className="z-[1] flex justify-around w-[calc((100%-250px)/2)] hidden lg:flex">
       {STACK[props.index].map((value, index) => {
         return (
           <div key={index} className="flex flex-col gap-1 items-center">

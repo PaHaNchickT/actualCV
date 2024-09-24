@@ -3,7 +3,14 @@ import { nextui } from '@nextui-org/react';
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        steam: {
+          '0%, 100%': { 'background-position': '0% 0%' },
+          '50%': { 'background-position': '400% 0%' },
+        },
+      },
+    },
   },
   darkMode: 'class',
   plugins: [
@@ -15,9 +22,9 @@ module.exports = {
         light: {
           layout: {},
           colors: {
-            background: '#fff8d1',
+            background: '#111111',
             primary: {
-              DEFAULT: '#495bff',
+              DEFAULT: '#f6ad34',
             },
           },
         },

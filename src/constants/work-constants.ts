@@ -1,7 +1,7 @@
 import type { TWorkItem } from '@/types/types';
 
 export const ASSETS_PATH = {
-  video: '/video/bg.gif',
+  video: '/video/bg.mp4',
   videoPoster: '/images/bg.jpg',
   avatar: '/images/avatar.png',
   placeholder: '/images/placeholder.png',
@@ -32,10 +32,6 @@ export const STACK_COLORS: { [key: string]: string } = {
   tail: 'text-[#06B6D4]',
   ts: 'text-[#3178C6]',
   webpack: 'text-[#1C78C0]',
-};
-
-export const STACK_WIDTH: { [key: number]: string } = {
-  250: 'w-[calc((100%-250px)/2)]',
 };
 
 export const STACK = [

@@ -7,7 +7,7 @@ export default function NotFound(): ReactElement {
   const t = useTranslations('NotFound');
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen text-center">
       <Video />
       <div className="flex flex-col z-[2]">
         <p className="text-4xl text-center">404</p>

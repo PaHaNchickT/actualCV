@@ -72,12 +72,22 @@ const Header = (): ReactElement => {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        <NavbarMenuItem className="flex align-middle">
-          <div>
-            <Link href="/#work">{t('work')}</Link>
-            <Link href="/about">{t('about')}</Link>
-            <Link href="/contact">{t('contact')}</Link>
-          </div>
+        <NavbarMenuItem className="flex flex-col justify-center items-center h-full gap-10">
+          <Link
+            href="/#work"
+            className="text-3xl"
+            onPress={() => {
+              if (isMenuOpen) setIsMenuOpen(false);
+            }}
+          >
+            {t('work')}
+          </Link>
+          <Link href="/about" className="text-3xl">
+            {t('about')}
+          </Link>
+          <Link href="/contact" className="text-3xl">
+            {t('contact')}
+          </Link>
           <LangDropdown />
         </NavbarMenuItem>
       </NavbarMenu>

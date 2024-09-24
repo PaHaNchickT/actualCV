@@ -21,8 +21,12 @@ const Providers = ({ children, locale, messages }: ProviderProps): ReactNode => 
   const router = useRouterIntl();
   const [mounted, setMounted] = useState(false);
   const { timeZone } = Intl.DateTimeFormat().resolvedOptions();
+  const [screenWidth, setScreenWidth] = useState(1024);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    if (window) setScreenWidth(window.screen.width);
+  }, []);
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages} timeZone={timeZone}>
@@ -34,7 +38,7 @@ const Providers = ({ children, locale, messages }: ProviderProps): ReactNode => 
         ) : (
           <Loader />
         )}
-        <Toaster position="bottom-right" />
+        <Toaster position={screenWidth <= 640 ? 'bottom-center' : 'bottom-right'} />
       </NextUIProvider>
     </NextIntlClientProvider>
   );

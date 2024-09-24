@@ -6,7 +6,7 @@ import { type ReactElement } from 'react';
 
 const AboutLanguages = (props: { t: ReturnType<typeof useTranslations<'About'>> }): ReactElement => {
   return (
-    <Card className="p-4 max-w-[800px]" shadow="lg">
+    <Card className="p-4 max-w-[800px] text-sm sm:text-base" shadow="lg">
       <CardHeader className="text-primary">{props.t('languages.header')}</CardHeader>
       <CardBody className="overflow-visible py-2">
         <p className="text-justify">

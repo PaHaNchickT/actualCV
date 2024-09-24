@@ -38,7 +38,7 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
     <>
       <Card className="p-4 max-w-[800px]" shadow="lg">
         <CardBody className="overflow-visible py-2">
-          <div className="flex gap-5 justify-between items-center">
+          <div className="flex flex-col gap-5 justify-between items-center sm:flex-row">
             <div className="flex flex-col gap-5">
               <div
                 onClick={onOpen}
@@ -49,7 +49,7 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
                 <CarouselButton counter={counter} setCounter={setCounter} isPlus={true} />
               </div>
             </div>
-            <p className="w-8/12 text-justify">
+            <p className="w-full text-justify text-sm sm:w-8/12 sm:text-base">
               {props.t('work.0')} {linkEpam} {props.t('work.1')} {linkRSS} {props.t('work.2')}
             </p>
           </div>

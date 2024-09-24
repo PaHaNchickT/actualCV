@@ -73,7 +73,7 @@ const Header = (): ReactElement => {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem className="flex flex-col justify-center items-center h-full gap-10">
-          <Link href="/#work" className="text-3xl">
+          <Link href="/#work" className="text-3xl" onPress={() => setIsMenuOpen(false)}>
             {t('work')}
           </Link>
           <Link href="/about" className="text-3xl">

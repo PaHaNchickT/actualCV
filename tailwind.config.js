@@ -15,9 +15,9 @@ module.exports = {
         light: {
           layout: {},
           colors: {
-            background: '#fff8d1',
+            background: '#111111',
             primary: {
-              DEFAULT: '#495bff',
+              DEFAULT: '#f6ad34',
             },
           },
         },

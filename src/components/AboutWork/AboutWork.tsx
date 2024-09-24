@@ -73,6 +73,10 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
           <ModalFooter></ModalFooter>
         </ModalContent>
       </Modal>
+
+      {ASSETS_PATH.diplomas.map((url, index) => (
+        <div key={index} className={`${url} bg-cover hidden z-[-1]`}></div>
+      ))}
     </>
   );
 };

@@ -62,8 +62,6 @@ export const Footer = (): ReactElement => {
                     )
                       dispatch(toggleLoading(true));
                   }}
-                  underline={selectedPage === link ? 'always' : 'none'}
-                  color={selectedPage === link ? 'foreground' : 'primary'}
                 >
                   {t(`links.${link}`)}
                 </Link>

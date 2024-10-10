@@ -21,9 +21,12 @@ const Home = (): ReactElement => {
   const isLoading = useSelector((state: RootState) => state.appState.isLoading);
 
   useEffect(() => {
-    if (window && window.location.hash === '#work' && !isLoading) elementRef.current.scrollIntoView();
     dispatch(toggleLoading(false));
   }, []);
+
+  useEffect(() => {
+    if (window && window.location.hash === '#work' && !isLoading) elementRef.current.scrollIntoView();
+  }, [isLoading]);
 
   return (
     <>

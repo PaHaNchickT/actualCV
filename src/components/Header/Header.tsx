@@ -1,3 +1,5 @@
+/* eslint-disable react-compiler/react-compiler */
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import {
@@ -13,16 +15,19 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState, type ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { usePathnameIntl } from '@/navigation';
-import { toggleLoading } from '@/redux/appStateSlice';
+import { swapPage, toggleLoading } from '@/redux/appStateSlice';
+import type { RootState } from '@/redux/store';
 import LangDropdown from '@/ui/LangDropdown/LangDropdown';
 
 const Header = (): ReactElement => {
   const dispatch = useDispatch();
-  const [selected, setSelected] = useState('');
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const selectedPage = useSelector((state: RootState) => state.appState.selectedPage);
 
   const pathname = usePathnameIntl();
   const t = useTranslations('Header');
@@ -36,10 +41,13 @@ const Header = (): ReactElement => {
   };
 
   useEffect(() => {
-    setSelected(
-      (location.hash && location.hash.slice(1, location.hash.length)) ||
-        location.pathname.split('/')[location.pathname.split('/').length - 1],
+    dispatch(
+      swapPage(
+        (location.hash && location.hash.slice(1, location.hash.length)) ||
+          location.pathname.split('/')[location.pathname.split('/').length - 1],
+      ),
     );
+
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return (): void => window.removeEventListener('scroll', handleScroll);
@@ -62,8 +70,8 @@ const Header = (): ReactElement => {
           href="/"
           onPress={() => {
             if (isMenuOpen) setIsMenuOpen(false);
-            setSelected('');
-            if (selected === 'about' || selected === 'contact') dispatch(toggleLoading(true));
+            dispatch(swapPage(''));
+            if (selectedPage === 'about' || selectedPage === 'contact') dispatch(toggleLoading(true));
           }}
         >
           <Image src="/images/logo.png" width={48} height={48} alt="logo" />
@@ -79,11 +87,11 @@ const Header = (): ReactElement => {
             key="work"
             href="/#work"
             onPress={() => {
-              setSelected('work');
-              if (selected === 'about' || selected === 'contact') dispatch(toggleLoading(true));
+              dispatch(swapPage('work'));
+              if (selectedPage === 'about' || selectedPage === 'contact') dispatch(toggleLoading(true));
             }}
-            underline={selected === 'work' ? 'always' : 'none'}
-            color={selected === 'work' ? 'foreground' : 'primary'}
+            underline={selectedPage === 'work' ? 'always' : 'none'}
+            color={selectedPage === 'work' ? 'foreground' : 'primary'}
           >
             {t('work')}
           </Link>
@@ -93,11 +101,11 @@ const Header = (): ReactElement => {
             key="about"
             href="/about"
             onPress={() => {
-              setSelected('about');
-              if (selected !== 'about') dispatch(toggleLoading(true));
+              dispatch(swapPage('about'));
+              if (selectedPage !== 'about') dispatch(toggleLoading(true));
             }}
-            underline={selected === 'about' ? 'always' : 'none'}
-            color={selected === 'about' ? 'foreground' : 'primary'}
+            underline={selectedPage === 'about' ? 'always' : 'none'}
+            color={selectedPage === 'about' ? 'foreground' : 'primary'}
           >
             {t('about')}
           </Link>
@@ -107,11 +115,11 @@ const Header = (): ReactElement => {
             key="contact"
             href="/contact"
             onPress={() => {
-              setSelected('contact');
-              if (selected !== 'contact') dispatch(toggleLoading(true));
+              dispatch(swapPage('contact'));
+              if (selectedPage !== 'contact') dispatch(toggleLoading(true));
             }}
-            underline={selected === 'contact' ? 'always' : 'none'}
-            color={selected === 'contact' ? 'foreground' : 'primary'}
+            underline={selectedPage === 'contact' ? 'always' : 'none'}
+            color={selectedPage === 'contact' ? 'foreground' : 'primary'}
           >
             {t('contact')}
           </Link>
@@ -128,11 +136,11 @@ const Header = (): ReactElement => {
             className="text-3xl"
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
-              setSelected('work');
-              if (selected === 'about' || selected === 'contact') dispatch(toggleLoading(true));
+              dispatch(swapPage('work'));
+              if (selectedPage === 'about' || selectedPage === 'contact') dispatch(toggleLoading(true));
             }}
-            underline={selected === 'work' ? 'always' : 'none'}
-            color={selected === 'work' ? 'foreground' : 'primary'}
+            underline={selectedPage === 'work' ? 'always' : 'none'}
+            color={selectedPage === 'work' ? 'foreground' : 'primary'}
           >
             {t('work')}
           </Link>
@@ -142,11 +150,11 @@ const Header = (): ReactElement => {
             className="text-3xl"
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
-              setSelected('about');
-              if (selected !== 'about') dispatch(toggleLoading(true));
+              dispatch(swapPage('about'));
+              if (selectedPage !== 'about') dispatch(toggleLoading(true));
             }}
-            underline={selected === 'about' ? 'always' : 'none'}
-            color={selected === 'about' ? 'foreground' : 'primary'}
+            underline={selectedPage === 'about' ? 'always' : 'none'}
+            color={selectedPage === 'about' ? 'foreground' : 'primary'}
           >
             {t('about')}
           </Link>
@@ -156,11 +164,11 @@ const Header = (): ReactElement => {
             className="text-3xl"
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
-              setSelected('contact');
-              if (selected !== 'contact') dispatch(toggleLoading(true));
+              dispatch(swapPage('contact'));
+              if (selectedPage !== 'contact') dispatch(toggleLoading(true));
             }}
-            underline={selected === 'contact' ? 'always' : 'none'}
-            color={selected === 'contact' ? 'foreground' : 'primary'}
+            underline={selectedPage === 'contact' ? 'always' : 'none'}
+            color={selectedPage === 'contact' ? 'foreground' : 'primary'}
           >
             {t('contact')}
           </Link>

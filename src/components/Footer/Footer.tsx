@@ -1,13 +1,31 @@
+/* eslint-disable react-compiler/react-compiler */
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import { Button, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
-import type { ReactElement } from 'react';
+import { useEffect, type ReactElement } from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
+import { swapPage, toggleLoading } from '@/redux/appStateSlice';
+import type { RootState } from '@/redux/store';
 import { GithubOutlineIcon } from '@/ui/Icons/GithubOutlineIcon';
 
 export const Footer = (): ReactElement => {
+  const dispatch = useDispatch();
+  const selectedPage = useSelector((state: RootState) => state.appState.selectedPage);
+
   const t = useTranslations('Footer');
+
+  useEffect(() => {
+    dispatch(
+      swapPage(
+        (location.hash && location.hash.slice(1, location.hash.length)) ||
+          location.pathname.split('/')[location.pathname.split('/').length - 1],
+      ),
+    );
+  }, []);
 
   return (
     <footer className="z-5 bg-black/30 border-t-1 border-t-default-300 w-full flex justify-center backdrop-blur-lg backdrop-saturate-150">
@@ -28,9 +46,33 @@ export const Footer = (): ReactElement => {
             </div>
             <div className="flex flex-col gap-5">
               <p>{t('headers.navigation')}</p>
-              <Link href="/#work">{t('links.work')}</Link>
-              <Link href="/about">{t('links.about')}</Link>
-              <Link href="/contact">{t('links.contact')}</Link>
+              <Link
+                href="/#work"
+                onPress={() => {
+                  dispatch(swapPage('work'));
+                  if (selectedPage === 'about' || selectedPage === 'contact') dispatch(toggleLoading(true));
+                }}
+              >
+                {t('links.work')}
+              </Link>
+              <Link
+                href="/about"
+                onPress={() => {
+                  dispatch(swapPage('about'));
+                  if (selectedPage !== 'about') dispatch(toggleLoading(true));
+                }}
+              >
+                {t('links.about')}
+              </Link>
+              <Link
+                href="/contact"
+                onPress={() => {
+                  dispatch(swapPage('contact'));
+                  if (selectedPage !== 'contact') dispatch(toggleLoading(true));
+                }}
+              >
+                {t('links.contact')}
+              </Link>
             </div>
           </div>
           <Button

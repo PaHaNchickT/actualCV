@@ -53,6 +53,7 @@ export const Footer = (): ReactElement => {
                   key={link}
                   href={!index ? `/#${link}` : `/${link}`}
                   onPress={() => {
+                    if (window) window.scrollTo(0, 0);
                     dispatch(swapPage(link));
                     if (
                       (!index && selectedPage === 'about') ||

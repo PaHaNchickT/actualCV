@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
+import { Comfortaa } from 'next/font/google';
 import { getMessages } from 'next-intl/server';
 import { type ReactElement } from 'react';
 
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
   description: 'Portfolio of Junior Frontend Developer Pavel Terno made using TypeScript, React and Next.js',
 };
 
+const comfortaa = Comfortaa({ subsets: ['latin'] });
+
 const RootLayout = async ({
   children,
   params: { locale },
@@ -25,7 +28,7 @@ const RootLayout = async ({
 
   return (
     <html lang={locale} suppressHydrationWarning={true}>
-      <body>
+      <body className={comfortaa.className}>
         <Providers locale={locale} messages={messages}>
           <div className="min-h-screen flex flex-col">
             <Header />

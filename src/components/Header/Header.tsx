@@ -17,6 +17,7 @@ import { useEffect, useState, type ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
+import { LINKS_ARRAY } from '@/constants/global-constants';
 import { usePathnameIntl } from '@/navigation';
 import { swapPage, toggleLoading } from '@/redux/appStateSlice';
 import type { RootState } from '@/redux/store';
@@ -82,96 +83,54 @@ const Header = (): ReactElement => {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center"></NavbarContent>
       <NavbarContent className="hidden sm:flex" justify="end">
-        <NavbarItem>
-          <Link
-            key="work"
-            href="/#work"
-            onPress={() => {
-              dispatch(swapPage('work'));
-              if (selectedPage === 'about' || selectedPage === 'contact') dispatch(toggleLoading(true));
-            }}
-            underline={selectedPage === 'work' ? 'always' : 'none'}
-            color={selectedPage === 'work' ? 'foreground' : 'primary'}
-          >
-            {t('work')}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            key="about"
-            href="/about"
-            onPress={() => {
-              dispatch(swapPage('about'));
-              if (selectedPage !== 'about') dispatch(toggleLoading(true));
-            }}
-            underline={selectedPage === 'about' ? 'always' : 'none'}
-            color={selectedPage === 'about' ? 'foreground' : 'primary'}
-          >
-            {t('about')}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            key="contact"
-            href="/contact"
-            onPress={() => {
-              dispatch(swapPage('contact'));
-              if (selectedPage !== 'contact') dispatch(toggleLoading(true));
-            }}
-            underline={selectedPage === 'contact' ? 'always' : 'none'}
-            color={selectedPage === 'contact' ? 'foreground' : 'primary'}
-          >
-            {t('contact')}
-          </Link>
-        </NavbarItem>
+        {LINKS_ARRAY.map((link, index) => (
+          <NavbarItem key={index}>
+            <Link
+              key={link}
+              href={!index ? `/#${link}` : `/${link}`}
+              onPress={() => {
+                dispatch(swapPage(link));
+                if (
+                  (!index && selectedPage === 'about') ||
+                  (!index && selectedPage === 'contact') ||
+                  (index !== 0 && selectedPage !== link)
+                )
+                  dispatch(toggleLoading(true));
+              }}
+              underline={selectedPage === link ? 'always' : 'none'}
+              color={selectedPage === link ? 'foreground' : 'primary'}
+            >
+              {t(link)}
+            </Link>
+          </NavbarItem>
+        ))}
         <NavbarItem>
           <LangDropdown />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem className="flex flex-col justify-center items-center h-full gap-10">
-          <Link
-            key="work"
-            href="/#work"
-            className="text-3xl"
-            onPress={() => {
-              if (isMenuOpen) setIsMenuOpen(false);
-              dispatch(swapPage('work'));
-              if (selectedPage === 'about' || selectedPage === 'contact') dispatch(toggleLoading(true));
-            }}
-            underline={selectedPage === 'work' ? 'always' : 'none'}
-            color={selectedPage === 'work' ? 'foreground' : 'primary'}
-          >
-            {t('work')}
-          </Link>
-          <Link
-            key="about"
-            href="/about"
-            className="text-3xl"
-            onPress={() => {
-              if (isMenuOpen) setIsMenuOpen(false);
-              dispatch(swapPage('about'));
-              if (selectedPage !== 'about') dispatch(toggleLoading(true));
-            }}
-            underline={selectedPage === 'about' ? 'always' : 'none'}
-            color={selectedPage === 'about' ? 'foreground' : 'primary'}
-          >
-            {t('about')}
-          </Link>
-          <Link
-            key="contact"
-            href="/contact"
-            className="text-3xl"
-            onPress={() => {
-              if (isMenuOpen) setIsMenuOpen(false);
-              dispatch(swapPage('contact'));
-              if (selectedPage !== 'contact') dispatch(toggleLoading(true));
-            }}
-            underline={selectedPage === 'contact' ? 'always' : 'none'}
-            color={selectedPage === 'contact' ? 'foreground' : 'primary'}
-          >
-            {t('contact')}
-          </Link>
+          {LINKS_ARRAY.map((link, index) => (
+            <Link
+              key={link}
+              href={!index ? `/#${link}` : `/${link}`}
+              className="text-3xl"
+              onPress={() => {
+                if (isMenuOpen) setIsMenuOpen(false);
+                dispatch(swapPage(link));
+                if (
+                  (!index && selectedPage === 'about') ||
+                  (!index && selectedPage === 'contact') ||
+                  (index !== 0 && selectedPage !== link)
+                )
+                  dispatch(toggleLoading(true));
+              }}
+              underline={selectedPage === link ? 'always' : 'none'}
+              color={selectedPage === link ? 'foreground' : 'primary'}
+            >
+              {t(link)}
+            </Link>
+          ))}
           <LangDropdown />
         </NavbarMenuItem>
       </NavbarMenu>

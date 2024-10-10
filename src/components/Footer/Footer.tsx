@@ -8,6 +8,7 @@ import { useEffect, type ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
+import { LINKS_ARRAY } from '@/constants/global-constants';
 import { swapPage, toggleLoading } from '@/redux/appStateSlice';
 import type { RootState } from '@/redux/store';
 import { GithubOutlineIcon } from '@/ui/Icons/GithubOutlineIcon';
@@ -44,35 +45,28 @@ export const Footer = (): ReactElement => {
                 pt1999@mail.ru
               </Link>
             </div>
+
             <div className="flex flex-col gap-5">
               <p>{t('headers.navigation')}</p>
-              <Link
-                href="/#work"
-                onPress={() => {
-                  dispatch(swapPage('work'));
-                  if (selectedPage === 'about' || selectedPage === 'contact') dispatch(toggleLoading(true));
-                }}
-              >
-                {t('links.work')}
-              </Link>
-              <Link
-                href="/about"
-                onPress={() => {
-                  dispatch(swapPage('about'));
-                  if (selectedPage !== 'about') dispatch(toggleLoading(true));
-                }}
-              >
-                {t('links.about')}
-              </Link>
-              <Link
-                href="/contact"
-                onPress={() => {
-                  dispatch(swapPage('contact'));
-                  if (selectedPage !== 'contact') dispatch(toggleLoading(true));
-                }}
-              >
-                {t('links.contact')}
-              </Link>
+              {LINKS_ARRAY.map((link, index) => (
+                <Link
+                  key={link}
+                  href={!index ? `/#${link}` : `/${link}`}
+                  onPress={() => {
+                    dispatch(swapPage(link));
+                    if (
+                      (!index && selectedPage === 'about') ||
+                      (!index && selectedPage === 'contact') ||
+                      (index !== 0 && selectedPage !== link)
+                    )
+                      dispatch(toggleLoading(true));
+                  }}
+                  underline={selectedPage === link ? 'always' : 'none'}
+                  color={selectedPage === link ? 'foreground' : 'primary'}
+                >
+                  {t(`links.${link}`)}
+                </Link>
+              ))}
             </div>
           </div>
           <Button

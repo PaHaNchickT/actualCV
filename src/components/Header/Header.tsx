@@ -55,7 +55,13 @@ const Header = (): ReactElement => {
       className={`z-50 transition-all duration-300 ${isScrolled ? 'bg-black/30 shadow-lg' : 'bg-transparent'}`}
     >
       <NavbarContent>
-        <Link href="/" onPress={() => setSelected('')}>
+        <Link
+          href="/"
+          onPress={() => {
+            if (isMenuOpen) setIsMenuOpen(false);
+            setSelected('');
+          }}
+        >
           <Image src="/images/logo.png" width={48} height={48} alt="logo" />
         </Link>
       </NavbarContent>

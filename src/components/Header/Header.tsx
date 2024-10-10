@@ -20,6 +20,7 @@ const Header = (): ReactElement => {
   const [selected, setSelected] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
   const pathname = usePathnameIntl();
   const t = useTranslations('Header');
 
@@ -70,8 +71,6 @@ const Header = (): ReactElement => {
             onPress={() => setSelected('work')}
             underline={selected === 'work' ? 'always' : 'none'}
             color={selected === 'work' ? 'foreground' : 'primary'}
-            isDisabled={selected === 'work'}
-            className="opacity-100"
           >
             {t('work')}
           </Link>
@@ -83,8 +82,6 @@ const Header = (): ReactElement => {
             onPress={() => setSelected('about')}
             underline={selected === 'about' ? 'always' : 'none'}
             color={selected === 'about' ? 'foreground' : 'primary'}
-            isDisabled={selected === 'about'}
-            className="opacity-100"
           >
             {t('about')}
           </Link>
@@ -96,8 +93,6 @@ const Header = (): ReactElement => {
             onPress={() => setSelected('contact')}
             underline={selected === 'contact' ? 'always' : 'none'}
             color={selected === 'contact' ? 'foreground' : 'primary'}
-            isDisabled={selected === 'contact'}
-            className="opacity-100"
           >
             {t('contact')}
           </Link>
@@ -111,42 +106,39 @@ const Header = (): ReactElement => {
           <Link
             key="work"
             href="/#work"
-            className="text-3xl opacity-100"
+            className="text-3xl"
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
               setSelected('work');
             }}
             underline={selected === 'work' ? 'always' : 'none'}
             color={selected === 'work' ? 'foreground' : 'primary'}
-            isDisabled={selected === 'work'}
           >
             {t('work')}
           </Link>
           <Link
             key="about"
             href="/about"
-            className="text-3xl opacity-100"
+            className="text-3xl"
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
               setSelected('about');
             }}
             underline={selected === 'about' ? 'always' : 'none'}
             color={selected === 'about' ? 'foreground' : 'primary'}
-            isDisabled={selected === 'about'}
           >
             {t('about')}
           </Link>
           <Link
             key="contact"
             href="/contact"
-            className="text-3xl opacity-100"
+            className="text-3xl"
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
               setSelected('contact');
             }}
             underline={selected === 'contact' ? 'always' : 'none'}
             color={selected === 'contact' ? 'foreground' : 'primary'}
-            isDisabled={selected === 'contact'}
           >
             {t('contact')}
           </Link>

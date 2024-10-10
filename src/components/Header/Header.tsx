@@ -17,6 +17,7 @@ import { usePathnameIntl } from '@/navigation';
 import LangDropdown from '@/ui/LangDropdown/LangDropdown';
 
 const Header = (): ReactElement => {
+  const [selected, setSelected] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathnameIntl();
@@ -31,6 +32,10 @@ const Header = (): ReactElement => {
   };
 
   useEffect(() => {
+    setSelected(
+      (location.hash && location.hash.slice(1, location.hash.length)) ||
+        location.pathname.split('/')[location.pathname.split('/').length - 1],
+    );
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return (): void => window.removeEventListener('scroll', handleScroll);
@@ -49,7 +54,7 @@ const Header = (): ReactElement => {
       className={`z-50 transition-all duration-300 ${isScrolled ? 'bg-black/30 shadow-lg' : 'bg-transparent'}`}
     >
       <NavbarContent>
-        <Link href="/">
+        <Link href="/" onPress={() => setSelected('')}>
           <Image src="/images/logo.png" width={48} height={48} alt="logo" />
         </Link>
       </NavbarContent>
@@ -59,13 +64,43 @@ const Header = (): ReactElement => {
       <NavbarContent className="hidden sm:flex gap-4" justify="center"></NavbarContent>
       <NavbarContent className="hidden sm:flex" justify="end">
         <NavbarItem>
-          <Link href="/#work">{t('work')}</Link>
+          <Link
+            key="work"
+            href="/#work"
+            onPress={() => setSelected('work')}
+            underline={selected === 'work' ? 'always' : 'none'}
+            color={selected === 'work' ? 'foreground' : 'primary'}
+            isDisabled={selected === 'work'}
+            className="opacity-100"
+          >
+            {t('work')}
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/about">{t('about')}</Link>
+          <Link
+            key="about"
+            href="/about"
+            onPress={() => setSelected('about')}
+            underline={selected === 'about' ? 'always' : 'none'}
+            color={selected === 'about' ? 'foreground' : 'primary'}
+            isDisabled={selected === 'about'}
+            className="opacity-100"
+          >
+            {t('about')}
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/contact">{t('contact')}</Link>
+          <Link
+            key="contact"
+            href="/contact"
+            onPress={() => setSelected('contact')}
+            underline={selected === 'contact' ? 'always' : 'none'}
+            color={selected === 'contact' ? 'foreground' : 'primary'}
+            isDisabled={selected === 'contact'}
+            className="opacity-100"
+          >
+            {t('contact')}
+          </Link>
         </NavbarItem>
         <NavbarItem>
           <LangDropdown />
@@ -74,18 +109,45 @@ const Header = (): ReactElement => {
       <NavbarMenu>
         <NavbarMenuItem className="flex flex-col justify-center items-center h-full gap-10">
           <Link
+            key="work"
             href="/#work"
-            className="text-3xl"
+            className="text-3xl opacity-100"
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
+              setSelected('work');
             }}
+            underline={selected === 'work' ? 'always' : 'none'}
+            color={selected === 'work' ? 'foreground' : 'primary'}
+            isDisabled={selected === 'work'}
           >
             {t('work')}
           </Link>
-          <Link href="/about" className="text-3xl">
+          <Link
+            key="about"
+            href="/about"
+            className="text-3xl opacity-100"
+            onPress={() => {
+              if (isMenuOpen) setIsMenuOpen(false);
+              setSelected('about');
+            }}
+            underline={selected === 'about' ? 'always' : 'none'}
+            color={selected === 'about' ? 'foreground' : 'primary'}
+            isDisabled={selected === 'about'}
+          >
             {t('about')}
           </Link>
-          <Link href="/contact" className="text-3xl">
+          <Link
+            key="contact"
+            href="/contact"
+            className="text-3xl opacity-100"
+            onPress={() => {
+              if (isMenuOpen) setIsMenuOpen(false);
+              setSelected('contact');
+            }}
+            underline={selected === 'contact' ? 'always' : 'none'}
+            color={selected === 'contact' ? 'foreground' : 'primary'}
+            isDisabled={selected === 'contact'}
+          >
             {t('contact')}
           </Link>
           <LangDropdown />

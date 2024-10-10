@@ -10,6 +10,7 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
+  Spinner,
   useDisclosure,
 } from '@nextui-org/react';
 import type { useTranslations } from 'next-intl';
@@ -40,10 +41,13 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
         <CardBody className="overflow-visible py-2">
           <div className="flex flex-col gap-5 justify-between items-center sm:flex-row">
             <div className="flex flex-col gap-5">
-              <div
-                onClick={onOpen}
-                className={`${ASSETS_PATH.diplomas[counter]} bg-cover w-[200px] h-[155px] transition-all duration-500 rounded-xl cursor-pointer shadow-[0_0_8px_3px_#F6AD34] hover:shadow-[0_0_8px_3px_#F6AD34] hover:grayscale-0 sm:shadow-none sm:grayscale`}
-              ></div>
+              <div className="relative">
+                <div
+                  onClick={onOpen}
+                  className={`${ASSETS_PATH.diplomas[counter]} relative z-[1] bg-cover w-[200px] h-[155px] transition-all duration-500 rounded-xl cursor-pointer shadow-[0_0_8px_3px_#F6AD34] hover:shadow-[0_0_8px_3px_#F6AD34] hover:grayscale-0 sm:shadow-none sm:grayscale`}
+                ></div>
+                {<Spinner className="absolute z-0 top-[calc((100%-32px)/2)] left-[calc((100%-32px)/2)]" />}
+              </div>
               <div className="flex gap-5 self-center">
                 <CarouselButton counter={counter} setCounter={setCounter} isPlus={false} />
                 <CarouselButton counter={counter} setCounter={setCounter} isPlus={true} />
@@ -73,10 +77,6 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
           <ModalFooter></ModalFooter>
         </ModalContent>
       </Modal>
-
-      {ASSETS_PATH.diplomas.map((url, index) => (
-        <div key={index} className={`${url} bg-cover hidden z-[-1]`}></div>
-      ))}
     </>
   );
 };

@@ -16,3 +16,6 @@
 *.mp4 binary
 *.avi binary
 *.webm binary
+
+# CV
+*.pdf binary

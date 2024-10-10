@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import type { TWorkItem } from '@/types/types';
 
 export const ASSETS_PATH = {
@@ -12,6 +13,7 @@ export const ASSETS_PATH = {
     "bg-[url('/images/diploma1.jpg')]",
     "bg-[url('/images/diploma2.jpg')]",
     "bg-[url('/images/diploma3.jpg')]",
+    "bg-[url('/images/diploma4.jpg')]",
   ],
 };
 
@@ -129,6 +131,45 @@ export const WORKS: TWorkItem[] = [
         key: 'redux',
       },
       {
+        name: 'TailWind',
+        key: 'tail',
+      },
+      {
+        name: 'ESLint',
+        key: 'lint',
+      },
+      {
+        name: 'Prettier',
+        key: 'pretty',
+      },
+      {
+        name: 'Husky',
+        key: 'husky',
+      },
+    ],
+    link: 'https://minesweeper-eight-green.vercel.app/',
+    cover: "bg-[url('/images/proj2.jpg')]",
+  },
+  {
+    id: 3,
+    stack: [
+      {
+        name: 'TypeScript',
+        key: 'ts',
+      },
+      {
+        name: 'React',
+        key: 'react',
+      },
+      {
+        name: 'NextJS',
+        key: 'next',
+      },
+      {
+        name: 'Redux',
+        key: 'redux',
+      },
+      {
         name: 'SASS',
         key: 'sass',
       },
@@ -150,10 +191,10 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://react-2024-q3-zrxs.vercel.app/films?page=1',
-    cover: "bg-[url('/images/proj2.jpg')]",
+    cover: "bg-[url('/images/proj3.jpg')]",
   },
   {
-    id: 3,
+    id: 4,
     stack: [
       {
         name: 'TypeScript',
@@ -181,10 +222,10 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-rss-puzzle/',
-    cover: "bg-[url('/images/proj3.jpg')]",
+    cover: "bg-[url('/images/proj4.jpg')]",
   },
   {
-    id: 4,
+    id: 5,
     stack: [
       {
         name: 'JavaScript',
@@ -208,25 +249,6 @@ export const WORKS: TWorkItem[] = [
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-nonograms/',
-    cover: "bg-[url('/images/proj4.jpg')]",
-  },
-  {
-    id: 5,
-    stack: [
-      {
-        name: 'HTML',
-        key: 'html',
-      },
-      {
-        name: 'SASS',
-        key: 'sass',
-      },
-      {
-        name: 'JavaScript',
-        key: 'js',
-      },
-    ],
-    link: 'https://pahanchickt.github.io/minesweeper/index.html',
     cover: "bg-[url('/images/proj5.jpg')]",
   },
   {

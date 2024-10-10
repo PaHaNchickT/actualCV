@@ -4,11 +4,10 @@ import { Comfortaa } from 'next/font/google';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { type ReactElement } from 'react';
 
-import Footer from '@/components/Footer/Footer';
-import Header from '@/components/Header/Header';
 import { locales, type Locale } from '@/i18n';
 
 import Providers from '../providers';
+import Controller from './controller';
 
 export function generateStaticParams(): {
   locale: Locale;
@@ -37,11 +36,7 @@ const RootLayout = async ({
     <html lang={locale} suppressHydrationWarning={true}>
       <body className={comfortaa.className}>
         <Providers locale={locale} messages={messages}>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="w-full flex-1">{children}</main>
-            <Footer />
-          </div>
+          <Controller>{children}</Controller>
         </Providers>
       </body>
     </html>

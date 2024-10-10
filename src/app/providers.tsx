@@ -6,10 +6,9 @@ import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { useEffect, useState, type ReactNode } from 'react';
 import { Toaster } from 'react-hot-toast';
 
+import Loader from '@/components/Loader/Loader';
 import type { Locale } from '@/i18n';
 import { useRouterIntl } from '@/navigation';
-
-import Loader from './[locale]/loading';
 
 type ProviderProps = {
   children: React.ReactNode;

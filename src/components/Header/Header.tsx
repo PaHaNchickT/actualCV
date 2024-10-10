@@ -12,11 +12,14 @@ import {
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState, type ReactElement } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { usePathnameIntl } from '@/navigation';
+import { toggleLoading } from '@/redux/appStateSlice';
 import LangDropdown from '@/ui/LangDropdown/LangDropdown';
 
 const Header = (): ReactElement => {
+  const dispatch = useDispatch();
   const [selected, setSelected] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,6 +63,7 @@ const Header = (): ReactElement => {
           onPress={() => {
             if (isMenuOpen) setIsMenuOpen(false);
             setSelected('');
+            if (selected === 'about' || selected === 'contact') dispatch(toggleLoading(true));
           }}
         >
           <Image src="/images/logo.png" width={48} height={48} alt="logo" />
@@ -74,7 +78,10 @@ const Header = (): ReactElement => {
           <Link
             key="work"
             href="/#work"
-            onPress={() => setSelected('work')}
+            onPress={() => {
+              setSelected('work');
+              if (selected === 'about' || selected === 'contact') dispatch(toggleLoading(true));
+            }}
             underline={selected === 'work' ? 'always' : 'none'}
             color={selected === 'work' ? 'foreground' : 'primary'}
           >
@@ -85,7 +92,10 @@ const Header = (): ReactElement => {
           <Link
             key="about"
             href="/about"
-            onPress={() => setSelected('about')}
+            onPress={() => {
+              setSelected('about');
+              if (selected !== 'about') dispatch(toggleLoading(true));
+            }}
             underline={selected === 'about' ? 'always' : 'none'}
             color={selected === 'about' ? 'foreground' : 'primary'}
           >
@@ -96,7 +106,10 @@ const Header = (): ReactElement => {
           <Link
             key="contact"
             href="/contact"
-            onPress={() => setSelected('contact')}
+            onPress={() => {
+              setSelected('contact');
+              if (selected !== 'contact') dispatch(toggleLoading(true));
+            }}
             underline={selected === 'contact' ? 'always' : 'none'}
             color={selected === 'contact' ? 'foreground' : 'primary'}
           >
@@ -116,6 +129,7 @@ const Header = (): ReactElement => {
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
               setSelected('work');
+              if (selected === 'about' || selected === 'contact') dispatch(toggleLoading(true));
             }}
             underline={selected === 'work' ? 'always' : 'none'}
             color={selected === 'work' ? 'foreground' : 'primary'}
@@ -129,6 +143,7 @@ const Header = (): ReactElement => {
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
               setSelected('about');
+              if (selected !== 'about') dispatch(toggleLoading(true));
             }}
             underline={selected === 'about' ? 'always' : 'none'}
             color={selected === 'about' ? 'foreground' : 'primary'}
@@ -142,6 +157,7 @@ const Header = (): ReactElement => {
             onPress={() => {
               if (isMenuOpen) setIsMenuOpen(false);
               setSelected('contact');
+              if (selected !== 'contact') dispatch(toggleLoading(true));
             }}
             underline={selected === 'contact' ? 'always' : 'none'}
             color={selected === 'contact' ? 'foreground' : 'primary'}

@@ -12,6 +12,7 @@ export const ASSETS_PATH = {
     "bg-[url('/images/diploma1.jpg')]",
     "bg-[url('/images/diploma2.jpg')]",
     "bg-[url('/images/diploma3.jpg')]",
+    "bg-[url('/images/diploma4.jpg')]",
   ],
 };
 

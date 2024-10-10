@@ -6,7 +6,7 @@
   },
   "Welcome": {
     "h1": "Pavel Terno",
-    "h2": "Junior Frontend developer"
+    "h2": "Frontend developer"
   },
   "Error": {
     "message": "Something went wrong!",
@@ -142,6 +142,6 @@
       "navigation": "Navigation:",
       "contact": "Contact:"
     },
-    "copyright": "©2024 Pavel Terno. Junior Frontend Developer"
+    "copyright": "©2024 Pavel Terno. Frontend Developer"
   }
 }

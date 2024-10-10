@@ -1,19 +1,13 @@
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 import { type ReactElement } from 'react';
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
-import { locales, type Locale } from '@/i18n';
+import { type Locale } from '@/i18n';
 
 import Providers from '../providers';
-
-export function generateStaticParams(): {
-  locale: Locale;
-}[] {
-  return locales.map((locale) => ({ locale }));
-}
 
 export const metadata: Metadata = {
   title: "Pavel's Terno Portfolio",
@@ -27,8 +21,6 @@ const RootLayout = async ({
   children: React.ReactNode;
   params: { locale: Locale };
 }>): Promise<ReactElement> => {
-  unstable_setRequestLocale(locale);
-
   const messages = await getMessages({ locale });
 
   return (

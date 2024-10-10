@@ -4,11 +4,15 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from '@
 import { useSearchParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import type { Key, ReactElement } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { locales, type Locale } from '@/i18n';
 import { usePathnameIntl, useRouterIntl } from '@/navigation';
+import { toggleLoading } from '@/redux/appStateSlice';
 
 const LangDropdown = (): ReactElement => {
+  const dispatch = useDispatch();
+
   const router = useRouterIntl();
   const pathname = usePathnameIntl();
   const locale = useLocale();
@@ -31,7 +35,9 @@ const LangDropdown = (): ReactElement => {
         onAction={changeLocale}
       >
         {locales.map((locale) => (
-          <DropdownItem key={locale}>{locale.toUpperCase()}</DropdownItem>
+          <DropdownItem key={locale} onPress={() => dispatch(toggleLoading(true))}>
+            {locale.toUpperCase()}
+          </DropdownItem>
         ))}
       </DropdownMenu>
     </Dropdown>

@@ -8,7 +8,7 @@ export const ASSETS_PATH = {
   placeholder: '/images/placeholder.png',
   proj: '/images/proj',
   diploma: '/images/diploma',
-  cv: '/pdf/CV.pdf',
+  cv: '/pdf/Terno Pavel CV.pdf',
   diplomas: [
     "bg-[url('/images/diploma1.jpg')]",
     "bg-[url('/images/diploma2.jpg')]",

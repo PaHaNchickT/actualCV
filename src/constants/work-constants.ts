@@ -290,6 +290,10 @@ export const PORTFOLIO_STACK = [
     key: 'next',
   },
   {
+    name: 'Redux',
+    key: 'redux',
+  },
+  {
     name: 'TailWind',
     key: 'tail',
   },

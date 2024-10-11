@@ -16,7 +16,7 @@ import {
 import type { useTranslations } from 'next-intl';
 import { useState, type ReactElement } from 'react';
 
-import { ASSETS_PATH } from '@/constants/work-constants';
+import { ASSETS_PATH } from '@/constants/global-constants';
 
 import CarouselButton from '../CarouselButton/CarouselButton';
 

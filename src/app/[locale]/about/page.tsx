@@ -16,7 +16,7 @@ import AboutStack from '@/components/AboutStack/AboutStack';
 import AboutWork from '@/components/AboutWork/AboutWork';
 import Loader from '@/components/Loader/Loader';
 import Video from '@/components/Video/Video';
-import { ASSETS_PATH } from '@/constants/work-constants';
+import { ASSETS_PATH } from '@/constants/global-constants';
 import { toggleLoading } from '@/redux/appStateSlice';
 import type { RootState } from '@/redux/store';
 

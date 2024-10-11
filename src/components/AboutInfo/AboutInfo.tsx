@@ -4,7 +4,7 @@ import { Avatar, Card, CardBody } from '@nextui-org/react';
 import type { useTranslations } from 'next-intl';
 import { type ReactElement } from 'react';
 
-import { ASSETS_PATH } from '@/constants/work-constants';
+import { ASSETS_PATH } from '@/constants/global-constants';
 
 const AboutInfo = (props: { t: ReturnType<typeof useTranslations<'About'>> }): ReactElement => {
   return (

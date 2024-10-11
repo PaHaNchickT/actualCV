@@ -2,7 +2,7 @@
 
 import { type ReactElement } from 'react';
 
-import { ASSETS_PATH } from '@/constants/work-constants';
+import { ASSETS_PATH } from '@/constants/global-constants';
 
 const Video = (): ReactElement => {
   return (

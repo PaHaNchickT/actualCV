@@ -3,7 +3,7 @@
 import { Button } from '@nextui-org/react';
 import type { Dispatch, ReactElement, SetStateAction } from 'react';
 
-import { ASSETS_PATH } from '@/constants/work-constants';
+import { ASSETS_PATH } from '@/constants/global-constants';
 
 const CarouselButton = (props: {
   counter: number;

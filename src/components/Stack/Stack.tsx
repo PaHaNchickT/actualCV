@@ -4,7 +4,7 @@ import { Avatar } from '@nextui-org/react';
 import type { MutableRefObject } from 'react';
 import { useEffect, useRef, useState, type ReactElement } from 'react';
 
-import { ASSETS_PATH } from '@/constants/work-constants';
+import { ASSETS_PATH } from '@/constants/global-constants';
 
 import StackItems from '../StackItems/StackItems';
 

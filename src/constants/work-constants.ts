@@ -1,21 +1,4 @@
-/* eslint-disable max-lines */
 import type { TWorkItem } from '@/types/types';
-
-export const ASSETS_PATH = {
-  video: '/video/bg.mp4',
-  videoPoster: '/images/bg.jpg',
-  avatar: '/images/avatar.png',
-  placeholder: '/images/placeholder.png',
-  proj: '/images/proj',
-  diploma: '/images/diploma',
-  cv: '/pdf/Terno Pavel CV.pdf',
-  diplomas: [
-    "bg-[url('/images/diploma1.jpg')]",
-    "bg-[url('/images/diploma2.jpg')]",
-    "bg-[url('/images/diploma3.jpg')]",
-    "bg-[url('/images/diploma4.jpg')]",
-  ],
-};
 
 export const STACK_COLORS: { [key: string]: string } = {
   figma: 'text-[#0ACF83]',

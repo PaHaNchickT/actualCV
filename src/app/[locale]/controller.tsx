@@ -9,8 +9,6 @@ import Header from '@/components/Header/Header';
 import { store } from '@/redux/store';
 
 const Controller = ({ children }: { children: ReactNode }): ReactElement => {
-  // const appState = useSelector((state: RootState) => state.appState.isLoading);
-
   return (
     <Provider store={store}>
       <div className="min-h-screen flex flex-col">

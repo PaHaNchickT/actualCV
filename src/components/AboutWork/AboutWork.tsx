@@ -10,7 +10,6 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
-  Spinner,
   useDisclosure,
 } from '@nextui-org/react';
 import type { useTranslations } from 'next-intl';
@@ -19,6 +18,7 @@ import { useState, type ReactElement } from 'react';
 import { ASSETS_PATH } from '@/constants/global-constants';
 
 import CarouselButton from '../CarouselButton/CarouselButton';
+import ImageSkeleton from '../ImageSkeleton/ImageSkeleton';
 
 const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): ReactElement => {
   const [counter, setCounter] = useState(0);
@@ -41,12 +41,12 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
         <CardBody className="overflow-visible py-2">
           <div className="flex flex-col gap-5 justify-between items-center sm:flex-row">
             <div className="flex flex-col gap-5">
-              <div className="relative">
+              <div className="relative w-[200px] h-[155px] rounded-xl overflow-hidden">
                 <div
                   onClick={onOpen}
-                  className={`${ASSETS_PATH.diplomas[counter]} relative z-[1] bg-cover w-[200px] h-[155px] transition-all duration-500 rounded-xl cursor-pointer shadow-[0_0_8px_3px_#F6AD34] hover:shadow-[0_0_8px_3px_#F6AD34] hover:grayscale-0 sm:shadow-none sm:grayscale`}
+                  className={`w-full h-full ${ASSETS_PATH.diplomas[counter]} relative z-[1] bg-cover transition-all duration-500 cursor-pointer shadow-[0_0_8px_3px_#F6AD34] hover:shadow-[0_0_8px_3px_#F6AD34] hover:grayscale-0 sm:shadow-none sm:grayscale`}
                 ></div>
-                {<Spinner className="absolute z-0 top-[calc((100%-32px)/2)] left-[calc((100%-32px)/2)]" />}
+                <ImageSkeleton />
               </div>
               <div className="flex gap-5 self-center">
                 <CarouselButton counter={counter} setCounter={setCounter} isPlus={false} />

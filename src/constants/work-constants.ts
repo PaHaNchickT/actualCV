@@ -20,6 +20,7 @@ export const STACK_COLORS: { [key: string]: string } = {
   tail: 'text-[#06B6D4]',
   ts: 'text-[#3178C6]',
   webpack: 'text-[#1C78C0]',
+  zod: 'text-[#3068B7]',
 };
 
 export const STACK = [
@@ -84,6 +85,10 @@ export const WORKS: TWorkItem[] = [
       {
         name: 'React Hook Form',
         key: 'reactForm',
+      },
+      {
+        name: 'Zod',
+        key: 'zod',
       },
       {
         name: 'FireBase',
@@ -310,6 +315,10 @@ export const PORTFOLIO_STACK = [
   {
     name: 'React Hook Form',
     key: 'reactForm',
+  },
+  {
+    name: 'Zod',
+    key: 'zod',
   },
   {
     name: 'ESLint',

@@ -9,10 +9,12 @@ export const STACK_COLORS: { [key: string]: string } = {
   jest: 'text-[#FF6434]',
   js: 'text-[#F6AD34]',
   lint: 'text-[#4B32C3]',
-  next: 'text-[white]',
+  next: 'text-white',
+  nextIntl: 'text-[#88DFFF]',
   nodejs: 'text-[#83CD29]',
-  pretty: 'text-[white]',
+  pretty: 'text-white',
   react: 'text-[#00D8FF]',
+  reactForm: 'text-[#EC5990]',
   redux: 'text-[#764ABC]',
   sass: 'text-[#EC407A]',
   tail: 'text-[#06B6D4]',
@@ -76,6 +78,18 @@ export const WORKS: TWorkItem[] = [
         key: 'tail',
       },
       {
+        name: 'Next-Intl',
+        key: 'nextIntl',
+      },
+      {
+        name: 'React Hook Form',
+        key: 'reactForm',
+      },
+      {
+        name: 'FireBase',
+        key: 'firebase',
+      },
+      {
         name: 'ESLint',
         key: 'lint',
       },
@@ -86,10 +100,6 @@ export const WORKS: TWorkItem[] = [
       {
         name: 'Husky',
         key: 'husky',
-      },
-      {
-        name: 'FireBase',
-        key: 'firebase',
       },
       {
         name: 'Jest',
@@ -111,20 +121,16 @@ export const WORKS: TWorkItem[] = [
         key: 'react',
       },
       {
-        name: 'React',
-        key: 'react',
-      },
-      {
         name: 'Next.js',
-        key: 'next',
-      },
-      {
-        name: 'NextUI',
         key: 'next',
       },
       {
         name: 'Redux',
         key: 'redux',
+      },
+      {
+        name: 'NextUI',
+        key: 'next',
       },
       {
         name: 'TailWind',
@@ -286,16 +292,24 @@ export const PORTFOLIO_STACK = [
     key: 'next',
   },
   {
-    name: 'NextUI',
-    key: 'next',
-  },
-  {
     name: 'Redux',
     key: 'redux',
   },
   {
+    name: 'NextUI',
+    key: 'next',
+  },
+  {
     name: 'TailWind',
     key: 'tail',
+  },
+  {
+    name: 'Next-Intl',
+    key: 'nextIntl',
+  },
+  {
+    name: 'React Hook Form',
+    key: 'reactForm',
   },
   {
     name: 'ESLint',

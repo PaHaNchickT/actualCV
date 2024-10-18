@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import type { TWorkItem } from '@/types/types';
 
 export const STACK_COLORS: { [key: string]: string } = {
@@ -63,7 +64,11 @@ export const WORKS: TWorkItem[] = [
         key: 'react',
       },
       {
-        name: 'NextJS',
+        name: 'Next.js',
+        key: 'next',
+      },
+      {
+        name: 'NextUI',
         key: 'next',
       },
       {
@@ -106,7 +111,15 @@ export const WORKS: TWorkItem[] = [
         key: 'react',
       },
       {
-        name: 'NextJS',
+        name: 'React',
+        key: 'react',
+      },
+      {
+        name: 'Next.js',
+        key: 'next',
+      },
+      {
+        name: 'NextUI',
         key: 'next',
       },
       {
@@ -145,7 +158,7 @@ export const WORKS: TWorkItem[] = [
         key: 'react',
       },
       {
-        name: 'NextJS',
+        name: 'Next.js',
         key: 'next',
       },
       {
@@ -269,7 +282,11 @@ export const PORTFOLIO_STACK = [
     key: 'react',
   },
   {
-    name: 'NextJS',
+    name: 'Next.js',
+    key: 'next',
+  },
+  {
+    name: 'NextUI',
     key: 'next',
   },
   {

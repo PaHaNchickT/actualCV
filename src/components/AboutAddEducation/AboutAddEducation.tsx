@@ -31,7 +31,7 @@ const AboutAddEducation = (props: { t: ReturnType<typeof useTranslations<'About'
         <div>
           <CardHeader className="text-primary">{props.t('addEducation.header')}</CardHeader>
           <CardBody className="overflow-visible py-2 pl-7">
-            <ul className="list-disc marker:text-primary">
+            <ul className="list-disc marker:text-primary flex flex-col gap-3">
               {ADD_EDUCATION.map((item, index) => (
                 <li key={index}>
                   <p>{item.name}</p>

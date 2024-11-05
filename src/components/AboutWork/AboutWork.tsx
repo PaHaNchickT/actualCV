@@ -16,7 +16,7 @@ const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): R
             {WORK.map((item, index) => (
               <li key={index} className="mb-10">
                 <div className="flex justify-between">
-                  <div className="flex flex-col gap-2 w-[115px]">
+                  <div className="flex flex-col gap-2 w-[30%]">
                     <div className="font-black">
                       <p>{props.t(item.durationFrom)}</p>
                       <p>{props.t(item.durationTo)}</p>

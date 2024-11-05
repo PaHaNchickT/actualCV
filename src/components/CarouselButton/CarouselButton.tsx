@@ -25,6 +25,7 @@ const CarouselButton = (props: {
     <>
       <Button
         color="primary"
+        radius="full"
         onPress={() => {
           if (props.counter > 0 && !props.isPlus) {
             props.setCounter((prevCount) => (prevCount -= 1));
@@ -33,7 +34,7 @@ const CarouselButton = (props: {
           }
         }}
         isDisabled={isDisableCalc()}
-        className="text-background font-black min-w-10"
+        className="text-background font-black min-w-10 p-0"
       >
         {props.isPlus ? '>' : '<'}
       </Button>

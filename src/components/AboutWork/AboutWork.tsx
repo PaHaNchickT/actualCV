@@ -1,82 +1,51 @@
 'use client';
 
-import {
-  Card,
-  CardBody,
-  Image,
-  Link,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  useDisclosure,
-} from '@nextui-org/react';
+import { Card, CardBody, CardHeader } from '@nextui-org/react';
 import type { useTranslations } from 'next-intl';
-import { useState, type ReactElement } from 'react';
+import { type ReactElement } from 'react';
 
-import { ASSETS_PATH } from '@/constants/global-constants';
-
-import CarouselButton from '../CarouselButton/CarouselButton';
-import ImageSkeleton from '../ImageSkeleton/ImageSkeleton';
+import { WORK } from '@/constants/about-constants';
 
 const AboutWork = (props: { t: ReturnType<typeof useTranslations<'About'>> }): ReactElement => {
-  const [counter, setCounter] = useState(0);
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const linkEpam = (
-    <Link href="https://learn.epam.com/start" target="_blank">
-      EPAM
-    </Link>
-  );
-  const linkRSS = (
-    <Link href="https://rs.school/courses" target="_blank">
-      The Rolling Scopes School
-    </Link>
-  );
-
   return (
     <>
-      <Card className="p-4 max-w-[800px]" shadow="lg">
-        <CardBody className="overflow-visible py-2">
-          <div className="flex flex-col gap-5 justify-between items-center sm:flex-row">
-            <div className="flex flex-col gap-5">
-              <div className="relative w-[200px] h-[155px] rounded-xl overflow-hidden">
-                <div
-                  onClick={onOpen}
-                  className={`w-full h-full ${ASSETS_PATH.diplomas[counter]} relative z-[1] bg-cover transition-all duration-500 cursor-pointer shadow-[0_0_8px_3px_#F6AD34] hover:shadow-[0_0_8px_3px_#F6AD34] hover:grayscale-0 sm:shadow-none sm:grayscale`}
-                ></div>
-                <ImageSkeleton />
-              </div>
-              <div className="flex gap-5 self-center">
-                <CarouselButton counter={counter} setCounter={setCounter} isPlus={false} />
-                <CarouselButton counter={counter} setCounter={setCounter} isPlus={true} />
-              </div>
-            </div>
-            <p className="w-full text-justify text-sm sm:w-8/12 sm:text-base">
-              {props.t('work.0')} {linkEpam} {props.t('work.1')} {linkRSS} {props.t('work.2')}
-            </p>
-          </div>
+      <Card className="p-4 max-w-[800px] text-sm sm:text-base h-full" shadow="lg">
+        <CardHeader className="text-primary">{props.t('work.header')}</CardHeader>
+        <CardBody className="overflow-visible pt-2 pb-0 pl-7">
+          <ul className="list-disc marker:text-primary">
+            {WORK.map((item, index) => (
+              <li key={index} className="mb-10">
+                <div className="flex justify-between">
+                  <div className="flex flex-col gap-2 w-[115px]">
+                    <div className="font-black">
+                      <p>{props.t(item.durationFrom)}</p>
+                      <p>{props.t(item.durationTo)}</p>
+                    </div>
+                    <p className="text-primary">{props.t(item.durationSummary)}</p>
+                  </div>
+                  <div className="flex flex-col gap-2 w-[65%]">
+                    <div>
+                      <p className="font-black">{props.t(item.name)}</p>
+                      <p className="text-primary">{props.t(item.city)}</p>
+                    </div>
+                    <div className="text-justify">
+                      <p className="font-black">{props.t(item.position)}</p>
+                      <div>
+                        {props
+                          .t(item.description)
+                          .split('—')
+                          .map((paragraph, index) => (
+                            <p key={index}>{`${index ? '— ' : ''}${paragraph}`}</p>
+                          ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </CardBody>
       </Card>
-
-      <Modal size="xl" isOpen={isOpen} onClose={onClose} backdrop="blur" placement="center">
-        <ModalContent>
-          <ModalHeader></ModalHeader>
-          <ModalBody>
-            <Image
-              isBlurred
-              shadow="sm"
-              radius="lg"
-              width="100%"
-              alt={`diploma-${counter + 1}-cover`}
-              className="object-cover"
-              src={`${ASSETS_PATH.diploma}${counter + 1}.jpg`}
-            />
-          </ModalBody>
-          <ModalFooter></ModalFooter>
-        </ModalContent>
-      </Modal>
     </>
   );
 };

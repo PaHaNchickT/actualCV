@@ -27,7 +27,7 @@ const AboutAddEducation = (props: { t: ReturnType<typeof useTranslations<'About'
 
   return (
     <>
-      <Card className="p-4 max-w-[800px] text-sm sm:text-base flex flex-col gap-5" shadow="lg">
+      <Card className="p-4 pb-6 max-w-[800px] text-sm sm:text-base flex flex-col gap-5" shadow="lg">
         <div>
           <CardHeader className="text-primary">{props.t('addEducation.header')}</CardHeader>
           <CardBody className="overflow-visible py-2 pl-7">

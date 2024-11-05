@@ -8,6 +8,7 @@ import { useEffect, type ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
+import AboutAddEducation from '@/components/AboutAddEducation/AboutAddEducation';
 import AboutEducation from '@/components/AboutEducation/AboutEducation';
 import AboutHobby from '@/components/AboutHobby/AboutHobby';
 import AboutInfo from '@/components/AboutInfo/AboutInfo';
@@ -41,16 +42,23 @@ const About = (): ReactElement => {
             <h3 className="font-black text-4xl text-center sm:text-5xl">{t('title')}</h3>
             <div className="flex flex-col gap-5 lg:w-[800px]">
               <AboutInfo t={t} />
-              <AboutWork t={t} />
+
               <div className="flex gap-5 flex-col-reverse lg:flex-row">
                 <div className="flex flex-col gap-5">
                   <AboutEducation t={t} />
+                  <AboutAddEducation t={t} />
+                </div>
+                <div className="flex flex-col gap-5">
+                  <AboutWork t={t} />
+                </div>
+              </div>
+
+              <div className="flex gap-5 flex-col-reverse lg:flex-row">
+                <div className="flex flex-col gap-5">
                   <AboutLanguages t={t} />
                   <AboutHobby t={t} />
                 </div>
-                <div>
-                  <AboutStack t={t} />
-                </div>
+                <AboutStack t={t} />
               </div>
             </div>
             <Link href={ASSETS_PATH.cv} download="Terno Pavel CV">

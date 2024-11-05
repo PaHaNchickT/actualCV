@@ -76,15 +76,39 @@
       "text": "Frontend development for me is, first and foremost, creativity, the perfect balance between intellectual work and the expression of emotions. Due to my empathy, I successfully find a common language with people and easily fit into a team. I strive to solve problems effectively and creatively, so I plan to achieve high performance indicators. I have the following qualities: determination, easy learning, organizational skills. I am constantly engaged in self-development."
     },
     "work": {
-      "0": "While studying at",
-      "1": "and",
-      "2": "online schools, I acquired skills in developing applications in JavaScript, TypeScript, and React. Among them were both single-page applications and games, as well as full-fledged multi-page sites, laid out according to Figma layouts. When writing code, I strictly follow the concepts of DRY, KISS, and YAGNI, and thanks to regular cross-checks of work, I have confident Code Review skills. During the final projects, I also studied the Agile methodology and gained experience in collective development according to Scrum, using Jira and gh project boards."
+      "header": "Experience",
+      "stackLabel": "Stack:",
+      "0": {
+        "name": "Architectural design bureau",
+        "city": "Saint Petersburg",
+        "position": "Frontend developer",
+        "description": "— Development of the client part of the corporate website from scratch. — Creation of adaptive and cross-browser interfaces that correspond to layouts and UX/UI requirements, as well as covering them with tests. — Implementation of client logic for processing forms. — Providing support and updating of the website by adding new functions and fixing bugs. — Optimization of website performance and loading.",
+        "durationFrom": "August 2023 —",
+        "durationTo": "October 2024",
+        "durationSummary": "1 year 3 months"
+      },
+      "1": {
+        "name": "Private Practice / Freelance",
+        "city": "Saint Petersburg",
+        "position": "Frontend developer",
+        "description": "Development of both individual pages for websites and full-fledged multi-page websites and SPA applications (client part).",
+        "durationFrom": "May 2022 —",
+        "durationTo": "August 2023",
+        "durationSummary": "1 year 4 months"
+      }
     },
     "education": {
       "header": "Education",
       "university": "Saint Petersburg State University",
       "bachelor": "Bachelor's degree",
       "master": "Master's degree"
+    },
+    "addEducation": {
+      "header": "Additional Education",
+      "edu1": "September 2021 — December 2021",
+      "edu2": "January 2022 — March 2022",
+      "edu3": "November 2023 — July 2024",
+      "edu4": "July 2024 — September 2024"
     },
     "languages": {
       "header": "Languages",

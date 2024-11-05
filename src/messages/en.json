@@ -124,7 +124,8 @@
       "1": "Understanding of SSR concepts, confident possession in Next.js and experience with Remix",
       "2": "Understanding of Rest API concept, experience with Websocket and GraphQL queries, as well as authentication tokens (FireBase)",
       "3": "Experience writing unit tests in Jest",
-      "4": "Basic knowledge and experience with Node.js"
+      "4": "Basic knowledge and experience with Node.js",
+      "5": "Clean and maintainable code, following the principles of KISS, DRY and YAGNI"
     },
     "downloadCV": "Download CV"
   },

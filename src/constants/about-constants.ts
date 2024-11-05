@@ -47,10 +47,11 @@ export const WORK: {
   },
 ];
 
-export const STACK: ['stack.0', 'stack.1', 'stack.2', 'stack.3', 'stack.4'] = [
+export const STACK: ['stack.0', 'stack.1', 'stack.2', 'stack.3', 'stack.4', 'stack.5'] = [
   'stack.0',
   'stack.1',
   'stack.2',
   'stack.3',
   'stack.4',
+  'stack.5',
 ];

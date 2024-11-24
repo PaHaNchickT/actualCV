@@ -17,7 +17,7 @@ export function generateStaticParams(): {
 
 export const metadata: Metadata = {
   title: "Pavel's Terno Portfolio",
-  description: 'Portfolio of Junior Frontend Developer Pavel Terno made using TypeScript, React and Next.js',
+  description: 'Portfolio of Frontend Developer Pavel Terno made using TypeScript, React and Next.js',
 };
 
 const comfortaa = Comfortaa({ subsets: ['latin'] });

@@ -19,13 +19,17 @@ export const ADD_EDUCATION: {
 ];
 
 export const WORK: {
-  name: 'work.0.name' | 'work.1.name';
-  city: 'work.0.city' | 'work.1.city';
-  position: 'work.0.position' | 'work.1.position';
-  description: 'work.0.description' | 'work.1.description';
-  durationFrom: 'work.0.durationFrom' | 'work.1.durationFrom';
-  durationTo: 'work.0.durationTo' | 'work.1.durationTo';
-  durationSummary: 'work.0.durationSummary' | 'work.1.durationSummary';
+  name: 'work.0.name' | 'work.1.name' | 'work.2.name' | 'work.3.name';
+  city: 'work.0.city' | 'work.1.city' | 'work.2.city' | 'work.3.city';
+  position: 'work.0.position' | 'work.1.position' | 'work.2.position' | 'work.3.position';
+  description: 'work.0.description' | 'work.1.description' | 'work.2.description' | 'work.3.description';
+  durationFrom: 'work.0.durationFrom' | 'work.1.durationFrom' | 'work.2.durationFrom' | 'work.3.durationFrom';
+  durationTo: 'work.0.durationTo' | 'work.1.durationTo' | 'work.2.durationTo' | 'work.3.durationTo';
+  durationSummary:
+    | 'work.0.durationSummary'
+    | 'work.1.durationSummary'
+    | 'work.2.durationSummary'
+    | 'work.3.durationSummary';
 }[] = [
   {
     name: 'work.0.name',
@@ -44,6 +48,24 @@ export const WORK: {
     durationFrom: 'work.1.durationFrom',
     durationTo: 'work.1.durationTo',
     durationSummary: 'work.1.durationSummary',
+  },
+  {
+    name: 'work.2.name',
+    city: 'work.2.city',
+    position: 'work.2.position',
+    description: 'work.2.description',
+    durationFrom: 'work.2.durationFrom',
+    durationTo: 'work.2.durationTo',
+    durationSummary: 'work.2.durationSummary',
+  },
+  {
+    name: 'work.3.name',
+    city: 'work.3.city',
+    position: 'work.3.position',
+    description: 'work.3.description',
+    durationFrom: 'work.3.durationFrom',
+    durationTo: 'work.3.durationTo',
+    durationSummary: 'work.3.durationSummary',
   },
 ];
 

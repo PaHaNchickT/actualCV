@@ -42,7 +42,7 @@ const AboutAddEducation = (props: { t: ReturnType<typeof useTranslations<'About'
             </ul>
           </CardBody>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex justify-center items-center gap-3">
           <CarouselButton counter={counter} setCounter={setCounter} isPlus={false} />
           <div className="relative w-[200px] h-[155px] rounded-xl overflow-hidden">
             <div

@@ -79,6 +79,24 @@
       "header": "Experience",
       "stackLabel": "Stack:",
       "0": {
+        "name": "Yandex",
+        "city": "Saint Petersburg",
+        "position": "Interface developer",
+        "description": "Creation and implementation of the visible part of the Auto.ru website, including the development of the user interface, its styling, ensuring interactivity and optimization for various devices.",
+        "durationFrom": "April 2025 —",
+        "durationTo": "",
+        "durationSummary": "Present time"
+      },
+      "1": {
+        "name": "Data & Finance Technologies",
+        "city": "Saint Petersburg",
+        "position": "Frontend developer",
+        "description": "— Development of the Frontend part of a financial application consisting of a multi-page admin panel integrated with the backend. — Writing custom components based on components from third-party libraries (Material UI, Prime React and Ant Design). — Refactoring of previously written code, its restructuring.",
+        "durationFrom": "November 2024 —",
+        "durationTo": "April 2025",
+        "durationSummary": "5 months"
+      },
+      "2": {
         "name": "Architectural design bureau",
         "city": "Saint Petersburg",
         "position": "Frontend developer",
@@ -87,7 +105,7 @@
         "durationTo": "October 2024",
         "durationSummary": "1 year 3 months"
       },
-      "1": {
+      "3": {
         "name": "Private Practice / Freelance",
         "city": "Saint Petersburg",
         "position": "Frontend developer",

@@ -42,25 +42,21 @@ const About = (): ReactElement => {
             <h3 className="font-black text-4xl text-center sm:text-5xl">{t('title')}</h3>
             <div className="flex flex-col gap-5 lg:w-[800px]">
               <AboutInfo t={t} />
+              <AboutWork t={t} />
 
               <div className="flex gap-5 flex-col-reverse lg:flex-row">
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-5 w-1/2">
                   <AboutEducation t={t} />
-                  <AboutAddEducation t={t} />
-                </div>
-                <div className="flex flex-col gap-5">
-                  <AboutWork t={t} />
-                </div>
-              </div>
-
-              <div className="flex gap-5 flex-col-reverse lg:flex-row">
-                <div className="flex flex-col gap-5">
                   <AboutLanguages t={t} />
                   <AboutHobby t={t} />
                 </div>
-                <AboutStack t={t} />
+                <div className="flex flex-col gap-5">
+                  <AboutAddEducation t={t} />
+                </div>
               </div>
             </div>
+
+            <AboutStack t={t} />
             <Link href={ASSETS_PATH.cv} download="Terno Pavel CV">
               <Button color="primary" size="lg" className="text-background">
                 {t('downloadCV')}

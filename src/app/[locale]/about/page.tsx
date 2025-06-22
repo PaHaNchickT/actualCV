@@ -45,7 +45,7 @@ const About = (): ReactElement => {
               <AboutWork t={t} />
 
               <div className="flex gap-5 flex-col-reverse lg:flex-row">
-                <div className="flex flex-col gap-5 w-1/2">
+                <div className="flex flex-col gap-5 w-full lg:w-1/2">
                   <AboutEducation t={t} />
                   <AboutLanguages t={t} />
                   <AboutHobby t={t} />

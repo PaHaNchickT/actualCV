@@ -27,7 +27,7 @@ const WorkItems = (props: { item: TWorkItem; t: ReturnType<typeof useTranslation
             ></div>
             <ImageSkeleton />
           </CardBody>
-          <div className="bg-background py-1 text-xl box-border relative z-[3] transition-all min-w-full group-hover/card:min-w-full group-hover/card:text-2xl sm:group-hover/card:text-5xl group-hover/card:py-4 group-hover/card:px-0 lg:min-w-[10px] lg:pl-8 lg:pr-2">
+          <div className="bg-background py-1 text-xl box-border relative z-[3] transition-all min-w-full group-hover/card:min-w-full group-hover/card:text-2xl sm:group-hover/card:text-5xl group-hover/card:py-4 group-hover/card:px-0 lg:min-w-[10px] lg:px-4">
             <p>{props.t(`items.${props.item.id}.title`)}</p>
           </div>
         </Card>

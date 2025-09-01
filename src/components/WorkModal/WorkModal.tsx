@@ -60,11 +60,22 @@ const WorkModal = (props: {
                       className="object-cover"
                       src={`${ASSETS_PATH.proj}${props.item.id}.jpg`}
                     />
-                    <Link href={props.item.link} className="rounded-xl" target="_blank">
-                      <Button color="primary" onPress={onClose} className="w-full text-black">
-                        {props.t('btnLink')}
+                    {props.item.link === 'UNDER_NDA' ? (
+                      <Button
+                        color="primary"
+                        onPress={onClose}
+                        className="w-full text-black pointer-events-auto cursor-not-allowed"
+                        isDisabled
+                      >
+                        {props.t('btnLinkDisabled')}
                       </Button>
-                    </Link>
+                    ) : (
+                      <Link href={props.item.link} className="rounded-xl" target="_blank">
+                        <Button color="primary" onPress={onClose} className="w-full text-black">
+                          {props.t('btnLink')}
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </ModalBody>

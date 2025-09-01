@@ -1,6 +1,6 @@
 {
   "Header": {
-    "work": "Work",
+    "work": "Projects",
     "about": "About",
     "contact": "Contact"
   },
@@ -15,22 +15,22 @@
   "Works": {
     "items": {
       "1": {
-        "title": "GetMan",
-        "subtitle": "\"GetMan\" App",
-        "descrMain": "This application is our joint final project on the RS School course. It is a simplified copy of the Postman application, allowing you to send both classic requests to the Resfull API and GraphQl requests, as well as study the response in a convenient and flexible editor. The application supports changing the language and theme, an authentication system, and a request history is implemented.",
-        "descrSub": "The development took 4 weeks. The development was carried out in a team of three people using the Scrum methodology, sprints lasted one week, at the end of the sprints a retrospective was held. We used GitHub Projects as a task board."
+        "title": "Auto.ru",
+        "subtitle": "\"Auto.ru\" App",
+        "descrMain": "While working at Yandex in the Avto.ru team, I made a great contribution to the product development. My big product task was to create a new block with reviews from scratch, which I placed on all the main pages. Among other things, I redesigned the functionality of the outdated \"Reset filters\" block in the listing. I also integrated a platform for collecting feedback and participated in updating blocks with content on the main pages (reviews, the \"Tests and overviews\" block, product cards with an updated design, etc.).",
+        "descrSub": "In addition to the above, I was engaged in optimization activities, including moving to new endpoints, fixing both minor and critical bugs, refactoring the code and writing unit tests, both standard and screenshot ones."
       },
       "2": {
+        "title": "Data & Finance Technologies",
+        "subtitle": "\"Data & Finance Technologies\" App",
+        "descrMain": "Data & Finance Technologies is a financial application that can analyze real financial data. The application offers a set of flexible tools for interacting with data, formatting it, changing it, as well as for generating detailed reports in tabular and graphical forms.",
+        "descrSub": "While working on this project, I was the only front-end developer and had full responsibility for the entire front-end component of the application. I supported a multi-page admin panel integrated with the backend, and also wrote new pages from scratch. In addition, I also wrote complex and multifunctional components with financial business logic based on components from third-party libraries (Material UI, Prime React, and Ant Design). I also refactored previously written code and restructured it."
+      },
+      "3": {
         "title": "Minesweeper",
         "subtitle": "\"Minesweeper\" Game",
         "descrMain": "This application is a copy of the iconic \"Minesweeper\", which I developed in 3 days on React using NextJS.",
         "descrSub": "The game consists of a 16x16 field and follows the classic rules: the left mouse button opens a cell, the right mouse button marks the cell with a flag. The game, according to all the canons, also has a counter of remaining mines and a timer. Victory occurs if the player successfully opens all the cells without bombs, marking the rest with flags. Well, if you are blown up by a mine, you can always start the game over."
-      },
-      "3": {
-        "title": "Kinomania",
-        "subtitle": "\"Kinomania\" App",
-        "descrMain": "This application is a film library that works with an unofficial Kinopoisk API.",
-        "descrSub": "You can search for films and series by keywords, view brief information about each element, select and download a short excerpt for selected films, and it is also possible to change the theme."
       },
       "4": {
         "title": "English Puzzle",
@@ -58,6 +58,7 @@
       }
     },
     "btnLink": "Go to site",
+    "btnLinkDisabled": "Unavailable due to NDA",
     "stackLabel": "Stack:",
     "footerAuthor": "Made by Pavel Terno",
     "btnClose": "Close"
@@ -177,7 +178,7 @@
     "links": {
       "tg": "Telegram",
       "vk": "VK",
-      "work": "Work",
+      "work": "Projects",
       "about": "About",
       "contact": "Contact"
     },
@@ -185,6 +186,6 @@
       "navigation": "Navigation:",
       "contact": "Contact:"
     },
-    "copyright": "©2024 Pavel Terno. Frontend Developer"
+    "copyright": "©2025 Pavel Terno. Frontend Developer"
   }
 }

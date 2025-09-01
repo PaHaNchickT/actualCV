@@ -12,6 +12,7 @@ export const STACK_COLORS: { [key: string]: string } = {
   next: 'text-white',
   nextIntl: 'text-[#88DFFF]',
   nodejs: 'text-[#83CD29]',
+  puppeteer: 'text-[#01D8A2]',
   pretty: 'text-white',
   react: 'text-[#00D8FF]',
   reactForm: 'text-[#EC5990]',
@@ -21,6 +22,7 @@ export const STACK_COLORS: { [key: string]: string } = {
   ts: 'text-[#3178C6]',
   webpack: 'text-[#1C78C0]',
   zod: 'text-[#3068B7]',
+  default: 'text-white',
 };
 
 export const STACK = [
@@ -49,7 +51,7 @@ export const STACK = [
     ],
     [
       { name: 'Jest', key: 'jest', id: 10 },
-      { name: 'Node.js', key: 'nodejs', id: 11 },
+      { name: 'Puppeteer', key: 'puppeteer', id: 11 },
     ],
   ],
 ];
@@ -67,94 +69,54 @@ export const WORKS: TWorkItem[] = [
         key: 'react',
       },
       {
-        name: 'Next.js',
-        key: 'next',
+        name: 'Redux',
+        key: 'redux',
       },
       {
-        name: 'NextUI',
-        key: 'next',
+        name: 'Storybook',
+        key: 'sass',
       },
       {
-        name: 'TailWind',
-        key: 'tail',
-      },
-      {
-        name: 'Next-Intl',
-        key: 'nextIntl',
-      },
-      {
-        name: 'React Hook Form',
-        key: 'reactForm',
-      },
-      {
-        name: 'Zod',
-        key: 'zod',
-      },
-      {
-        name: 'FireBase',
-        key: 'firebase',
-      },
-      {
-        name: 'ESLint',
-        key: 'lint',
-      },
-      {
-        name: 'Prettier',
-        key: 'pretty',
-      },
-      {
-        name: 'Husky',
-        key: 'husky',
+        name: 'Descript',
+        key: 'nodejs',
       },
       {
         name: 'Jest',
         key: 'jest',
       },
+      {
+        name: 'Puppeteer',
+        key: 'puppeteer',
+      },
     ],
-    link: 'https://graphiql-app-kappa.vercel.app/en',
+    link: 'https://auto.ru/',
     cover: "bg-[url('/images/proj1.jpg')]",
   },
   {
     id: 2,
     stack: [
       {
-        name: 'TypeScript',
-        key: 'ts',
+        name: 'JavaScript',
+        key: 'js',
       },
       {
         name: 'React',
         key: 'react',
       },
       {
-        name: 'Next.js',
-        key: 'next',
+        name: 'React Admin',
+        key: 'default',
       },
       {
-        name: 'Redux',
-        key: 'redux',
-      },
-      {
-        name: 'NextUI',
-        key: 'next',
-      },
-      {
-        name: 'TailWind',
+        name: 'Material UI',
         key: 'tail',
       },
       {
-        name: 'ESLint',
-        key: 'lint',
-      },
-      {
-        name: 'Prettier',
-        key: 'pretty',
-      },
-      {
-        name: 'Husky',
-        key: 'husky',
+        name: 'React Hook Form',
+        key: 'reactForm',
       },
     ],
-    link: 'https://minesweeper-eight-green.vercel.app/',
+    link: 'UNDER_NDA',
     cover: "bg-[url('/images/proj2.jpg')]",
   },
   {
@@ -177,27 +139,15 @@ export const WORKS: TWorkItem[] = [
         key: 'redux',
       },
       {
-        name: 'SASS',
-        key: 'sass',
+        name: 'NextUI',
+        key: 'next',
       },
       {
-        name: 'ESLint',
-        key: 'lint',
-      },
-      {
-        name: 'Prettier',
-        key: 'pretty',
-      },
-      {
-        name: 'Husky',
-        key: 'husky',
-      },
-      {
-        name: 'Jest',
-        key: 'jest',
+        name: 'TailWind',
+        key: 'tail',
       },
     ],
-    link: 'https://react-2024-q3-zrxs.vercel.app/films?page=1',
+    link: 'https://minesweeper-eight-green.vercel.app/',
     cover: "bg-[url('/images/proj3.jpg')]",
   },
   {
@@ -214,18 +164,6 @@ export const WORKS: TWorkItem[] = [
       {
         name: 'WebPack',
         key: 'webpack',
-      },
-      {
-        name: 'ESLint',
-        key: 'lint',
-      },
-      {
-        name: 'Prettier',
-        key: 'pretty',
-      },
-      {
-        name: 'Husky',
-        key: 'husky',
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-rss-puzzle/',
@@ -245,14 +183,6 @@ export const WORKS: TWorkItem[] = [
       {
         name: 'WebPack',
         key: 'webpack',
-      },
-      {
-        name: 'ESLint',
-        key: 'lint',
-      },
-      {
-        name: 'Prettier',
-        key: 'pretty',
       },
     ],
     link: 'https://rolling-scopes-school.github.io/pahanchickt-JSFE2023Q4/build-nonograms/',
@@ -319,17 +249,5 @@ export const PORTFOLIO_STACK = [
   {
     name: 'Zod',
     key: 'zod',
-  },
-  {
-    name: 'ESLint',
-    key: 'lint',
-  },
-  {
-    name: 'Prettier',
-    key: 'pretty',
-  },
-  {
-    name: 'Husky',
-    key: 'husky',
   },
 ];

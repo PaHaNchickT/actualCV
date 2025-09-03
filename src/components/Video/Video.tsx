@@ -13,7 +13,7 @@ const Video = (): ReactElement => {
       autoPlay
       muted
       loop
-      className="fixed top-0 z-[0] blur-[2px] opacity-90 w-[1440px] max-w-[1440px]"
+      className="fixed top-0 z-[0] blur-[2px] opacity-90 w-[1536px] max-w-[1536px] 2xl:w-full 2xl:max-w-full 2xl:h-full object-cover"
     ></video>
   );
 };

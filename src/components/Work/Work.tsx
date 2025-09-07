@@ -15,7 +15,7 @@ const Work = (): ReactElement => {
 
   return (
     <div className="relative w-full flex justify-center align-center bg-gradient-to-t from-transparent to-background z-1">
-      <div className="flex justify-center flex-wrap gap-5 w-full pt-[120px] px-20 max-w-[1600px]">
+      <div className="flex justify-center flex-wrap gap-5 w-full pt-[120px] px-20 max-w-[1410px]">
         {WORKS.map((item, index) => (
           <WorkItems item={item} t={t} key={index} />
         ))}

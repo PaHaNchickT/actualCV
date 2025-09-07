@@ -30,7 +30,7 @@ export const Footer = (): ReactElement => {
 
   return (
     <footer className="z-5 bg-black/30 border-t-1 border-t-default-300 w-full flex justify-center backdrop-blur-lg backdrop-saturate-150">
-      <div className="px-6 py-10 gap-10 w-full flex flex-col max-w-[1024px]">
+      <div className="px-6 py-10 gap-10 w-full flex flex-col max-w-[1298px]">
         <div className="flex justify-between">
           <div className="flex gap-10 flex-wrap sm:gap-28">
             <div className="flex flex-col gap-5">

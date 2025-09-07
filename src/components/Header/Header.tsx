@@ -65,6 +65,9 @@ const Header = (): ReactElement => {
       isBordered
       position="sticky"
       className={`z-50 transition-all duration-300 ${isScrolled ? 'bg-black/30 shadow-lg' : 'bg-transparent'}`}
+      classNames={{
+        wrapper: 'max-w-[1298px]',
+      }}
     >
       <NavbarContent>
         <Link

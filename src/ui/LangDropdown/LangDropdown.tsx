@@ -3,16 +3,14 @@
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from '@nextui-org/react';
 import { useSearchParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
+import NProgress from 'nprogress';
 import type { Key, ReactElement } from 'react';
-import { useDispatch } from 'react-redux';
 
 import { locales, type Locale } from '@/i18n';
 import { usePathnameIntl, useRouterIntl } from '@/navigation';
-import { toggleLoading } from '@/redux/appStateSlice';
+import 'nprogress/nprogress.css';
 
 const LangDropdown = (): ReactElement => {
-  const dispatch = useDispatch();
-
   const router = useRouterIntl();
   const pathname = usePathnameIntl();
   const locale = useLocale();
@@ -35,7 +33,7 @@ const LangDropdown = (): ReactElement => {
         onAction={changeLocale}
       >
         {locales.map((locale) => (
-          <DropdownItem key={locale} onPress={() => dispatch(toggleLoading(true))}>
+          <DropdownItem key={locale} onPress={() => NProgress.start()}>
             {locale.toUpperCase()}
           </DropdownItem>
         ))}

@@ -1,31 +1,19 @@
-/* eslint-disable react-compiler/react-compiler */
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
-import {
-  Navbar,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-  Link,
-} from '@nextui-org/react';
+import { Navbar, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from '@nextui-org/react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState, type ReactElement } from 'react';
-import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
 import { LINKS_ARRAY } from '@/constants/global-constants';
 import { usePathnameIntl } from '@/navigation';
-import { swapPage, toggleLoading } from '@/redux/appStateSlice';
 import type { RootState } from '@/redux/store';
 import LangDropdown from '@/ui/LangDropdown/LangDropdown';
 
-const Header = (): ReactElement => {
-  const dispatch = useDispatch();
+import ProgressLink from '../ProgressBar/ProgressLink';
 
+const Header = (): ReactElement => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const selectedPage = useSelector((state: RootState) => state.appState.selectedPage);
@@ -42,15 +30,9 @@ const Header = (): ReactElement => {
   };
 
   useEffect(() => {
-    dispatch(
-      swapPage(
-        (location.hash && location.hash.slice(1, location.hash.length)) ||
-          location.pathname.split('/')[location.pathname.split('/').length - 1],
-      ),
-    );
-
     handleScroll();
     window.addEventListener('scroll', handleScroll);
+
     return (): void => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -70,16 +52,9 @@ const Header = (): ReactElement => {
       }}
     >
       <NavbarContent>
-        <Link
-          href="/"
-          onPress={() => {
-            if (isMenuOpen) setIsMenuOpen(false);
-            dispatch(swapPage(''));
-            if (selectedPage === 'about' || selectedPage === 'contact') dispatch(toggleLoading(true));
-          }}
-        >
+        <ProgressLink href="/" isSelected={selectedPage === ''}>
           <Image src="/images/logo.png" width={48} height={48} alt="logo" />
-        </Link>
+        </ProgressLink>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} className="sm:hidden" />
@@ -88,23 +63,9 @@ const Header = (): ReactElement => {
       <NavbarContent className="hidden sm:flex" justify="end">
         {LINKS_ARRAY.map((link, index) => (
           <NavbarItem key={index}>
-            <Link
-              key={link}
-              href={!index ? `/#${link}` : `/${link}`}
-              onPress={() => {
-                dispatch(swapPage(link));
-                if (
-                  (!index && selectedPage === 'about') ||
-                  (!index && selectedPage === 'contact') ||
-                  (index !== 0 && selectedPage !== link)
-                )
-                  dispatch(toggleLoading(true));
-              }}
-              underline={selectedPage === link ? 'always' : 'none'}
-              color={selectedPage === link ? 'foreground' : 'primary'}
-            >
+            <ProgressLink key={index} href={`/${link}`} isSelected={selectedPage === link}>
               {t(link)}
-            </Link>
+            </ProgressLink>
           </NavbarItem>
         ))}
         <NavbarItem>
@@ -114,25 +75,9 @@ const Header = (): ReactElement => {
       <NavbarMenu>
         <NavbarMenuItem className="flex flex-col justify-center items-center h-full gap-10">
           {LINKS_ARRAY.map((link, index) => (
-            <Link
-              key={link}
-              href={!index ? `/#${link}` : `/${link}`}
-              className="text-3xl"
-              onPress={() => {
-                if (isMenuOpen) setIsMenuOpen(false);
-                dispatch(swapPage(link));
-                if (
-                  (!index && selectedPage === 'about') ||
-                  (!index && selectedPage === 'contact') ||
-                  (index !== 0 && selectedPage !== link)
-                )
-                  dispatch(toggleLoading(true));
-              }}
-              underline={selectedPage === link ? 'always' : 'none'}
-              color={selectedPage === link ? 'foreground' : 'primary'}
-            >
+            <ProgressLink key={index} href={`/${link}`} isSelected={selectedPage === link}>
               {t(link)}
-            </Link>
+            </ProgressLink>
           ))}
           <LangDropdown />
         </NavbarMenuItem>

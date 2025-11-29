@@ -14,5 +14,5 @@ export const ASSETS_PATH = {
   ],
 };
 
-export const LINKS_ARRAY: ('about' | 'work' | 'contact')[] = ['work', 'about', 'contact'];
+export const LINKS_ARRAY: ('about' | 'work' | 'contact')[] = ['about', 'contact'];
 

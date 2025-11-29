@@ -1,32 +1,20 @@
-/* eslint-disable react-compiler/react-compiler */
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import { Button, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
-import { useEffect, type ReactElement } from 'react';
-import { useDispatch } from 'react-redux';
+import { type ReactElement } from 'react';
 import { useSelector } from 'react-redux';
 
 import { LINKS_ARRAY } from '@/constants/global-constants';
-import { swapPage, toggleLoading } from '@/redux/appStateSlice';
 import type { RootState } from '@/redux/store';
 import { GithubOutlineIcon } from '@/ui/Icons/GithubOutlineIcon';
 
+import ProgressLink from '../ProgressBar/ProgressLink';
+
 export const Footer = (): ReactElement => {
-  const dispatch = useDispatch();
   const selectedPage = useSelector((state: RootState) => state.appState.selectedPage);
 
   const t = useTranslations('Footer');
-
-  useEffect(() => {
-    dispatch(
-      swapPage(
-        (location.hash && location.hash.slice(1, location.hash.length)) ||
-          location.pathname.split('/')[location.pathname.split('/').length - 1],
-      ),
-    );
-  }, []);
 
   return (
     <footer className="z-5 bg-black/30 border-t-1 border-t-default-300 w-full flex justify-center backdrop-blur-lg backdrop-saturate-150">
@@ -46,25 +34,12 @@ export const Footer = (): ReactElement => {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col items-start gap-5">
               <p>{t('headers.navigation')}</p>
               {LINKS_ARRAY.map((link, index) => (
-                <Link
-                  key={link}
-                  href={!index ? `/#${link}` : `/${link}`}
-                  onPress={() => {
-                    if (window) window.scrollTo(0, 0);
-                    dispatch(swapPage(link));
-                    if (
-                      (!index && selectedPage === 'about') ||
-                      (!index && selectedPage === 'contact') ||
-                      (index !== 0 && selectedPage !== link)
-                    )
-                      dispatch(toggleLoading(true));
-                  }}
-                >
+                <ProgressLink key={index} href={`/${link}`} isSelected={selectedPage === link}>
                   {t(`links.${link}`)}
-                </Link>
+                </ProgressLink>
               ))}
             </div>
           </div>

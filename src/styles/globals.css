@@ -3,3 +3,14 @@
 @import 'tailwindcss/utilities';
 @import 'loader.css';
 @import 'scroll.css';
+
+/* nprogress custom style */
+#nprogress .bar {
+  background: #f6ad34 !important;
+  height: 3px;
+}
+#nprogress .peg {
+  box-shadow:
+    0 0 10px #f6ad34,
+    0 0 5px #f6ad34 !important;
+}
